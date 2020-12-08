@@ -1,0 +1,37 @@
+/* reset/main */
+@import './components/reset.css';
+@import './components/layout.css';
+/* 3rd party components */
+/* your components */
+@import './components/button.css';
+@import './components/faq.css';
+@import './components/footer.css';
+@import './components/form.css';
+@import './components/gallery.css';
+@import './components/header.css';
+@import './components/hero-home.css';
+@import './components/pricing.css';
+@import './components/testimonials.css';
+
+/*
+***********************************************
+CUSTOM HOME PAGE STYLES GOES BELOW THIS COMMENT
+***********************************************
+*/
+
+/* main style */
+/* header */
+/* hero */
+/* features */
+/* app promo */
+/* app promo 2 */
+/* how works */
+/* gallery */
+/* testimonials */
+/* pricing */
+/* faq */
+/* team */
+/* app store */
+/* subscribe */
+/* contact */
+/* footer */
