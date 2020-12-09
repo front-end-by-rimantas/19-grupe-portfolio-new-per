@@ -1,0 +1,20 @@
+.container.hero {
+    background-color: blue;
+}
+.span {
+    text-align: center;
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #bdbdbd;
+}
+.h1 {
+    text-align: center;
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #bdbdbd;
+    
+}
