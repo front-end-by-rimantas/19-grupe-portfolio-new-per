@@ -3,7 +3,6 @@
 # New Per portfolio
 ### Demo project for learning purposes
 
-
 <br>
 
 You can access the website: [![c](https://img.shields.io/badge/HERE-9C27B0)](https://front-end-by-rimantas.github.io/19-grupe-portfolio-new-per/)
@@ -19,8 +18,6 @@ Design inspiration: [New per](https://new-per.netlify.app/demo-3.html)
 - css animations
 - form validations
 - no AJAX (data sending)
-
-<br>
 
 ## Authors
 [BIT](https://bit.lt) full-stack development. Group 19 students:
