@@ -24,6 +24,9 @@ CUSTOM HOME PAGE STYLES GOES BELOW THIS COMMENT
 */
 
 /* main style */
+.container {
+    padding: 100px 0;
+}
 /* navigation bar */
 /* hero */
 /* about me */
