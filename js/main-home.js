@@ -1,37 +1,31 @@
 /***************
 ALL IMPORTS
 ****************/
-/* header */
+/* navigation bar */
 /* hero */
-/* features */
-/* app promo */
-/* app promo 2 */
-/* how works */
-/* gallery */
+/* about me */
+/* skills */
+/* resume */
+/* client counter */
+/* services */
+/* portfolio */
 /* testimonials */
-/* pricing */
-/* faq */
-/* team */
-/* app store */
-/* subscribe */
+/* blog */
 /* contact */
 /* footer */
 
 /***************
 EXECUTION
 ****************/
-/* header */
+/* navigation bar */
 /* hero */
-/* features */
-/* app promo */
-/* app promo 2 */
-/* how works */
-/* gallery */
+/* about me */
+/* skills */
+/* resume */
+/* client counter */
+/* services */
+/* portfolio */
 /* testimonials */
-/* pricing */
-/* faq */
-/* team */
-/* app store */
-/* subscribe */
+/* blog */
 /* contact */
 /* footer */
