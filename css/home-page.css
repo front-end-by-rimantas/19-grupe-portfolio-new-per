@@ -4,14 +4,18 @@
 /* 3rd party components */
 /* your components */
 @import './components/button.css';
-@import './components/faq.css';
-@import './components/footer.css';
-@import './components/form.css';
-@import './components/gallery.css';
-@import './components/header.css';
-@import './components/hero-home.css';
-@import './components/pricing.css';
+@import './components/navigation-bar.css';
+@import './components/hero.css';
+@import './components/about-me.css';
+@import './components/skills.css';
+@import './components/resume.css';
+@import './components/client-counter.css';
+@import './components/sevices.css';
+@import './components/portfolio.css';
 @import './components/testimonials.css';
+@import './components/blog.css';
+@import './components/contact.css';
+@import './components/form.css';
 
 /*
 ***********************************************
@@ -20,18 +24,15 @@ CUSTOM HOME PAGE STYLES GOES BELOW THIS COMMENT
 */
 
 /* main style */
-/* header */
+/* navigation bar */
 /* hero */
-/* features */
-/* app promo */
-/* app promo 2 */
-/* how works */
-/* gallery */
+/* about me */
+/* skills */
+/* resume */
+/* client counter */
+/* services */
+/* portfolio */
 /* testimonials */
-/* pricing */
-/* faq */
-/* team */
-/* app store */
-/* subscribe */
+/* blog */
 /* contact */
 /* footer */
