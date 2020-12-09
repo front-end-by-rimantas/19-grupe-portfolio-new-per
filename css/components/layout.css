@@ -6,31 +6,106 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1200px 1fr;
+    padding: 80px 0;
+    gap: 30px;
 }
     .container > .row {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
         grid-column: 2/3;
+        gap: 30px;
     }
+        .container > .row > .col-1 { grid-column: auto / span 1; }
+        .container > .row > .col-2 { grid-column: auto / span 2; }
+        .container > .row > .col-3 { grid-column: auto / span 3; }
+        .container > .row > .col-4 { grid-column: auto / span 4; }
+        .container > .row > .col-5 { grid-column: auto / span 5; }
+        .container > .row > .col-6 { grid-column: auto / span 6; }
+        .container > .row > .col-7 { grid-column: auto / span 7; }
+        .container > .row > .col-8 { grid-column: auto / span 8; }
+        .container > .row > .col-9 { grid-column: auto / span 9; }
+        .container > .row > .col-10 { grid-column: auto / span 10; }
+        .container > .row > .col-11 { grid-column: auto / span 11; }
+        .container > .row > .col-12 { grid-column: auto / span 12; }
 
 @media (max-width: 1300px) {
     .container {
         grid-template-columns: 1fr 980px 1fr;
     }
+        .container > .row > .col-lg-1 { grid-column: auto / span 1; }
+        .container > .row > .col-lg-2 { grid-column: auto / span 2; }
+        .container > .row > .col-lg-3 { grid-column: auto / span 3; }
+        .container > .row > .col-lg-4 { grid-column: auto / span 4; }
+        .container > .row > .col-lg-5 { grid-column: auto / span 5; }
+        .container > .row > .col-lg-6 { grid-column: auto / span 6; }
+        .container > .row > .col-lg-7 { grid-column: auto / span 7; }
+        .container > .row > .col-lg-8 { grid-column: auto / span 8; }
+        .container > .row > .col-lg-9 { grid-column: auto / span 9; }
+        .container > .row > .col-lg-10 { grid-column: auto / span 10; }
+        .container > .row > .col-lg-11 { grid-column: auto / span 11; }
+        .container > .row > .col-lg-12 { grid-column: auto / span 12; }
 }
 
 @media (max-width: 1080px) {
     .container {
         grid-template-columns: 1fr 780px 1fr;
+        gap: 20px;
     }
+    .container > .row {
+        gap: 20px;
+    }
+        .container > .row > .col-md-1 { grid-column: auto / span 1; }
+        .container > .row > .col-md-2 { grid-column: auto / span 2; }
+        .container > .row > .col-md-3 { grid-column: auto / span 3; }
+        .container > .row > .col-md-4 { grid-column: auto / span 4; }
+        .container > .row > .col-md-5 { grid-column: auto / span 5; }
+        .container > .row > .col-md-6 { grid-column: auto / span 6; }
+        .container > .row > .col-md-7 { grid-column: auto / span 7; }
+        .container > .row > .col-md-8 { grid-column: auto / span 8; }
+        .container > .row > .col-md-9 { grid-column: auto / span 9; }
+        .container > .row > .col-md-10 { grid-column: auto / span 10; }
+        .container > .row > .col-md-11 { grid-column: auto / span 11; }
+        .container > .row > .col-md-12 { grid-column: auto / span 12; }
 }
 
 @media (max-width: 860px) {
     .container {
         grid-template-columns: 1fr 640px 1fr;
     }
+    .container > .row {
+        gap: 10px;
+    }
+        .container > .row > .col-sm-1 { grid-column: auto / span 1; }
+        .container > .row > .col-sm-2 { grid-column: auto / span 2; }
+        .container > .row > .col-sm-3 { grid-column: auto / span 3; }
+        .container > .row > .col-sm-4 { grid-column: auto / span 4; }
+        .container > .row > .col-sm-5 { grid-column: auto / span 5; }
+        .container > .row > .col-sm-6 { grid-column: auto / span 6; }
+        .container > .row > .col-sm-7 { grid-column: auto / span 7; }
+        .container > .row > .col-sm-8 { grid-column: auto / span 8; }
+        .container > .row > .col-sm-9 { grid-column: auto / span 9; }
+        .container > .row > .col-sm-10 { grid-column: auto / span 10; }
+        .container > .row > .col-sm-11 { grid-column: auto / span 11; }
+        .container > .row > .col-sm-12 { grid-column: auto / span 12; }
 }
 
 @media (max-width: 680px) {
     .container {
         grid-template-columns: 20px 1fr 20px;
     }
+    .container > .row {
+        gap: 10px;
+    }
+        .container > .row > .col-xs-1 { grid-column: auto / span 1; }
+        .container > .row > .col-xs-2 { grid-column: auto / span 2; }
+        .container > .row > .col-xs-3 { grid-column: auto / span 3; }
+        .container > .row > .col-xs-4 { grid-column: auto / span 4; }
+        .container > .row > .col-xs-5 { grid-column: auto / span 5; }
+        .container > .row > .col-xs-6 { grid-column: auto / span 6; }
+        .container > .row > .col-xs-7 { grid-column: auto / span 7; }
+        .container > .row > .col-xs-8 { grid-column: auto / span 8; }
+        .container > .row > .col-xs-9 { grid-column: auto / span 9; }
+        .container > .row > .col-xs-10 { grid-column: auto / span 10; }
+        .container > .row > .col-xs-11 { grid-column: auto / span 11; }
+        .container > .row > .col-xs-12 { grid-column: auto / span 12; }
 }
