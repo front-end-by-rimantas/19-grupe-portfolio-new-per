@@ -123,8 +123,46 @@ h4.title {
 
 .fa-briefcase {
     position: absolute;
+    align-items: center;
+    top: 10px;
+    left: -8px;
+    width: 16px;
+    color: white;
+    margin-left: 19px;
+    margin-top: 3px;
+}
+
+.resume-right-column > .icon {
+    display: inline-block;
+    content: '';
+    position: absolute;
     left: -20px;
     width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2e353e;
+}
+
+.fa-book {
+    position: absolute;
+    align-items: center;
+    top: 10px;
+    left: -7px;
+    width: 16px;
+    color: white;
+    margin-left: 19px;
+    margin-top: 3px;
+}
+
+.resume-left-column > .icon {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2e353e;
 }
 
 @media (max-width: 680px) {
@@ -142,7 +180,5 @@ h4.title {
         position: relative;
         margin-left: 0;
     }
-    .fa-book {
-        margin-top: -30px;
-    }
+
 }
