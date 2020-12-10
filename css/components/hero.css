@@ -1,20 +1,52 @@
 .container.hero {
-    background-color: blue;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url(../../img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    min-height: 100vh;
 }
-.span {
-    text-align: center;
-    display: inline-block;
-    font-family: 'Raleway', sans-serif;
-    font-size: 25px;
-    margin-bottom: 20px;
-    color: #bdbdbd;
-}
-.h1 {
+    /*******overlay?*********/
+
+.container.hero .row > span {
     text-align: center;
     display: block;
     font-family: 'Raleway', sans-serif;
-    font-size: 25px;
-    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 100;
     color: #bdbdbd;
-    
 }
+h1 {
+    text-align: center;
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+ul {
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    padding: 0 16px;
+    color: #bdbdbd;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+    span > .typed-cursor {
+        display: inline-block;
+        font-family: 'Raleway', sans-serif;
+    }
+    .container.hero .row > .social-icon {
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+        line-height: 40px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.1);
+        color: #fff;
+        cursor: pointer;
+    }
