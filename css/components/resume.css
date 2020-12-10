@@ -1,0 +1,99 @@
+.col-12 {
+    text-align: center;
+}
+
+h4.title {
+    display: inline-block;
+    grid-column: 4 / 7;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color: #484848;
+    border-bottom: 1px solid #f5f5f5;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+.title > span{
+    color: #9c27b0;
+}
+
+.left-column h5 {
+    font-size: 17px;
+    color: #9c27b0;
+    text-transform: uppercase;
+    margin: 15px 0 8px 0;
+}
+
+.right-column h5 {
+    font-size: 17px;
+    color: #9c27b0;
+    text-transform: uppercase;
+    margin: 15px 0 8px 0;
+}
+
+.list {
+    position: relative;
+    list-style: none;
+    padding: 30px 30px 10px 30px;
+    margin: 0 0 -10px 0;
+}
+
+.left-column {
+    text-align: right;
+}
+
+.left-column {
+    padding: 50px 0 50px 0;
+    border-right: 1px solid #f5f5f5;;
+}
+
+.left-column span {
+    font-size: 15px;
+}
+
+.left-column h6 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.right-column {
+    padding: 50px 0 50px 0;
+    border-left: 1px solid #f5f5f5;;
+}
+
+.right-column span {
+    font-size: 15px;
+}
+
+.right-column h6 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.left-column > .list > span::after {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: -7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid #d6b161;
+    background-color: #2e353e;
+}
+.right-column > .list > span::before {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: -7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid #d6b161;
+    background-color: #2e353e;
+}
+
+.container > .row {
+    gap: 60px;
+}
