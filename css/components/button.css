@@ -1,5 +1,5 @@
 .button {
-    background-color: #9c27b0;
+    background-color: var(--main-color);
     color: #fff;
     cursor: pointer;
     font-weight: 400;
