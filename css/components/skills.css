@@ -1,16 +1,6 @@
 .container.skills {
-    background: #f4f5f8;
+    background: var(--background-color);
 }
-    .container.skills .row > h4 {
-        text-align: center;
-        font-size: 35px;
-        color: #9c27b0;
-        margin-bottom: 50px;
-    }
-        .container.skills .row > h4 > span {
-            color: #484848;
-            
-        }
     .container.skills .skills-bars:nth-of-type(1){
         padding-left: 15px;
         
@@ -37,7 +27,7 @@
         }
             .pbar .loading {
                 width: 73%;
-                background-color: #9c27b0;
+                background-color: var(--main-color);
             }
             .pbar .bar-value {
                 display: flex;
@@ -49,7 +39,7 @@
                 width: 30px;
                 height: 30px;
                 background-color: #fff;
-                color: #9c27b0;
+                color: var(--main-color);
                 font-size: 0.9rem;
                 border-radius: 5px;
                 margin-top: 5px;

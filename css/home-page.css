@@ -3,6 +3,7 @@
 @import './components/reset.css';
 @import './components/layout.css';
 /* 3rd party components */
+@import './components/font-awesome.min.css';
 /* your components */
 @import './components/button.css';
 @import './components/navigation-bar.css';
@@ -16,7 +17,6 @@
 @import './components/testimonials.css';
 @import './components/blog.css';
 @import './components/contact.css';
-@import './components/font-awesome.min.css';
 @import './components/form.css';
 
 /*
@@ -26,6 +26,48 @@ CUSTOM HOME PAGE STYLES GOES BELOW THIS COMMENT
 */
 
 /* main style */
+    /* --title style start--*/
+    .container.skills .row > .row-title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: var(--section-heading-space);
+    }
+
+        .row-title * {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+        }
+        .about .row-title > h4 {
+            border-color: var(--background-color);
+        }
+        .row-title > h4 {
+            display: inline-block;
+            text-transform: capitalize;
+            color: var(--h4-color);
+            text-shadow: 1px 3px 3px #00000023;
+            border-bottom: 1px solid #fff;
+            position: relative;
+            font-size: 2rem;
+            padding-bottom: 10px;
+        }
+
+        .row-title > h4 > span {
+                color: var(--main-color);
+            }
+
+        .row-title > h4::before {
+            content: "";
+            width: 55px;
+            background-color: var(--main-color);
+            height: 1px;
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+        }
+        /* --title style end--*/
+
 /* navigation bar */
 /* hero */
 /* about me */
