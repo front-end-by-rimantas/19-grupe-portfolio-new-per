@@ -20,44 +20,44 @@
     .container.hero > .row {
         z-index: 10;
     }  
-    .hero > .row > .row > span {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-        font-family: 'Raleway', sans-serif;
-        font-size: 23px;
-        color: #bdbdbd;
-    }
-    .hero > .row > .row > h1 {
-        width: 100%;
-        display: block;
-        margin-bottom: 30px;
-        font-family: 'Raleway', sans-serif;
-        font-size: 60px;
-        font-weight: 490;
-        text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
-        color: #fff;
-    }
-    .hero .row > .row ul {
-        display: inline-block;
-        margin-bottom: 16px;
-        list-style: none;
-        letter-spacing: 5px;
-        font-family: 'Raleway', sans-serif;
-        font-size: 14px;
-        color: #bdbdbd;
-        border-top: 1px solid rgba(255, 255, 255, 0.07);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    }
-    ul > span > .typed-cursor {
-        font-family: 'Raleway', sans-serif;
-    }
-    .social-icon {
-        width: 100%;
-    }
-    .hero .row .fa {
-        cursor: pointer;
-        display: inline-block;
-        color: white;
-        padding: 10px;
-    }
+        .hero > .row > .row > span {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 23px;
+            color: #bdbdbd;
+        }
+        .hero > .row > .row > h1 {
+            width: 100%;
+            display: block;
+            margin-bottom: 30px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 60px;
+            font-weight: 490;
+            text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+            color: #fff;
+        }
+        .hero .row > .row ul {
+            display: inline-block;
+            margin-bottom: 16px;
+            list-style: none;
+            letter-spacing: 5px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            color: #bdbdbd;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+            ul > span > .typed-cursor {
+                font-family: 'Raleway', sans-serif;
+            }
+        .social-icon {
+            width: 100%;
+        }
+            .hero .row .fa {
+                cursor: pointer;
+                display: inline-block;
+                color: white;
+                padding: 10px;
+            }
