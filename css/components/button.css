@@ -1,0 +1,18 @@
+.nav {
+    width: 100%;
+}
+.btn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 15px;
+    padding: 15px;
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    
+}
