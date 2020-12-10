@@ -1,4 +1,5 @@
 /* reset/main */
+@import './components/variables.css';
 @import './components/reset.css';
 @import './components/layout.css';
 /* 3rd party components */
