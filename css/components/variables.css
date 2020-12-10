@@ -1,0 +1,14 @@
+:root {
+    --main-color: #9C27B0;
+    --h4-color: #484848;
+    --title-color: #282830;
+    --background-color: #F4F5F8;
+    --text-main-color: #777777;
+    --resume-date-color: #212529;
+    --resume-location-color: #4B4B4B;
+    --clients-text-color: #9E9E9E;
+    --footer-color: #282830;
+    --main-space: 20px;
+    --section-heading-space: 50px;
+    --section-padding: 100px;
+}
