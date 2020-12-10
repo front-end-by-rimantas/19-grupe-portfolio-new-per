@@ -1,5 +1,6 @@
 .container.hero {
     background-image: url(../../img/header.jpg);
+    display: grid;
     position: relative;
     background-size: cover;
     background-position: center;
@@ -21,11 +22,13 @@
     }
 
 .container.hero > .row {
-    grid-auto-rows: 30px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
     .container.hero .row > span {
         text-align: center;
-        display: block;
+        display: inline-block;
+        grid-column: 4/8;
         font-family: 'Raleway', sans-serif;
         font-size: 24px;
         font-weight: 100;
@@ -33,7 +36,8 @@
     }
     h1 {
         text-align: center;
-        display: block;
+        display: inline-block;
+        grid-column: 3/11;
         font-family: 'Raleway', sans-serif;
         font-size: 64px;
         font-weight: 490;
