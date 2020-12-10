@@ -28,7 +28,7 @@
     .container.hero .row > span {
         text-align: center;
         display: inline-block;
-        grid-column: 4/8;
+        grid-column: 6/8;
         font-family: 'Raleway', sans-serif;
         font-size: 24px;
         font-weight: 100;
@@ -48,10 +48,10 @@
         text-align: center;
         list-style: none;
         display: inline-block;
+        grid-column: 5/9;
         letter-spacing: 5px;
         font-family: 'Raleway', sans-serif;
         font-size: 14px;
-        padding: 4px 16px;
         color: #bdbdbd;
         border-top: 1px solid rgba(255, 255, 255, 0.07);
         border-bottom: 1px solid rgba(255, 255, 255, 0.07);
