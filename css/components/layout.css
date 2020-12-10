@@ -6,7 +6,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1200px 1fr;
-    padding: 80px 0;
+    padding: var(--section-padding) 0;
     gap: 30px;
 }
     .container > .row {
