@@ -5,118 +5,372 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <!-- fonts begin-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,800&family=Raleway:wght@500;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <!-- fonts end -->
+    <!-- css begin -->
     <link rel="stylesheet" href="./css/home-page.css">
+    <!-- css end -->
 </head>
 
 <body>
+    <!-- nav begin-->
+    <nav class="container navbar">
+        <div class="row navbar">
+            <a class="navbar-logo col-6" href="#">
+                <img class="black" src="./img/logo.png" alt class="logo-1">
+                <img class="white" src="./img/logo-2.png" alt class="logo-2">
+            </a>
+            <div class="nav-links col-6">
+                <a class="nav-a activeNavLink" href="#home">Home</a>
+                <a class="nav-a" href="#about">About</a>
+                <a class="nav-a" href="#services">Services</a>
+                <a class="nav-a" href="#portfolio">Portfolio</a>
+                <a class="nav-a" href="#client">Client</a>
+                <a class="nav-a" href="#blog">Blog</a>
+                <a class="nav-a" href="#contact">Contact</a>
+            </div>
+            <div class="menu-btn">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end-->
     <!-- header begin -->
-    <header class="container">
-        <div class="row">
-            HEADER: logo + nav
+    <header class="container hero">
+        <div class="row col-12">
+            <div class="row col-12">
+                <span>
+                    WELCOME
+                </span>
+                <h1>
+                    I AM JOHN DOE
+                </h1>
+                <!--typewriter effect-->
+                <ul>
+                    <li>
+                        WEB DEVELOPER
+                        <span class="typed-cursor">|</span>
+                    </li>
+                </ul>
+                <!--social media-->
+                <div class="social-icon">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fa fa-behance" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    <i class="fa fa-dribbble" aria-hidden="true"></i>
+                </div>
+            </div>
         </div>
     </header>
     <!-- header end -->
 
-    <!-- section HERO begin -->
+    <!-- section About Me begin -->
     <section class="container">
         <div class="row">
-            HERO
+            <img class="portrait col-5" src="./img/about.jpg" alt="grey hair man portrait">
+            <div class="about col-7">
+                <div class="row-title">
+                    <h4><span>About</span> Me</h4>
+                </div>
+                    <h5>i am a ui/ux designer and a human</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ea blanditiis sunt fugiat nam
+                            officia
+                            ut rerum culpa quam odio ipsa itaque, impedit laboriosam non eaque numquam magnam. Veniam,
+                            aperiam.
+                        </p>
+                        <div class="info">
+                            <div class="info left col-3">
+                                <ul>
+                                    <li>Name: <span>John Doe</span></li>
+                                    <li>Age: <span>27</span></li>
+                                </ul>
+                            </div>
+                            <div class="info right col-3">
+                                <ul>
+                                    <li>Email: <span>John_Doe@gmail.com</span></li>
+                                    <li>Location : <span>Los Angeles, USA</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <input type="submit" value="Dowload resume" class="btn">
+                        <input type="submit" value="Hire me" class="btn">
+            </div>
         </div>
     </section>
-    <!-- section HERO end -->
+    <!-- section About Me end -->
 
-    <!-- section FEATURES begin -->
-    <section class="container">
+    <!-- section SKILLS begin -->
+    <section class="container skills">
         <div class="row">
-            FEATURES
+            <div class="row-title col-12">
+                <h4><span>My</span> Skills</h4>
+            </div>
+            <div class="skills-bars col-6">
+                <div class="progress-bar">
+                    <div class="label">Photography</div>
+                    <div class="pbar">
+                        <div class="pbar loading"></div>
+                        <div class="bar-value">73%</div>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="label">Branding</div>
+                    <div class="pbar">
+                        <div class="pbar loading"></div>
+                        <div class="bar-value">73%</div>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="label">Graphic design</div>
+                    <div class="pbar">
+                        <div class="pbar loading"></div>
+                        <div class="bar-value">73%</div>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="label">Development</div>
+                    <div class="pbar">
+                        <div class="pbar loading"></div>
+                        <div class="bar-value">73%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-bars col-6">
+                <div class="progress-bar">
+                    <div class="label">Html/Css</div>
+                    <div class="pbar">
+                        <div class="pbar loading"></div>
+                        <div class="bar-value">73%</div>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="label">Js/Jquery</div>
+                    <div class="pbar">
+                        <div class="pbar loading"></div>
+                        <div class="bar-value">73%</div>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="label">Php/Wordpress</div>
+                    <div class="pbar">
+                        <div class="pbar loading"></div>
+                        <div class="bar-value">73%</div>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="label">Photoshop</div>
+                    <div class="pbar">
+                        <div class="pbar loading"></div>
+                        <div class="bar-value">73%</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <!-- section FEATURES end -->
+    <!-- section SKILLS end -->
 
-    <!-- section APP PROMO begin -->
-    <section class="container">
+    <!-- section RESUME begin -->
+    <section class="container resume">
         <div class="row">
-            APP PROMO
+                <div class="row-title col-12">
+                    <h4><span>My</span> Resume</h4>
+                </div>
+            <!-- Left column -->
+            <div class="col-6 col-md-6 col-xs-12">
+                <div class="resume-left-column">
+                    <div class="icon">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        <!-- <img class="fa-book" src="./img/fa-book.png" alt=""> -->
+                    </div>
+                    <ul class="left-column">
+                        <li class="list">
+                            <span class="res-dot" class="res-dot">Jan 2004 - Dec 2006</span>
+                            <h5>Specialization course</h5>
+                            <h6>University Of Studies, Poland, Cracow</h6>
+                        </li>
+                        <li class="list">
+                            <span class="res-dot">Jan 2004 - Dec 2006</span>
+                            <h5>Specialization course</h5>
+                            <h6>University Of Studies, Poland, Cracow</h6>
+                        </li>
+                        <li class="list">
+                            <span class="res-dot">Jan 2004 - Dec 2006</span>
+                            <h5>Specialization course</h5>
+                            <h6>University Of Studies, Poland, Cracow</h6>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Right column -->
+            <div class="col-6 col-md-6 col-xs-12">
+                <div class="resume-right-column">
+                    <div class="icon">
+                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                        <!-- <img class="fa-briefcase" src="./img/fa-briefcase.png" alt=""> -->
+                    </div>
+                    <ul class="right-column">
+                        <li class="list">
+                            <span class="res-dot">Jan 2004 - Dec 2006</span>
+                            <h5>Specialization course</h5>
+                            <h6>University Of Studies, Poland, Cracow</h6>
+                        </li>
+                        <li class="list">
+                            <span class="res-dot">Jan 2004 - Dec 2006</span>
+                            <h5>Specialization course</h5>
+                            <h6>University Of Studies, Poland, Cracow</h6>
+                        </li>
+                        <li class="list">
+                            <span class="res-dot">Jan 2004 - Dec 2006</span>
+                            <h5>Specialization course</h5>
+                            <h6>University Of Studies, Poland, Cracow</h6>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
-    <!-- section APP PROMO end -->
+    <!-- section RESUME end -->
 
-    <!-- section APP PROMO 2 begin -->
-    <section class="container">
+    <!-- section CLIENT/COUNTER begin -->
+    <section class="container counter overlay">
         <div class="row">
-            APP PROMO 2
+            <div class="col-3">
+                <div class="block-counter col-3">
+                    <div class="counter-icon">
+                        <span class="fa fa-heart"></span>
+                    </div>
+                    <h4 class="integers">738</h4>
+                    <h5 class="counter-label">Happy clients</h5>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="block-counter">
+                    <div class="counter-icon">
+                        <span class="fa fa-check-square-o"></span>
+                    </div>
+                    <h4 class="integers">102</h4>
+                    <h5 class="counter-label">Successful projects</h5>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="block-counter">
+                    <div class="counter-icon">
+                        <span class="fa fa-trophy"></span>
+                    </div>
+                    <h4 class="integers">06</h4>
+                    <h5 class="counter-label">Awards received</h5>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="block-counter">
+                    <div class="counter-icon">
+                        <span class="fa fa-coffee"></span>
+                    </div>
+                    <h4 class="integers">511</h4>
+                    <h5 class="counter-label">Cups of tea</h5>
+                </div>
+            </div>
         </div>
     </section>
-    <!-- section APP PROMO 2 end -->
+    <!-- section CLIENT/COUNTER end -->
 
-    <!-- section HOW WORKS? begin -->
+    <!-- section SERVICES begin -->
     <section class="container">
         <div class="row">
-            HOW WORKS?
+            SERVICES
         </div>
     </section>
-    <!-- section HOW WORKS? end -->
+    <!-- section SERVICES end -->
 
-    <!-- section GALLERY begin -->
+    <!-- section PORTFOLIO begin -->
     <section class="container">
         <div class="row">
-            GALLERY
+            PORTFOLIO
         </div>
     </section>
-    <!-- section GALLERY end -->
+    <!-- section PORTFOLIO end -->
 
     <!-- section TESTIMONIALS begin -->
-    <section class="container">
+    <section class="container testimonials">
         <div class="row">
-            TESTIMONIALS
+            <div class="testi-cont-wrap col-12">
+                <div class="review-wrap">
+                    <h5 class="review-title upper rev-row">Awwwesome work</h5>
+                    <div class="stars rev-row">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <p class="review rev-row">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repudiandae distinctio consequatur provident repellendus a at tenetur, velit odit maiores nam, adipisci quo voluptate ab quisquam in earum accusamus nulla! A placeat deserunt dignissimos quasi ipsum quae atque praesentium! Ipsa!</p>
+                    <h5 class="rev-row reviewer upper">Jack Daniel</h5>
+                    <h5 class="rev-row reviewer-pos upper">Graphic designer</h5>
+                </div>
+                <div class="review-sliders rev-row">
+                    <div class="slider"></div>
+                    <div class="slider"></div>
+                    <div class="slider"></div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- section TESTIMONIALS end -->
 
-    <!-- section PRICING begin -->
+    <!-- section BLOG begin -->
     <section class="container">
         <div class="row">
-            PRICING
+            BLOG
         </div>
     </section>
-    <!-- section PRICING end -->
-
-    <!-- section FAQ begin -->
-    <section class="container">
-        <div class="row">
-            FAQ
-        </div>
-    </section>
-    <!-- section FAQ end -->
-
-    <!-- section TEAM begin -->
-    <section class="container">
-        <div class="row">
-            TEAM
-        </div>
-    </section>
-    <!-- section TEAM end -->
-
-    <!-- section APP STORE begin -->
-    <section class="container">
-        <div class="row">
-            APP STORE
-        </div>
-    </section>
-    <!-- section APP STORE end -->
-
-    <!-- section SUBSCRIBE begin -->
-    <section class="container">
-        <div class="row">
-            SUBSCRIBE
-        </div>
-    </section>
-    <!-- section SUBSCRIBE end -->
+    <!-- section BLOG end -->
 
     <!-- section CONTACT begin -->
-    <section class="container">
-        <div class="row">
-            CONTACT
+    <section class="container contacts">
+        <div class="row contacts-row">
+            <div class="cont-left col-7">
+                <div class="row-title">
+                    <h4><span>Get </span>in touch</h4>
+                </div>
+                <form>
+                    <div class="cont-row">
+                        <div class="c-icon fa fa-user"></div>
+                        <input class="cont-input" placeholder="your full name here" type="text" maxlength="50">
+                    </div>
+                    <div class="cont-row">
+                        <div class="c-icon fa fa-envelope"></div>
+                        <input class="cont-input" placeholder="your email here" type="email" maxlength="50">
+                    </div>
+                    <div class="cont-row">
+                        <div class="c-icon fa fa-comment"></div>
+                        
+                        <textarea class="cont-input message" placeholder="message for me" maxlength="1000" required></textarea>
+                    </div>
+                    <button class="btn">Send message</button>
+                </form>
+            </div>
+            <div class="cont-right col-5">
+                <h4>Contact info.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis quibusdam eius ad quis repellat.</p>
+                <div class="cont-row cont-info">
+                    <div class="ci-icon fa fa-headphones"></div>
+                    <span>+00123456789</span>
+                </div>
+                <div class="cont-row cont-info">
+                    <div class="ci-icon fa fa-paper-plane"></div>
+                    <span>DEMO@GMAIL.COM</span>
+                </div>
+                <div class="cont-row cont-info">
+                    <div class="ci-icon fa fa-map-marker"></div>
+                    <span>Buckingham palace, London
+                    </span>
+                </div>
+            </div>
         </div>
     </section>
     <!-- section CONTACT end -->

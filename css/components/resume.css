@@ -1,0 +1,125 @@
+.col-12 {
+    text-align: center;
+}
+
+.left-column h5 {
+    font-size: 16px;
+    color: #9c27b0;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 15px 0 8px 0;
+}
+
+.right-column h5 {
+    font-size: 16px;
+    color: #9c27b0;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 15px 0 8px 0;
+}
+
+.list {
+    position: relative;
+    list-style: none;
+    padding: 30px 30px 10px 30px;
+    margin: 0 0 10px 0;
+}
+
+.left-column {
+    text-align: right;
+    padding: 50px 0 5px 0;
+    border-right: 1px solid #f5f5f5;
+}
+
+.left-column span {
+    font-size: 14px;
+    line-height: 11px;
+    color: #4b4b4b;
+}
+
+.left-column h6 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #4b4b4b;;
+}
+
+.right-column {
+    padding: 50px 0 5px 0;
+    border-left: 1px solid #f5f5f5;;
+}
+
+.right-column span {
+    font-size: 14px;
+    line-height: 11px;
+    color: #4b4b4b;
+}
+
+.right-column h6 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #4b4b4b;;
+}
+   
+span.res-dot::after {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: -7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid #d6b161;
+    background-color: #2e353e;
+}
+    .resume-right-column span.res-dot::after {
+        left: -7px;
+    }
+
+.container > .row {
+    gap: 20px;
+}
+
+.resume-left-column {
+    position: relative;
+    margin-right: 25px;
+}
+
+.resume-right-column {
+    position: relative;
+    margin-left: 25px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: -20px;
+    background-color: #2e353e;
+    color: #fff;
+    border-radius: 50%; 
+}
+    .resume-right-column .icon {
+        left: -20px;
+    }
+
+@media (max-width: 680px) {
+    .left-column > .list > span::after {
+        left: -7px;
+    }
+
+    .left-column {
+        text-align: left;
+        padding: 20px 0 5px 0;
+        border-left: 1px solid #f5f5f5;
+        border-right: 0px solid #f5f5f5;
+    }
+    .resume-right-column {
+        position: relative;
+        margin-left: 0;
+    }
+
+}

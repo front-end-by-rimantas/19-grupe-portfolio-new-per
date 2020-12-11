@@ -1,0 +1,50 @@
+.container.counter {
+    background: url(../../img/client.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+}
+    .container.counter > .row {
+        z-index: 1;
+    }
+        .counter .col-3 {
+            padding: 0 15px;
+        }
+            .block-counter {
+                text-align: center;
+            }
+                .counter-icon {
+                    color: var(--main-color);
+                    margin-bottom: 30px;
+                    font-size: 30px;
+                    transition: all 0.3s;
+                }
+                .block-counter:hover > .counter-icon {
+                    transform: scale(1.1);
+                }
+                .integers {
+                    font-size: 1.5rem;
+                    font-weight: 800;
+                    font-style: italic;
+                    color: #FFFFFF;
+                    margin-bottom: var(--main-space);
+                }
+                .counter-label {
+                    color: var(--clients-text-color);
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    margin-bottom: 8px;
+                }
