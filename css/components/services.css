@@ -34,7 +34,7 @@
     border-radius: 50%;
     font-size: 2rem;
     color: #9c27b0;
-    transition: all .8s;
+    transition: .8s;
 }
 
 .service-text {
