@@ -1,0 +1,52 @@
+/* Container background */
+.testimonials {
+    background: url(../../img/client.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+    .testimonials::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.6);
+        z-index: -1;
+    }
+/* background ends */
+.testimonials .row {
+    background: white;
+}
+.upper {
+    text-transform: uppercase;
+}
+.review-wrap .rev-row {
+    width: 100%;
+    text-align: center;
+}
+.testi-cont-wrap{
+
+}
+    .testi-cont-wrap .review-wrap {
+
+    }
+        .review-wrap .review-title{
+
+        }
+        .review-wrap .stars {
+
+        }
+        .review-wrap .review {
+
+        }
+        .review-wrap .reviewer {
+            
+        }
+        .review-wrap .reviewer-pos {
+            
+        }
