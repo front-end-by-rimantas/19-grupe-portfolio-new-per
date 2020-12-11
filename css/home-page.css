@@ -27,27 +27,24 @@ CUSTOM HOME PAGE STYLES GOES BELOW THIS COMMENT
 
 /* main style */
     /* --title style start--*/
-    .container.skills .row > .row-title {
+    .container .row .row-title {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: var(--section-heading-space);
     }
-
         .row-title * {
             font-family: 'Montserrat', sans-serif;
             font-weight: 500;
         }
-        .about .row-title > h4 {
-            border-color: var(--background-color);
-        }
+        
         .row-title > h4 {
             display: inline-block;
             text-transform: capitalize;
             color: var(--h4-color);
             text-shadow: 1px 3px 3px #00000023;
-            border-bottom: 1px solid #fff;
+            border-bottom: 1px solid var(--background-color);
             position: relative;
             font-size: 2rem;
             padding-bottom: 10px;
@@ -72,12 +69,24 @@ CUSTOM HOME PAGE STYLES GOES BELOW THIS COMMENT
 /* hero */
 
 /* about me */
+.container .row .about .row-title {
+    justify-content: flex-start;
+}
 /* skills */
+.skills .row-title > h4 {
+    border-color: #fff;
+}
 /* resume */
 /* client counter */
 /* services */
+.services .row-title > h4{
+    border-color: #fff;
+}
 /* portfolio */
 /* testimonials */
 /* blog */
 /* contact */
+.container .contacts .row-title {
+    justify-content: flex-start;
+}
 /* footer */
