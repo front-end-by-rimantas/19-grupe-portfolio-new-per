@@ -52,7 +52,6 @@
         .stars > i {
             color: #e2be08;
             padding: 2px;
-            box-shadow: inset 1px 6px 1px #000 ;
         }
         .review {
            margin-bottom: 30px;
