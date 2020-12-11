@@ -74,7 +74,9 @@
         <div class="row">
             <img class="portrait col-5" src="./img/about.jpg" alt="grey hair man portrait">
             <div class="about col-7">
-                <h4><span>About</span> me</h1>
+                <div class="row-title">
+                    <h4><span>About</span> Me</h4>
+                </div>
                     <h5>i am a ui/ux designer and a human</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ea blanditiis sunt fugiat nam
                             officia
@@ -173,14 +175,11 @@
     <!-- section SKILLS end -->
 
     <!-- section RESUME begin -->
-    <section class="container">
+    <section class="container resume">
         <div class="row">
-            <div class="col-12">
-                <div class="title">
-                    <h4 class="title">
-                        <span>My</span> Resume</h4>
+                <div class="row-title col-12">
+                    <h4><span>My</span> Resume</h4>
                 </div>
-            </div>
             <!-- Left column -->
             <div class="col-6 col-md-6 col-xs-12">
                 <div class="resume-left-column">
@@ -334,9 +333,46 @@
     <!-- section BLOG end -->
 
     <!-- section CONTACT begin -->
-    <section class="container">
-        <div class="row">
-            CONTACT
+    <section class="container contacts">
+        <div class="row contacts-row">
+            <div class="cont-left col-7">
+                <div class="row-title">
+                    <h4><span>Get </span>in touch</h4>
+                </div>
+                <form>
+                    <div class="cont-row">
+                        <div class="c-icon fa fa-user"></div>
+                        <input class="cont-input" placeholder="your full name here" type="text" maxlength="50">
+                    </div>
+                    <div class="cont-row">
+                        <div class="c-icon fa fa-envelope"></div>
+                        <input class="cont-input" placeholder="your email here" type="email" maxlength="50">
+                    </div>
+                    <div class="cont-row">
+                        <div class="c-icon fa fa-comment"></div>
+                        
+                        <textarea class="cont-input message" placeholder="message for me" maxlength="1000" required></textarea>
+                    </div>
+                    <button class="btn">Send message</button>
+                </form>
+            </div>
+            <div class="cont-right col-5">
+                <h4>Contact info.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis quibusdam eius ad quis repellat.</p>
+                <div class="cont-row cont-info">
+                    <div class="ci-icon fa fa-headphones"></div>
+                    <span>+00123456789</span>
+                </div>
+                <div class="cont-row cont-info">
+                    <div class="ci-icon fa fa-paper-plane"></div>
+                    <span>DEMO@GMAIL.COM</span>
+                </div>
+                <div class="cont-row cont-info">
+                    <div class="ci-icon fa fa-map-marker"></div>
+                    <span>Buckingham palace, London
+                    </span>
+                </div>
+            </div>
         </div>
     </section>
     <!-- section CONTACT end -->
