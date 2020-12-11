@@ -1,0 +1,7 @@
+.filtering {
+    margin-bottom: var(--section-heading-space);
+    text-align: center;
+}
+    .filtering .button {
+        display: inline-block;
+    }
