@@ -21,7 +21,7 @@
         .block-counter {
             text-align: center;
         }
-            .block-counter .icon {
+            .counter-icon {
                 color: var(--main-color);
                 margin-bottom: 30px;
                 font-size: 30px;
