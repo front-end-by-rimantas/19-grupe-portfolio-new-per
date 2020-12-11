@@ -10,21 +10,21 @@
 img {
     width: 900px;
 }
-
-.contacts-row .cont-left {
+.contacts-row .cont-left, .cont-right {
     width: 100%;
-    padding: 30px;
+    padding: 40px 10px 40px 40px;
+    
 }
     .cont-left form .cont-row {
         width: 100%;
         display: flex;
         justify-content: flex-start;
-        align-items: center;
         margin-bottom: 15px;
         height: 40px;
     }
     .cont-left form .cont-row:last-of-type {
-        min-height: 150px;
+        min-height: 100px;
+        max-height: 400px;
         margin-bottom: 25px;
     }
     .cont-row .c-icon {
@@ -49,6 +49,9 @@ img {
     }  
         textarea.cont-input.message {
             resize: vertical;
+            min-height: 100px;
+            max-height: 400px;
+            padding: 10px;
         }
         .cont-input::placeholder {
             color: var(--clients-text-color);
@@ -58,24 +61,38 @@ img {
             width: 100%;
         }
     
-    
 .cont-right {
-    background: aqua;
+    background-image: url(../../img/contact.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #fff;
+    position: relative;
+}
+.cont-right::before {
+    background-color: #9C27B0c4;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
     .cont-right > h4 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         font-size: 2rem;
         text-transform: capitalize;
+        margin-bottom: 1.5rem;
     }
     .cont-right > p {
         font-family: 'Roboto', sans-serif;
+        margin-bottom: 1.5rem;
     }
     .cont-right .cont-row {
         width: 100%;
-        background-color: pink;
-        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        margin-bottom: 15px;
+        height: 40px;
     }
         .ci-icon {
             display: flex;
@@ -83,7 +100,7 @@ img {
             align-items: center;
             width: 32px;
             height: 32px;
-            margin-bottom: 10px;
-            border-radius: 20px;
+            margin: 0 10px 15px 0;
+            border-radius: 16px;
             border: 1px solid #fff;
         }
