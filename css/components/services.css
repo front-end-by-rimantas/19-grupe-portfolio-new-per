@@ -21,10 +21,10 @@
 .services:after {
     content: "";
     position: absolute;
-    left: 11%;
+    left: 7%;
     top: 56%;
     background-color: #fff;
-    width: 78%;
+    width: 86%;
     height: 1px;
 }
 
