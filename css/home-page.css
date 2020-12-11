@@ -86,7 +86,7 @@ CUSTOM HOME PAGE STYLES GOES BELOW THIS COMMENT
 /* testimonials */
 /* blog */
 /* contact */
-.container .contacts .row-title {
+.container .contacts-row .row-title {
     justify-content: flex-start;
 }
 /* footer */
