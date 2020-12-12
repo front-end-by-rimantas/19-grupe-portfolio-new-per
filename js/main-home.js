@@ -8,7 +8,8 @@ ALL IMPORTS
 /* resume */
 /* client counter */
 /* services */
-import {  } from "./data/servicesData.js";
+import { servicesData } from "./data/servicesData.js";
+import { renderMyServices } from "./components/myServices/renderMyServices.js";
 /* portfolio */
 /* testimonials */
 /* blog */
@@ -25,6 +26,7 @@ EXECUTION
 /* resume */
 /* client counter */
 /* services */
+renderMyServices('#services-block', servicesData)
 /* portfolio */
 /* testimonials */
 /* blog */
