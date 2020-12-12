@@ -3,7 +3,6 @@
 }
     .container.skills .skills-bars:nth-of-type(1){
         padding-left: 15px;
-        
     }
     .container.skills .skills-bars:nth-of-type(2){
         padding-right: 15px;
@@ -44,3 +43,15 @@
                 border-radius: 5px;
                 margin-top: 5px;
             }
+
+@media (max-width: 680px) {
+    .container {
+        grid-template-columns: 20px 1fr 20px;
+    }
+    .container.skills > .row {
+        gap: 0;
+    }
+    .container.skills .skills-bars:nth-of-type(2) {
+        padding-right: 0;
+    }
+}

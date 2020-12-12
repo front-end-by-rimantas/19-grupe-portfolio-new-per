@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/png">
     <!-- fonts begin-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,6 +14,8 @@
     <!-- fonts end -->
     <!-- css begin -->
     <link rel="stylesheet" href="./css/home-page.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <!-- css end -->
 </head>
 
@@ -74,29 +77,33 @@
         <div class="row">
             <img class="portrait col-5" src="./img/about.jpg" alt="grey hair man portrait">
             <div class="about col-7">
-                <h4><span>About</span> me</h1>
-                    <h5>i am a ui/ux designer and a human</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ea blanditiis sunt fugiat nam
-                            officia
-                            ut rerum culpa quam odio ipsa itaque, impedit laboriosam non eaque numquam magnam. Veniam,
-                            aperiam.
-                        </p>
-                        <div class="info">
-                            <div class="info left col-3">
-                                <ul>
-                                    <li>Name: <span>John Doe</span></li>
-                                    <li>Age: <span>27</span></li>
-                                </ul>
-                            </div>
-                            <div class="info right col-3">
-                                <ul>
-                                    <li>Email: <span>John_Doe@gmail.com</span></li>
-                                    <li>Location : <span>Los Angeles, USA</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <input type="submit" value="Dowload resume" class="btn">
-                        <input type="submit" value="Hire me" class="btn">
+                <div class="row-title">
+                    <h4><span>About</span> Me</h4>
+                </div>
+                <h5>i am a ui/ux designer and a human</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ea blanditiis sunt fugiat nam
+                    officia
+                    ut rerum culpa quam odio ipsa itaque, impedit laboriosam non eaque numquam magnam. Veniam,
+                    aperiam.
+                </p>
+                <div class="info">
+                    <div class="info left col-3">
+                        <ul>
+                            <li>Name: <span>John Doe</span></li>
+                            <li>Age: <span>27</span></li>
+                        </ul>
+                    </div>
+                    <div class="info right col-3">
+                        <ul>
+                            <li>Email: <span>John_Doe@gmail.com</span></li>
+                            <li>Location : <span>Los Angeles, USA</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="btn">Download resume</a>
+                    <a href="#" class="btn">Hire me</a>
+                </div>
             </div>
         </div>
     </section>
@@ -108,7 +115,7 @@
             <div class="row-title col-12">
                 <h4><span>My</span> Skills</h4>
             </div>
-            <div class="skills-bars col-6">
+            <div class="skills-bars col-6 col-xs-12">
                 <div class="progress-bar">
                     <div class="label">Photography</div>
                     <div class="pbar">
@@ -138,7 +145,7 @@
                     </div>
                 </div>
             </div>
-            <div class="skills-bars col-6">
+            <div class="skills-bars col-6 col-xs-12">
                 <div class="progress-bar">
                     <div class="label">Html/Css</div>
                     <div class="pbar">
@@ -173,14 +180,10 @@
     <!-- section SKILLS end -->
 
     <!-- section RESUME begin -->
-    <section class="container">
+    <section class="container resume">
         <div class="row">
-            <div class="col-12">
-                <div class="title">
-                    <h4 class="title">
-                        <span>My</span> Resume
-                    </h4>
-                </div>
+            <div class="row-title col-12">
+                <h4><span>My</span> Resume</h4>
             </div>
             <!-- Left column -->
             <div class="col-6 col-md-6 col-xs-12">
@@ -239,17 +242,127 @@
     <!-- section RESUME end -->
 
     <!-- section CLIENT/COUNTER begin -->
-    <section class="container">
+    <section class="container counter overlay">
         <div class="row">
-            CLIENT/COUNTER
+            <div class="col-3">
+                <div class="block-counter col-3">
+                    <div class="counter-icon">
+                        <span class="fa fa-heart"></span>
+                    </div>
+                    <h4 class="integers">738</h4>
+                    <h5 class="counter-label">Happy clients</h5>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="block-counter">
+                    <div class="counter-icon">
+                        <span class="fa fa-check-square-o"></span>
+                    </div>
+                    <h4 class="integers">102</h4>
+                    <h5 class="counter-label">Successful projects</h5>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="block-counter">
+                    <div class="counter-icon">
+                        <span class="fa fa-trophy"></span>
+                    </div>
+                    <h4 class="integers">06</h4>
+                    <h5 class="counter-label">Awards received</h5>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="block-counter">
+                    <div class="counter-icon">
+                        <span class="fa fa-coffee"></span>
+                    </div>
+                    <h4 class="integers">511</h4>
+                    <h5 class="counter-label">Cups of tea</h5>
+                </div>
+            </div>
         </div>
     </section>
     <!-- section CLIENT/COUNTER end -->
 
     <!-- section SERVICES begin -->
-    <section class="container">
+    <section class="container services">
         <div class="row">
-            SERVICES
+            <!-- title -->
+            <div class="row-title col-12">
+                <h4><span>My</span> Services</h4>
+            </div>
+            <div class="col-4 col-md-6 col-xs-12">
+                <div class="services-item text-center">
+                    <div>
+                        <span class="zmdi zmdi-flower-alt"></span>
+                    </div>
+                    <div class="service-text">
+                        <h4>Branding</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-md-6 col-xs-12">
+                <div class="services-item text-center">
+                    <div>
+                        <span class="zmdi zmdi-devices"></span>
+                    </div>
+                    <div class="service-text">
+                        <h4>Web Design</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-md-6 col-xs-12">
+                <div class="services-item text-center">
+                    <div>
+                        <span class="zmdi zmdi-shopping-basket"></span>
+                    </div>
+                    <div class="service-text">
+                        <h4>Marketing</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-md-6 col-xs-12">
+                <div class="services-item text-center">
+                    <div>
+                        <span class="zmdi zmdi-code-setting"></span>
+                    </div>
+                    <div class="service-text">
+                        <h4>Clean Code</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-md-6 col-xs-12">
+                <div class="services-item text-center">
+                    <div>
+                        <span class="zmdi zmdi-collection-item"></span>
+                    </div>
+                    <div class="service-text">
+                        <h4>Friendly All Screen</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-md-6 col-xs-12">
+                <div class="services-item text-center">
+                    <div>
+                        <span class="zmdi zmdi-compass"></span>
+                    </div>
+                    <div class="service-text">
+                        <h4>Unlimited Support</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- section SERVICES end -->
@@ -323,9 +436,31 @@
     <!-- section PORTFOLIO end -->
 
     <!-- section TESTIMONIALS begin -->
-    <section class="container">
+    <section class="container testimonials">
         <div class="row">
-            TESTIMONIALS
+            <div class="testi-cont-wrap col-12">
+                <div class="review-wrap">
+                    <h5 class="review-title upper rev-row">Awwwesome work</h5>
+                    <div class="stars rev-row">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <p class="review rev-row">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+                        repudiandae distinctio consequatur provident repellendus a at tenetur, velit odit maiores nam,
+                        adipisci quo voluptate ab quisquam in earum accusamus nulla! A placeat deserunt dignissimos
+                        quasi ipsum quae atque praesentium! Ipsa!</p>
+                    <h5 class="rev-row reviewer upper">Jack Daniel</h5>
+                    <h5 class="rev-row reviewer-pos upper">Graphic designer</h5>
+                </div>
+                <div class="review-sliders rev-row">
+                    <div class="slider"></div>
+                    <div class="slider"></div>
+                    <div class="slider"></div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- section TESTIMONIALS end -->
@@ -339,9 +474,48 @@
     <!-- section BLOG end -->
 
     <!-- section CONTACT begin -->
-    <section class="container">
-        <div class="row">
-            CONTACT
+    <section class="container contacts">
+        <div class="row contacts-row">
+            <div class="cont-left col-7">
+                <div class="row-title">
+                    <h4><span>Get </span>in touch</h4>
+                </div>
+                <form>
+                    <div class="cont-row">
+                        <div class="c-icon fa fa-user"></div>
+                        <input class="cont-input" placeholder="your full name here" type="text" maxlength="50">
+                    </div>
+                    <div class="cont-row">
+                        <div class="c-icon fa fa-envelope"></div>
+                        <input class="cont-input" placeholder="your email here" type="email" maxlength="50">
+                    </div>
+                    <div class="cont-row">
+                        <div class="c-icon fa fa-comment"></div>
+
+                        <textarea class="cont-input message" placeholder="message for me" maxlength="1000"
+                            required></textarea>
+                    </div>
+                    <button class="btn">Send message</button>
+                </form>
+            </div>
+            <div class="cont-right col-5">
+                <h4>Contact info.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis quibusdam eius ad quis
+                    repellat.</p>
+                <div class="cont-row cont-info">
+                    <div class="ci-icon fa fa-headphones"></div>
+                    <span>+00123456789</span>
+                </div>
+                <div class="cont-row cont-info">
+                    <div class="ci-icon fa fa-paper-plane"></div>
+                    <span>DEMO@GMAIL.COM</span>
+                </div>
+                <div class="cont-row cont-info">
+                    <div class="ci-icon fa fa-map-marker"></div>
+                    <span>Buckingham palace, London
+                    </span>
+                </div>
+            </div>
         </div>
     </section>
     <!-- section CONTACT end -->
@@ -349,7 +523,9 @@
     <!-- footer begin -->
     <footer class="container">
         <div class="row">
-            FOOTER
+            <div class="bottom-text col-12">
+                <h6>Copy Right &copy; By A-Shawky 2020 | All Rights Reserved.</h6>
+            </div>
         </div>
     </footer>
     <!-- footer end -->

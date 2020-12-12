@@ -1,10 +1,12 @@
 .btn {
+  display: inline-block;
   background: var(--main-color);
   font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
   text-align: center;
   font-size: 13px;
   text-transform: uppercase;
+  text-decoration: none;
   line-height: 1.2em;
   color: #fff;
   border-radius: 25px;
@@ -12,8 +14,7 @@
   margin: 0 10px 15px 0;
   padding: 1em 3em;
   position: relative;
-  transform: perspective(1px) translateZ(0);
-  transition-duration: 0.5s;
+  z-index: 0;
 }
 
 .btn::after {
@@ -25,17 +26,17 @@
   left: 0;
   right: 0;
   background: #fff;
-  transform: scaleX(0);
-  transform-origin: 50%;
-  transition-property: transform;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
+  transform: scaleX(0); /* works in X axis */
+  transform-origin: 50%; /* starts from the middle */
+  transition: all 0.5s ease-in-out; /* animation */
 }
+  /* hover action on the actual element */
   .btn:hover, .btn:focus, .btn:active {
     color: var(--title-color);
     cursor: pointer;
   }
+  /* hover action on the pseudo ::after element */
   .btn:hover:after, .btn:focus:after, .btn:active:after {
-    transform: scaleX(1.099);
+    transform: scaleX(1.099); /* where it finishes */
     border-radius: 25px;
   }

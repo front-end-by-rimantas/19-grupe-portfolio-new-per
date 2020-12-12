@@ -1,0 +1,117 @@
+.container.contacts{
+    background-color: var(--background-color);
+}
+    .contacts-row {
+        background-color: #fff;
+    }
+
+.contacts-row .cont-left, .cont-right {
+    width: 100%;
+    padding: 50px 10px 40px 40px;
+}
+    .cont-left > form .cont-row {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .cont-left form .cont-row:last-of-type {
+        min-height: 100px;
+        max-height: 400px;
+        margin-bottom: 25px;
+    }
+
+    .cont-row .c-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        padding: 10px;
+        background-color: #E9ECEF;
+        color: #495057;
+        border-radius: 5px 0 0 5px;
+    }
+
+    form .cont-row .cont-input {
+        background: var(--background-color);
+        width: 100%;
+        height: 40px;
+        color: #495057;
+        font-family: 'Roboto', sans-serif;
+        padding: 0 10px;
+        border: none;
+        outline: none;
+    }  
+
+        textarea.cont-input.message {
+            resize: vertical;
+            min-height: 100px;
+            max-height: 400px;
+            padding: 10px;
+        }
+
+        .cont-input::placeholder {
+            color: var(--clients-text-color);
+            text-transform: capitalize;
+        }
+
+        form .btn {
+            width: 100%;
+        }
+    
+.cont-right {
+    background-image: url(../../img/contact.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffffe7;
+    position: relative;
+    padding-right: 40px;
+    z-index: 1;
+}
+
+    .cont-right::before {
+        background-color: #9C27B0e9;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .cont-right > h4 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 2rem;
+        text-transform: capitalize;
+        margin-bottom: 1.5rem;
+    }
+
+    .cont-right > p {
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 1.5rem;
+        letter-spacing: 1px;
+        line-height: 1.6rem;
+    }
+
+        .cont-right .cont-row {
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            margin-bottom: 10px;
+            height: 40px;
+        }
+
+            .ci-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 32px;
+                height: 32px;
+                margin-right: 15px;
+                border-radius: 20px;
+                border: 1px solid var(--background-color);
+            }
