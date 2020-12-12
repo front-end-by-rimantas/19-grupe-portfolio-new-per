@@ -26,7 +26,7 @@ EXECUTION
 /* resume */
 /* client counter */
 /* services */
-renderMyServices('#services-block', servicesData)
+renderMyServices('#services-block', servicesData);
 /* portfolio */
 /* testimonials */
 /* blog */

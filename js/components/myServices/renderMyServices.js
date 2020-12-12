@@ -1,3 +1,5 @@
+import { areServicesValid } from "./areServicesValid.js";
+
 /**
  * My Services turinį generuojanti funkcija
  * @param {string} selector CSS like salyga, kaip rasti norima vieta turinio generavimui
@@ -5,6 +7,7 @@
  * @returns {*}
  */
 function renderMyServices(selector, servicesData) {
+
 
     const DOM = document.querySelector(selector);
     if (!DOM) {
@@ -17,7 +20,10 @@ function renderMyServices(selector, servicesData) {
 
     for (let i = 0; i < count; i++) {
         const services = servicesData.data[i];
-
+        if (!areServicesValid(services)) {
+            continue;
+        }
+        
         HTML += `<div class="col-4 col-md-6 col-xs-12">
         <div class="services-item text-center">
             <div>
@@ -32,7 +38,7 @@ function renderMyServices(selector, servicesData) {
     }
 
     DOM.innerHTML = HTML;
-    
+
 }
 
 export { renderMyServices }
