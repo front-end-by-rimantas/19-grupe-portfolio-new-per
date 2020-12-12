@@ -13,7 +13,7 @@
     border-left: 1px solid #fff;
 }
 
-.services-item span:hover {
+.services-item:hover span {
     background-color: #9c27b0;
     color: #fff;
 }

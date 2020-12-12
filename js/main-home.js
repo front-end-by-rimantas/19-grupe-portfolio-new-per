@@ -8,6 +8,7 @@ ALL IMPORTS
 /* resume */
 /* client counter */
 /* services */
+import {  } from "./data/servicesData.js";
 /* portfolio */
 /* testimonials */
 /* blog */
