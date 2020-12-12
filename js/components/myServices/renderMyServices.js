@@ -4,7 +4,7 @@ import { isValidInput } from "./isValidInput.js";
 /**
  * My Services turinį generuojanti funkcija
  * @param {string} selector CSS like salyga, kaip rasti norima vieta turinio generavimui
- * @param {Array} data Sąrašas objektų, aprašancių kiekvieną paslaugą
+ * @param {Array} data Sąrašas objektų, aprašančių kiekvieną paslaugą
  * @returns {*}
  */
 function renderMyServices(selector, servicesData) {
