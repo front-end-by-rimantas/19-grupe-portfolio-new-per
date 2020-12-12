@@ -65,3 +65,10 @@
         padding: 15px 40px;
     }
 }
+
+@media (max-width: 680px) {
+    .services-item {
+        border-right: none;
+        border-left: none;
+    }
+}
