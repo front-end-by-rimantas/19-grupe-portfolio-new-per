@@ -1,4 +1,5 @@
 import { areServicesValid } from "./areServicesValid.js";
+import { isValidInput } from "./isValidInput.js";
 
 /**
  * My Services turinį generuojanti funkcija
@@ -7,7 +8,9 @@ import { areServicesValid } from "./areServicesValid.js";
  * @returns {*}
  */
 function renderMyServices(selector, servicesData) {
-
+    if (!isValidInput(selector, servicesData)) {
+        return false;
+    }
 
     const DOM = document.querySelector(selector);
     if (!DOM) {
