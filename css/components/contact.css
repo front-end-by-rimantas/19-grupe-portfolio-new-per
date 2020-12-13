@@ -7,7 +7,7 @@
 
 .contacts-row .cont-left, .cont-right {
     width: 100%;
-    padding: 50px 10px 40px 40px;
+    padding: 50px 20px 40px 40px;
 }
     .cont-left > form .cont-row {
         width: 100%;
@@ -17,8 +17,6 @@
     }
 
     .cont-left form .cont-row:last-of-type {
-        min-height: 100px;
-        max-height: 400px;
         margin-bottom: 25px;
     }
 
@@ -26,7 +24,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 3rem;
+        width: 3.5rem;
         padding: 10px;
         background-color: #E9ECEF;
         color: #495057;
@@ -36,18 +34,18 @@
     form .cont-row .cont-input {
         background: var(--background-color);
         width: 100%;
-        height: 40px;
+        height: 55px;
         color: #495057;
         font-family: 'Roboto', sans-serif;
+        font-size: 15px;
         padding: 0 10px;
         border: none;
         outline: none;
     }  
 
         textarea.cont-input.message {
-            resize: vertical;
-            min-height: 100px;
-            max-height: 400px;
+            resize: none;
+            min-height: 150px;
             padding: 10px;
         }
 
