@@ -1,7 +1,13 @@
 .container.navbar {
-    background-color: var(--background-color);
-    padding: 8px 16px;
+    position: relative;
+    padding: 0;
 }
+    .row.navmenu {
+        position: absolute;
+        top: 0; 
+        padding: 15px 0;
+        z-index: 10;
+    }
     .navbar-logo > img {
         width: 100px;
         height: 40px;
