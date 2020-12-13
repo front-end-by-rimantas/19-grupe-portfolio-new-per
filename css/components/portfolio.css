@@ -1,47 +1,6 @@
-.row2 {
-    display: grid;
-    grid-column: 2/12;
-    grid-template-columns: 1fr;
-}
-    .container .row >.row2 .row-title {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: var(--section-heading-space);
-    }
-
-        .row-title * {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-        }
-        .about .row-title > h4 {
-            border-color: var(--background-color);
-        }
-        .row2>.row-title > h4 {
-            display: inline-block;
-            text-transform: capitalize;
-            color: var(--h4-color);
-            text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
-            border-bottom: 1px solid #f5f5f5;
-            position: relative;
-            font-size: 2rem;
-            padding-bottom: 10px;
-        }
-
-        .row-title > h4 > span {
-                color: var(--main-color);
-            }
-
-        .row-title > h4::before {
-            content: "";
-            width: 55px;
-            background-color: var(--main-color);
-            height: 1px;
-            position: absolute;
-            left: 0;
-            bottom: -1px;
-        }
+.container .row.portfolio .container-portfolio.col-12 { 
+    grid-column: 2 / span 10;
+ }
     .filtering {
         margin-bottom: var(--section-heading-space);
     }
