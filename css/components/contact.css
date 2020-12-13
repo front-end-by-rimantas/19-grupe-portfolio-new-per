@@ -115,3 +115,19 @@
                 border-radius: 20px;
                 border: 1px solid var(--background-color);
             }
+
+@media (max-width: 860px) {
+    .contacts-row .cont-left {
+        padding: 50px 40px 0;
+    }
+}
+
+@media (max-width: 680px) {
+    .container.contacts{
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+    .contacts-row .cont-left {
+        padding: 50px 40px 0;
+    }
+}
