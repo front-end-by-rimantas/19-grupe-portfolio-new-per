@@ -18,7 +18,7 @@
         right: 0;
     }
     .container.hero > .row {
-        z-index: 2;
+        z-index: 1;
     }  
     .container.hero > .row > .col-12 {
         text-align: center;
