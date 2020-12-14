@@ -1,9 +1,9 @@
 .container .row.portfolio .container-portfolio.col-12 { 
     grid-column: 2 / span 10;
  }
- .row.portfolio {
+ /* .row.portfolio {
      margin: 0 -77px;
- }
+ } */
     .filtering {
         margin-bottom: var(--section-heading-space);
     }
