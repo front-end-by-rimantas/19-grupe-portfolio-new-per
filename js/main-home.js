@@ -25,7 +25,8 @@ EXECUTION
 /* hero */
 /* about me */
 /* skills */
-renderMySkills('#skills', skillsData);
+renderMySkills('#skillsLeft', skillsData);
+renderMySkills('#skillsRight', skillsData);
 /* resume */
 /* client counter */
 /* services */
