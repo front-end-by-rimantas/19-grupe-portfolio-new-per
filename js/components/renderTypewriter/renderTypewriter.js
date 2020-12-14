@@ -1,8 +1,8 @@
 const sarasas = ['photographer','web developer','ui/ux designer'];
-let wordCount = 0;
+let letterCount = 0;
 let currentWord = '';
 let index = 0;
-const speed = 500;
+const speed = 100;
 const DOM = document.querySelector('li');
 
 // console.log(sarasas);
@@ -14,20 +14,25 @@ const DOM = document.querySelector('li');
 // console.log(sarasas[2].length);
 
 function renderTypewriter(){
-    if (wordCount === sarasas[index].length){
+    if (letterCount === sarasas[index].length){
         index++;
-        setTimeout(renderTypewriter, speed);
-        wordCount = 0;
+        letterCount = 0;
         DOM.textContent = '';
+        setTimeout(renderTypewriter, speed);
+        console.log("INDEX: " + index);
+        console.log("length: " + sarasas.length);
     }
-    if (wordCount < sarasas[index].length){
-        currentWord = sarasas[index].charAt([wordCount]);
+    if (letterCount < sarasas[index].length){
+        currentWord = sarasas[index].charAt([letterCount]);
         DOM.textContent += currentWord;
-        wordCount++;
+        letterCount++;
         setTimeout(renderTypewriter, speed);
     }
-    console.log(wordCount);
-    console.log(sarasas[index]);
+    if (index === sarasas.length){
+        index = 0;
+        letterCount = 0;
+        setTimeout(renderTypewriter, speed);
+    }
 }
 
 export { renderTypewriter };
