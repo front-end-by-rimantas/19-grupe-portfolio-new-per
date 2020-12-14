@@ -1,8 +1,12 @@
-section>div>img.portrait {
-    width: 360px;
+.container>.row>.image>img {
+    width: 100%;
+    height: auto;
     border-radius: 5px;
     border: 10px solid var(--background-color);
-    justify-self: right;
+    overflow: hidden;
+}
+.row > .image.col-4 {
+    grid-column: 2 / span 4;
 }
 .container>.row .about {
     display: inline-block;
@@ -33,7 +37,7 @@ section>div>img.portrait {
         .info.left {
             display: inline-block;
             float: left;
-            width: 50%;
+            width: 35%;
         }
             .info ul {
                 list-style: none;
@@ -56,7 +60,34 @@ section>div>img.portrait {
         .info.right {
             display: inline-block;
             float: right;
-            width: 50%;
+            width: 60%;
             padding-left: 10px;
         }
-    
+@media (max-width: 1080px) {
+    .row > .image.col-4.md-6 {
+        grid-column: 1 / span 5;
+    }
+    .container>.row .about {
+        padding: 0;
+    }
+}
+@media (max-width: 680px) {
+    .row > .image.col-4.md-6 {
+        grid-column: 1 / span 12;
+        margin-bottom: 30px;
+    }
+    .left {
+        width: 100%;
+    }
+    .info.right {
+        width: 100%;
+        padding: 0;
+    }
+    .container>.row .about {
+        padding: 0;
+    }
+    .btn {
+        display: inline;
+        padding: 1em 2em;
+    }
+}
