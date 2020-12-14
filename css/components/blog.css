@@ -1,8 +1,8 @@
 .row.blog {
-    margin: 0 -15px;
+    margin: 0 -10px;
 }
-    .col-4 .blog {
-        padding: 0 15px;
+    .container > .row.blog > .blog {
+        padding: 0 10px;
     }
     .img-blog {
         position: relative;
@@ -82,23 +82,18 @@
                 display: inline-block;
                 float: left;
                 vertical-align: center;
-                text-align: justify;
                 width: calc(100% - 50px);
                 padding: 8px;
-                font-family: 'Roboto', sans-serif;
-                font-size: 13px;
-                font-weight: 800;
-                line-height: 19px;
-                text-transform: uppercase;
-                color: #232323;
             }
                 .info > * {
                     display: inline-block;
+                    padding-top: 16px;
                     font-family: 'Montserrat', sans-serif;
                     font-weight: 500;
                     font-size: 13px;
+                    line-height: 19px;
                     color: #232323;
-                    padding-top: 16px;
+                    text-transform: uppercase;
                 }
                 .info > h5:after {
                     content: "|";
