@@ -30,8 +30,11 @@ function renderMySkills(selector, skillsData) {
             HTML += `<div class="progress-bar">
             <div class="label">${skills.label}</div>
             <div class="pbar">
-                <div class="pbar loading"></div>
-                <div class="bar-value">${skills.value}</div>
+            <div style="width:${skills.value}%" class="pbar bottom">
+                <div class="pbar loading">
+                <div class="bar-value">${skills.value}%</div>
+                </div>
+            </div>    
             </div>
             </div>`;
         }
@@ -45,8 +48,11 @@ function renderMySkills(selector, skillsData) {
             HTML += `<div class="progress-bar">
             <div class="label">${skills.label}</div>
             <div class="pbar">
-                <div class="pbar loading"></div>
-                <div class="bar-value">${skills.value}</div>
+            <div style="width:${skills.value}%" class="pbar bottom">
+                <div class="pbar loading">
+                <div class="bar-value">${skills.value}%</div>
+                </div>
+            </div>    
             </div>
             </div>`;
         }
