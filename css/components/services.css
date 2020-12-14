@@ -13,16 +13,16 @@
     border-left: 1px solid #fff;
 }
 
-.services-item span:hover {
+.services-item:hover span {
     background-color: #9c27b0;
     color: #fff;
 }
 
-.services:after {
+.services-line:after {
     content: "";
     position: absolute;
     left: 7%;
-    top: 56%;
+    top: 56.5%;
     background-color: #fff;
     width: 86%;
     height: 1px;
@@ -63,5 +63,12 @@
     }
     .services-item {
         padding: 15px 40px;
+    }
+}
+
+@media (max-width: 680px) {
+    .services-item {
+        border-right: none;
+        border-left: none;
     }
 }

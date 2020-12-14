@@ -50,6 +50,9 @@
             max-height: 400px;
             padding: 10px;
         }
+        textarea.cont-input.message:focus {
+            outline:#007bff40 solid 3px;
+        }
 
         .cont-input::placeholder {
             color: var(--clients-text-color);
@@ -58,6 +61,7 @@
 
         form .btn {
             width: 100%;
+            outline: none;
         }
     
 .cont-right {

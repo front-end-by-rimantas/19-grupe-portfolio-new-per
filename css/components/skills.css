@@ -3,7 +3,6 @@
 }
     .container.skills .skills-bars:nth-of-type(1){
         padding-left: 15px;
-        
     }
     .container.skills .skills-bars:nth-of-type(2){
         padding-right: 15px;
@@ -28,6 +27,7 @@
             .pbar .loading {
                 width: 73%;
                 background-color: var(--main-color);
+                animation: loading 2s forwards;
             }
             .pbar .bar-value {
                 display: flex;
@@ -43,4 +43,34 @@
                 font-size: 0.9rem;
                 border-radius: 5px;
                 margin-top: 5px;
+                animation: value 2s forwards;
             }
+
+@keyframes loading {
+    0% {
+        width: 0;
+    }
+    100%{
+        width: 73%;
+    }
+}
+@keyframes value {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 73%;
+    }
+}
+
+@media (max-width: 680px) {
+    .container {
+        grid-template-columns: 20px 1fr 20px;
+    }
+    .container.skills > .row {
+        gap: 0;
+    }
+    .container.skills .skills-bars:nth-of-type(2) {
+        padding-right: 0;
+    }
+}
