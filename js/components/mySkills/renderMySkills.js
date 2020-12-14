@@ -1,3 +1,5 @@
+import { isSkillsInputValid } from "./isSkillsInputValid.js";
+import { areSkillsValid } from "./areSkillsValid.js";
 
 /**
  * My Services turinį generuojanti funkcija
@@ -6,10 +8,11 @@
  * @returns {*}
  */
 function renderMySkills(selector, skillsData) {
-
+    if (!isSkillsInputValid(selector, skillsData)) {
+        return false;
+    }
     const DOM = document.querySelector(selector);
     if (!DOM) {
-        console.error('ERROR: could not find an elements by a given selector.')
         return false;
     }
 
@@ -18,10 +21,12 @@ function renderMySkills(selector, skillsData) {
     const countEndL = Math.ceil(skillsData.data.length / 2);
     const countStartR = countEndL;
     const countEndR = skillsData.data.length;
-    console.log(countEndR);
     if ( selector === '#skillsLeft' ) {
         for (let i = countStartL; i < countEndL; i++) {
             const skills = skillsData.data[i];
+            if (!areSkillsValid(skills)) {
+                continue;
+            }
             HTML += `<div class="progress-bar">
             <div class="label">${skills.label}</div>
             <div class="pbar">
@@ -34,6 +39,9 @@ function renderMySkills(selector, skillsData) {
     if ( selector === '#skillsRight' ) {
         for (let i = countStartR; i < countEndR; i++) {
             const skills = skillsData.data[i];
+            if (!areSkillsValid(skills)) {
+                continue;
+            }
             HTML += `<div class="progress-bar">
             <div class="label">${skills.label}</div>
             <div class="pbar">
