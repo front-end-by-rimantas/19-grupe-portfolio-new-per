@@ -5,6 +5,8 @@ ALL IMPORTS
 /* hero */
 /* about me */
 /* skills */
+import { skillsData } from "./data/skillsData.js";
+import { renderMySkills } from "./components/mySkills/renderMySkills.js";
 /* resume */
 /* client counter */
 /* services */
@@ -23,6 +25,7 @@ EXECUTION
 /* hero */
 /* about me */
 /* skills */
+renderMySkills('#skills', skillsData);
 /* resume */
 /* client counter */
 /* services */
