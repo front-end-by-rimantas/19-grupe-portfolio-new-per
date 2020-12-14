@@ -13,6 +13,8 @@
     }
         .progress-bar .label {
             font-size: 13px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
             text-transform: uppercase;
             line-height: 20px;
             margin-bottom: 10px;
@@ -40,7 +42,8 @@
                 height: 30px;
                 background-color: #fff;
                 color: var(--main-color);
-                font-size: 0.9rem;
+                font-size: 12px;
+                font-weight: 700;
                 border-radius: 5px;
                 margin-top: 5px;
                 animation: value 2s forwards;
