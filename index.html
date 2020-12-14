@@ -8,26 +8,23 @@
     <link rel="shortcut icon" href="./favicon.png" type="image/png">
     <!-- fonts begin-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,800&family=Raleway:wght@500;700&family=Roboto:wght@400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,800&family=Raleway:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <!-- fonts end -->
     <!-- css begin -->
     <link rel="stylesheet" href="./css/home-page.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <!-- css end -->
 </head>
 
 <body>
     <!-- nav begin-->
-    <nav class="container navbar">
-        <div class="row navbar">
-            <a class="navbar-logo col-6" href="#">
-                <img class="black" src="./img/logo.png" alt class="logo-1">
-                <img class="white" src="./img/logo-2.png" alt class="logo-2">
+    <nav class="container navbar over-bar">
+        <div class="row navmenu">
+            <a class="navbar-logo col-3" href="#">
+                <img class="over-bar" src="./img/logo.png" alt="Black New Per logo">
+                <img class="white" src="./img/logo-2.png" alt="White New Per logo">
             </a>
-            <div class="nav-links col-6">
+            <div class="nav-links col-9">
                 <a class="nav-a activeNavLink" href="#home">Home</a>
                 <a class="nav-a" href="#about">About</a>
                 <a class="nav-a" href="#services">Services</a>
@@ -56,11 +53,11 @@
                 <ul><li></li></ul>
                 <!--social media-->
                 <div class="social-icon">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                    <i class="fa fa-behance" aria-hidden="true"></i>
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    <a href="#" target="_blank" class="fa fa-facebook" aria-hidden="true"></a>
+                    <a href="#" target="_blank" class="fa fa-twitter" aria-hidden="true"></a>
+                    <a href="#" target="_blank" class="fa fa-behance" aria-hidden="true"></a>
+                    <a href="#" target="_blank" class="fa fa-linkedin" aria-hidden="true"></a>
+                    <a href="#" target="_blank" class="fa fa-dribbble" aria-hidden="true"></a>
                 </div>
             </div>
         </div>
@@ -388,9 +385,80 @@
     <!-- section TESTIMONIALS end -->
 
     <!-- section BLOG begin -->
-    <section class="container">
-        <div class="row">
-            BLOG
+    <section class="container blog">
+        <div class="row blog ">
+            <div class="row-title col-12">
+                <h4><span>Latest</span> Blog</h4>
+            </div>
+            <div class="col-4 blog">
+                <div class="item-blog">
+                    <div class="img-blog">
+                        <img src="./img/blog/1.jpg">
+                        <a href="#">UX/UI</a>
+                    </div>
+                    <div class="content-blog">
+                        <a href="#">
+                            <h4>Light trails on highway</h4>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum rerum laborum inventore, accusantium culpa quaerat.</p>
+                        <div class="info-img">
+                            <div class="img-client">
+                                <img src="./img/blog/p1.jpg">
+                            </div>
+                            <div class="info">
+                                <h5><span>By :</span> Jack Daniel</h5>
+                                <h6>25 June 2017</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 blog">
+                <div class="item-blog">
+                    <div class="img-blog">
+                        <img src="./img/blog/2.jpg">
+                        <a href="#">Web Design</a>
+                    </div>
+                    <div class="content-blog">
+                        <a href="#">
+                            <h4>Riomaggiore coast scene</h4>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum rerum laborum inventore, accusantium culpa quaerat.</p>
+                        <div class="info-img">
+                            <div class="img-client">
+                                <img src="./img/blog/p2.jpg">
+                            </div>
+                            <div class="info">
+                                <h5><span>By :</span> Jack Daniel</h5>
+                                <h6>25 June 2017</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 blog">
+                <div class="item-blog">
+                    <div class="img-blog">
+                        <img src="./img/blog/3.jpg">
+                        <a href="#">Development</a>
+                    </div>
+                    <div class="content-blog">
+                        <a href="#">
+                            <h4>10 secrets tips for web design</h4>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum rerum laborum inventore, accusantium culpa quaerat.</p>
+                        <div class="info-img">
+                            <div class="img-client">
+                                <img src="./img/blog/p3.jpg">
+                            </div>
+                            <div class="info">
+                                <h5><span>By :</span> Jack Daniel</h5>
+                                <h6>25 June 2017</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- section BLOG end -->
@@ -398,7 +466,7 @@
     <!-- section CONTACT begin -->
     <section class="container contacts">
         <div class="row contacts-row">
-            <div class="cont-left col-7">
+            <div class="cont-left col-7 col-sm-12 col-xs-12">
                 <div class="row-title">
                     <h4><span>Get </span>in touch</h4>
                 </div>
@@ -420,7 +488,7 @@
                     <button class="btn">Send message</button>
                 </form>
             </div>
-            <div class="cont-right col-5">
+            <div class="cont-right col-5 col-sm-12 col-xs-12">
                 <h4>Contact info.</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis quibusdam eius ad quis
                     repellat.</p>
