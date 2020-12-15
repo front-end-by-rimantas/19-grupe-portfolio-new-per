@@ -46,6 +46,7 @@
             text-transform: uppercase;
             font-family: 'Raleway', sans-serif;
             font-size: 14px;
+            line-height: 30px;;
             color: #bdbdbd;
             border-top: 1px solid #ffffff12;
             border-bottom: 1px solid #ffffff12;
@@ -73,3 +74,18 @@
                 .hero .row .fa:hover {
                     background-color: var(--main-color);
                 }
+@media (max-width: 760px) {
+    .hero > .row > .row > span {
+        font-size: 16px;
+    }
+    .hero > .row > .row > h1 {
+        font-size: 32px;
+    }
+    .hero .row > .row ul > li {
+        font-size: 10px;
+    }
+    .hero .row .fa {
+        margin: 2px;
+    }
+
+}
