@@ -26,14 +26,14 @@ function renderClientCounter (selector, data) {
             continue;
         }
         HTML += `<div class="col-3 col-sm-6 col-xs-12">
-        <div class="block-counter">
-            <div class="counter-icon">
-                <span class="fa fa-${item.icon}"></span>
-            </div>
-            <h4 class="integers">${item.value}</h4>
-            <h5 class="counter-label">${item.title}</h5>
-        </div>
-    </div>`;
+                    <div class="block-counter">
+                        <div class="counter-icon">
+                            <span class="fa fa-${item.icon}"></span>
+                        </div>
+                        <h4 class="integers">${item.value}</h4>
+                        <h5 class="counter-label">${item.title}</h5>
+                    </div>
+                </div>`;
     }
 
     // post logic validation
