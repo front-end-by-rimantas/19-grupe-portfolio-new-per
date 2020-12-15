@@ -7,15 +7,13 @@ let wordCount = 0;
 let letterCount = 0;
 
 // sets speed of letter printing
-const letterSpeed = 150;
+const letterSpeed = 180;
 
 // gets the place where to print
 const DOM = document.getElementById('typeWriter');
 
 function renderTypeWriting(){
    
-    DOM.textContent = currentWord.substring(0, letterCount - 1);
-
     // restarts the word printing if the count is equal to the list length
     if (wordCount === typeWriterAllWords.length){
         wordCount = 0;
