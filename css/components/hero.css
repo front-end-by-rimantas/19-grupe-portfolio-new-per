@@ -20,15 +20,17 @@
     .container.hero > .row {
         z-index: 10;
     }  
-        .hero > .row > .row > span {
+        .hero h3 {
             width: 100%;
             display: block;
             margin-bottom: 20px;
             font-family: 'Raleway', sans-serif;
             font-size: 23px;
+            line-height: 29px;
+            font-weight: 500;
             color: #bdbdbd;
         }
-        .hero > .row > .row > h1 {
+        .hero > .row h1 {
             width: 100%;
             display: block;
             margin-bottom: 30px;
@@ -38,18 +40,16 @@
             text-shadow: 2px 4px 3px #0000001a;
             color: #fff;
         }
-        .hero .type-writing {
+        .container.hero .type-writing {
             display: inline-block;
             margin-bottom: 16px;
-            list-style: none;
+            padding: 5px 0;
             letter-spacing: 5px;
-            text-transform: uppercase;
             font-family: 'Raleway', sans-serif;
             font-size: 14px;
-            line-height: 30px;;
             color: #bdbdbd;
-            border-top: 1px solid #ffffff12;
-            border-bottom: 1px solid #ffffff12;
+            border: 1px solid #ffffff12;
+            border-right: 1px solid var(--text-main-color);
         }
             ul > span > .typed-cursor {
                 font-family: 'Raleway', sans-serif;
@@ -74,18 +74,3 @@
                 .hero .row .fa:hover {
                     background-color: var(--main-color);
                 }
-@media (max-width: 760px) {
-    .hero > .row > .row > span {
-        font-size: 16px;
-    }
-    .hero > .row > .row > h1 {
-        font-size: 32px;
-    }
-    .hero .row > .row ul > li {
-        font-size: 10px;
-    }
-    .hero .row .fa {
-        margin: 2px;
-    }
-
-}
