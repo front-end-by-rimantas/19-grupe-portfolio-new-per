@@ -474,19 +474,18 @@
                 <form>
                     <div class="cont-row">
                         <div class="c-icon fa fa-user"></div>
-                        <input class="cont-input" placeholder="your full name here" type="text" maxlength="50">
+                        <input class="cont-input" placeholder="your full name here" type="text" maxlength="50" data-validation="name">
                     </div>
                     <div class="cont-row">
                         <div class="c-icon fa fa-envelope"></div>
-                        <input class="cont-input" placeholder="your email here" type="email" maxlength="50">
+                        <input class="cont-input" placeholder="your email here" type="email" maxlength="50" data-validation="email">
                     </div>
                     <div class="cont-row">
                         <div class="c-icon fa fa-comment"></div>
 
-                        <textarea class="cont-input message" placeholder="message for me" maxlength="1000"
-                            required></textarea>
+                        <textarea class="cont-input message" placeholder="message for me" maxlength="1000"required data-validation="text"></textarea>
                     </div>
-                    <button class="btn">Send message</button>
+                    <button type="submit" class="btn">Send message</button>
                 </form>
             </div>
             <div class="cont-right col-5 col-sm-12 col-xs-12">

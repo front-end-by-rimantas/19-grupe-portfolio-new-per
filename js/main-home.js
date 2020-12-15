@@ -16,6 +16,9 @@ import { renderMyServices } from "./components/myServices/renderMyServices.js";
 /* testimonials */
 /* blog */
 /* contact */
+import { contactsValidator } from "./components/myServices/contactsValidator.js";
+
+
 /* footer */
 
 /***************
@@ -35,5 +38,6 @@ renderMyServices('#services-block', servicesData);
 /* testimonials */
 /* blog */
 /* contact */
-/* footer */
+contactsValidator('form');
 
+/* footer */
