@@ -3,8 +3,8 @@ ALL IMPORTS
 ****************/
 /* navigation bar */
 /* hero */
-import { typeWriterWords } from "./data/typewriterData.js"
-import { renderTypewriter } from "./components/renderTypewriter/renderTypewriter.js"
+import { typeWriterAllWords } from "./data/typewriterData.js"
+import { renderTypeWriting } from "./components/renderTypewriter/renderTypewriter.js"
 /* about me */
 /* skills */
 /* resume */
@@ -23,7 +23,7 @@ EXECUTION
 ****************/
 /* navigation bar */
 /* hero */
-renderTypewriter('li');
+renderTypeWriting();
 /* about me */
 /* skills */
 /* resume */

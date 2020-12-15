@@ -1,39 +1,63 @@
-const sarasas = ['photographer','web developer','ui/ux designer'];
-let letterCount = 0;
+const words = ['photographer','web developer','ui/ux designer'];
 let currentWord = '';
-let index = 0;
-const speed = 100;
-const DOM = document.querySelector('li');
+let wordIndex = 0;
+let letterCount = 0;
+const wordSpeed = 500;
+const letterSpeed = 50;
+const DOM = document.getElementById('typeWriter');
 
-// console.log(sarasas);
-// console.log(sarasas[0]);
-// console.log(sarasas[0].length);
-// console.log(sarasas[1]);
-// console.log(sarasas[1].length);
-// console.log(sarasas[2]);
-// console.log(sarasas[2].length);
-
-function renderTypewriter(){
-    if (letterCount === sarasas[index].length){
-        index++;
-        letterCount = 0;
-        DOM.textContent = '';
-        setTimeout(renderTypewriter, speed);
-        console.log("INDEX: " + index);
-        console.log("length: " + sarasas.length);
-    }
-    if (letterCount < sarasas[index].length){
-        currentWord = sarasas[index].charAt([letterCount]);
+function renderTypeWriting(){
+    if (letterCount < words[wordIndex].length){
+        currentWord = words[wordIndex].charAt([letterCount]);
         DOM.textContent += currentWord;
         letterCount++;
-        setTimeout(renderTypewriter, speed);
-    }
-    if (index === sarasas.length){
-        index = 0;
+        setTimeout(renderTypeWriting, letterSpeed);
+    } 
+    else if (letterCount === words[wordIndex].length) {
         letterCount = 0;
-        setTimeout(renderTypewriter, speed);
+        wordIndex++;
+        setTimeout(renderTypeWriting, wordSpeed);
+        DOM.textContent = '';
+        console.log("INDEX: " + wordIndex);
+        console.log("length: " + words.length);
     }
+    console.log(currentWord);
+    console.log(words[wordIndex]);
 }
 
-export { renderTypewriter };
+// function delete(){
+    
+// }
+
+export { renderTypeWriting };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
