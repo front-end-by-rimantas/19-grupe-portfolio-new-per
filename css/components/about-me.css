@@ -3,18 +3,17 @@
     height: auto;
     border-radius: 5px;
     border: 10px solid var(--background-color);
-    overflow: hidden;
 }
-.row > .image.col-4 {
-    grid-column: 2 / span 4;
+.container>.row >.image.col-4 {
+    margin-bottom: var(--section-heading-space);
 }
 .container>.row .about {
     display: inline-block;
     float: left;
-    padding: 0 0 0 30px;
     margin-bottom: var(--main-space);
 }
     .about h5 {
+        display: inline-block;
         text-transform: uppercase;
         margin-bottom: var(--main-space);
         letter-spacing: 1.8px;
@@ -22,6 +21,7 @@
         font-size: 16px;
     }
     .about p{ 
+        display: inline-block;
         color: var(--text-main-color);
         margin-bottom: var(--main-space);
         padding-bottom: var(--main-space);
@@ -37,7 +37,7 @@
         .info.left {
             display: inline-block;
             float: left;
-            width: 35%;
+            width: 37%;
         }
             .info ul {
                 list-style: none;
@@ -63,31 +63,17 @@
             width: 60%;
             padding-left: 10px;
         }
-@media (max-width: 1080px) {
-    .row > .image.col-4.md-6 {
-        grid-column: 1 / span 5;
-    }
-    .container>.row .about {
-        padding: 0;
+@media (min-width: 1190px) {
+    .container>.row>.image.col-4 {
+        grid-column: 2 / span 4;
     }
 }
-@media (max-width: 680px) {
-    .row > .image.col-4.md-6 {
-        grid-column: 1 / span 12;
-        margin-bottom: 30px;
-    }
-    .left {
-        width: 100%;
-    }
+@media (max-width: 750px) {
     .info.right {
         width: 100%;
         padding: 0;
     }
-    .container>.row .about {
-        padding: 0;
-    }
-    .btn {
-        display: inline;
-        padding: 1em 2em;
+    .info.left {
+        width: 100%;
     }
 }

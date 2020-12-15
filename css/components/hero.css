@@ -1,6 +1,6 @@
 .container.hero {
     background-image: url(../../img/header.jpg);
-    text-align: center;
+    /* text-align: center; */
     position: relative;
     background-size: cover;
     background-position: center;
@@ -18,8 +18,12 @@
         right: 0;
     }
     .container.hero > .row {
-        z-index: 10;
+        z-index: 1;
     }  
+    .container.hero > .row > .col-12 {
+        text-align: center;
+        margin-top: 80px;
+    }
         .hero > .row > .row > span {
             width: 100%;
             display: block;
