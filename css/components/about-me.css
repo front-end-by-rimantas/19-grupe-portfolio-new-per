@@ -1,10 +1,10 @@
 .container>.row>.image>img {
     width: 100%;
+    height: auto;
     border-radius: 5px;
     border: 10px solid var(--background-color);
 }
 .container>.row >.image.col-4 {
-    grid-column: 2 / span 4;
     margin-bottom: var(--section-heading-space);
 }
 .container>.row .about {
@@ -63,33 +63,12 @@
             width: 60%;
             padding-left: 10px;
         }
-@media (max-width: 1080px) {
-    .container>.row .image.col-4 {
-        grid-column: 1 / span 5;
-    }
-    .row .about.col-7 {
-        grid-column: auto / span 7;
-    }
-    .container>.row.me {
-        margin: 0;
+@media (min-width: 1190px) {
+    .container>.row>.image.col-4 {
+        grid-column: 2 / span 4;
     }
 }
-@media (max-width: 945px) {
-    .container>.row .image.col-4 {
-        grid-column: 1 / span 6;
-    }
-    .row .about.col-7 {
-        grid-column: auto / span 6;
-    }
-}
-
-@media (max-width: 770px) {
-    .container>.row .image.col-4 {
-        grid-column: 2 / span 10;
-    }
-    .row .about.col-7 {
-        grid-column: 2 / span 10;
-    }
+@media (max-width: 750px) {
     .info.right {
         width: 100%;
         padding: 0;
