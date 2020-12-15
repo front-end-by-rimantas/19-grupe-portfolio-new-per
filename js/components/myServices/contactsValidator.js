@@ -9,6 +9,11 @@ function contactsValidator(selector) {
 
   const allElements = [...allInputDOMs, ...allTextareaDOMs];
 
+  if (!submitBtnDOM) {
+    console.error('ERROR: input:submit button can not be found in contacts form.');
+    return false;
+  }
+
   submitBtnDOM.addEventListener('click', () => {
     let errorCount = 0;
     console.clear();
@@ -21,20 +26,29 @@ function contactsValidator(selector) {
       const emailError = isValidContactEmail(text);
       const textError = isValidContactText(text);
 
-      if (validationRule === 'name' && nameError !== true) {
-        console.log(nameError);
-        errorCount++;
-        
-      }
-      if (validationRule === 'email' && emailError !== true) {
-        console.log(emailError);
-        errorCount++;
-        
-      }
-      if (validationRule === 'text' && textError !== true) {
-        console.log(textError);
-        errorCount++;
+      if (validationRule === 'name') {
+        const nameError = isValidContactName(text);
+        if (nameError !== true) {
+          console.log(nameError);
+          errorCount++;
 
+        }
+      }
+      if (validationRule === 'email') {
+        const emailError = isValidContactEmail(text);
+        if (emailError !== true) {
+          console.log(emailError);
+          errorCount++;
+
+        }
+      }
+      if (validationRule === 'text') {
+        const textError = isValidContactText(text);
+        if (textError !== true) {
+          console.log(textError);
+          errorCount++;
+
+        }
       }
     }
 

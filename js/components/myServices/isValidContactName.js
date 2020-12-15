@@ -7,12 +7,23 @@ function isValidContactName(name) {
     if (name === '') {
         return 'Name can not be empty.';
     }
-    // if (typeof name !== 'number') {
-    //     return 'Name can not be numbers.';
-    // }
     if (name.length > maxNameLength) {
         return `Name can not be longer than ${maxNameLength} symbols (excelled ${name.length - maxNameLength}).`;
     }
+    const abc = 'qwertyuioplkjhgfdsazxcvbnm';
+    for (let letter of name) {
+        if (!abc.includes(letter.toLocaleLowerCase())) {
+            return `Not allowed symbol was used in Name Section (you can not use ${letter}).`;
+        }
+    }
+    if (name.toLocaleLowerCase() === name) {
+        return 'Name can not be only from lowercase letters, please include first uppercase letter.';
+    }
+    const realNameFormat = name[0].toUpperCase() + name.slice(1).toLocaleLowerCase();
+    if (realNameFormat !== name) {
+        return 'Name can not be from uppercase letters, please include lowercase letters and just the first uppercase letter.';
+    }
+
     return true;
 }
 
