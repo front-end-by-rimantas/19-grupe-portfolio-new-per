@@ -42,8 +42,8 @@
                 height: 30px;
                 background-color: #fff;
                 color: var(--main-color);
-                font-size: 12px;
-                font-weight: 700;
+                font-size: 13px;
+                font-weight: 500;
                 border-radius: 5px;
                 margin-top: 5px;
                 animation: value 0.8s forwards;
@@ -62,7 +62,7 @@
         left: 0;
     }
     100% {
-        left: 100%;
+        left: 95%;
     }
 }
 
