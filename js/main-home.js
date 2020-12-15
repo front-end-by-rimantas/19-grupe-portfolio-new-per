@@ -4,7 +4,7 @@ ALL IMPORTS
 /* navigation bar */
 /* hero */
 import { typeWriterAllWords } from "./data/typewriterData.js"
-import { renderTypeWriting } from "./components/renderTypewriter/renderTypewriter.js"
+import { RenderTypeWriter } from "./components/renderTypewriter/renderTypewriter.js"
 /* about me */
 /* skills */
 /* resume */
@@ -23,7 +23,8 @@ EXECUTION
 ****************/
 /* navigation bar */
 /* hero */
-renderTypeWriting();
+const typeEffect = new RenderTypeWriter(".typer", typeWriterAllWords);
+typeEffect.typeWriting();
 /* about me */
 /* skills */
 /* resume */

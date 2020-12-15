@@ -1,40 +1,71 @@
-import { typeWriterAllWords } from "../../data//typewriterData.js"
+class RenderTypeWriter {
+        /**
+     * Typewriting effect
+     * @param {string} selector Selector for where the word will be printed 
+     * @param {Array} words Array of words to be printed
+     */
+    constructor(selector, words){
+        this.selector = selector;
+        this.words = words;
 
-let currentWord = '';
-let currentLetter = '';
+        this.currentWord = '';
+        this.currentLetter = '';
+        
+        this.wordCount = 0;
+        this.letterCount = 0;
+        
+        // sets speed of letter printing
+        this.writingSpeed = 70;
+        
+        this.endWord = false;
 
-let wordCount = 0;
-let letterCount = 0;
-
-// sets speed of letter printing
-const letterSpeed = 180;
-
-// gets the place where to print
-const DOM = document.getElementById('typeWriter');
-
-function renderTypeWriting(){
-   
-    // restarts the word printing if the count is equal to the list length
-    if (wordCount === typeWriterAllWords.length){
-        wordCount = 0;
+        // gets the place where to print
+        this.DOM = document.querySelector(this.selector);
+        
     }
-    // takes the word from the list
-    currentWord = typeWriterAllWords[wordCount];
+    typeWriting(){
+            
+        // sets the current word according to word list
+        this.currentWord = this.words[this.wordCount];
 
-    // slices/deletes the first letter from the word and increases lettercount
-    currentLetter = currentWord.slice(0, ++letterCount);
+        this.writingSpeed = 70;
 
-    // prints the letter in selected DOM area
-    DOM.textContent = currentLetter;
-    
-    // checks if the lettercount is same as current word printing count, resets the lettercount and selects next word.
-    if (letterCount === currentWord.length) {
-        setTimeout
-        wordCount++;
-        letterCount = 0;
+        //if the it's deleting a word, the speed is doubled
+        if(this.endWord) {
+            this.writingSpeed = this.writingSpeed / 2;
+        }
+
+        //checks what the method is doing and does the changes accordingly 
+        if (!this.endWord){
+            this.currentLetter = this.currentWord.substring(0, this.letterCount + 1);
+            this.letterCount++;
+        } 
+        else {
+            this.currentLetter = this.currentWord.substring(0, this.letterCount - 1);
+            this.letterCount--;
+        }
+
+        // prints out / deletes letters from the page
+        this.DOM.textContent = this.currentLetter;
+
+        // If the end of the current word
+            if(!this.endWord && this.currentLetter === this.currentWord) {
+            this.endWord = true;
+            this.writingSpeed = 1500;
+        
+        // if the word is deleted, change to the next word
+        } else if(this.endWord && this.currentLetter === '') {
+            this.endWord = false;
+            this.wordCount++;
+        }
+        if (this.wordCount === this.words.length){
+            this.wordCount = 0;
+            setTimeout(() => this.typeWriting(), this.writingSpeed);
+        } else {
+            setTimeout(() => this.typeWriting(), this.writingSpeed);
+        }
     }
-    // repeats the function all over again, with the selected printing speed
-    setTimeout(renderTypeWriting, letterSpeed)
-};
+}
+export { RenderTypeWriter } 
 
-export { renderTypeWriting };
+
