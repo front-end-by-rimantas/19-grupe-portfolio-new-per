@@ -3,7 +3,7 @@
  * @param {object} itemObject Objektas aprasantis viena klientu skaiciuokles bloka, kuri sudaro ikona, skaicius ir pavadinimas
  * @returns {boolean} Jei patikrinimo metu randama logine duomenu klaida, grazinama `false`, priesingu atveju - `true`
  */
-function isValiClientCounterItem (itemObject) {
+function isValidClientCounterItem (itemObject) {
         if (typeof itemObject !== 'object') {
             console.var('ERROR: klientų skaičiuoklės elementas turėtų būti objektas.');
             return false;

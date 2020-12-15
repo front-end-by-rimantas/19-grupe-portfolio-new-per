@@ -4,7 +4,7 @@
  * @param {Array} data  Duomenu masyvas su objektais, kurie reprezentuoja klientu skaiciuokle
  * @returns {boolean} Jei patikrinimo metu randama logine duomenu klaida, grazinama `false`, priesingu atveju - `true`
  */
-function isInputValid(selector, data) {
+function isValidInput(selector, data) {
     if (typeof selector !== 'string') {
         console.error('ERROR: selektorius turi būti tekstinio tipo.')
     }
@@ -22,4 +22,4 @@ function isInputValid(selector, data) {
     return true;
 }
 
-export { isInputValid }
+export { isValidInput }
