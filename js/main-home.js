@@ -7,6 +7,7 @@ ALL IMPORTS
 /* skills */
 /* resume */
 /* client counter */
+import { clientCounterData } from './data/clientCounterData.js';
 /* services */
 import { servicesData } from "./data/servicesData.js";
 import { renderMyServices } from "./components/myServices/renderMyServices.js";
