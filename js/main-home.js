@@ -18,6 +18,7 @@ import { servicesData } from "./data/servicesData.js";
 import { renderMyServices } from "./components/myServices/renderMyServices.js";
 /* portfolio */
 /* testimonials */
+import { testimonialData } from "./data/testimonialsData.js";
 /* blog */
 /* contact */
 import { contactsValidator } from "./components/contacts/contactsValidator.js";
