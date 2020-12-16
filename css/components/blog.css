@@ -8,7 +8,7 @@
         position: relative;
     }
         .img-blog > img {
-            width: 100%;
+            max-width: 100%;
         }
         .img-blog > a {
             position: absolute;
@@ -102,8 +102,3 @@
                 .info > h6 {
                     padding-left: 8px;
                 }
-@media (max-width: 480px) {
-    .info > h5 {
-        width: 100%;
-    }
-}

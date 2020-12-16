@@ -6,10 +6,10 @@ ALL IMPORTS
 import { heroIconData } from './data/heroIconData.js';
 import { renderHeroIcons } from './components/heroIcons/renderHeroIcons.js';
 // import renderHeroIcons
+import { typeWriterAllWords } from "./data/typewriterData.js"
+import { RenderTypeWriter } from "./components/renderTypewriter/renderTypewriter.js"
 /* about me */
 /* skills */
-import { skillsData } from "./data/skillsData.js";
-import { renderMySkills } from "./components/mySkills/renderMySkills.js";
 /* resume */
 /* client counter */
 import { clientCounterData } from './data/clientCounterData.js';
@@ -31,12 +31,13 @@ EXECUTION
 ****************/
 /* navigation bar */
 /* hero */
+// hero-icon-render
 renderHeroIcons('header > .row > .col-12 > div', heroIconData);
 // '#hero-icons', 
+const typeEffect = new RenderTypeWriter(".typer", typeWriterAllWords);
+typeEffect.typeWriting();
 /* about me */
 /* skills */
-renderMySkills('#skillsLeft', skillsData);
-renderMySkills('#skillsRight', skillsData);
 /* resume */
 /* client counter */
 renderClientCounter('#clientCounterBlock', clientCounterData);
