@@ -1,5 +1,17 @@
+.row.portfolio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.row.portfolio>.row-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
 .filtering {
     margin-bottom: var(--section-heading-space);
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
 }
     .filtering .portfolio-btn {
         background: inherit;
@@ -42,9 +54,12 @@
     }
 
 .container-portfolio {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    height: 883.787px;
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px; */
 }
     .w-3 {
         grid-column: span 2;
@@ -59,9 +74,50 @@
         grid-row: span 3;
     }
         .gallery-item {
-            width: 100%;
             height: 100%;
             position: relative;
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+        }
+        .gallery-item.first {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .gallery-item.second {
+            position:absolute;
+            left: 320px;
+            top: 0;
+        }
+        .gallery-item.third {
+            position: absolute;
+            left: 640px;
+            top: 0;
+        }
+        .gallery-item.fourth {
+            position: absolute;
+            left: 0;
+            top: 237px;
+        }
+        .gallery-item.fifth {
+            position: absolute;
+            left: 640px;
+            top: 237px;
+        }
+        .gallery-item.sixth {
+            position: absolute;
+            left: 320px;
+            top: 320px;
+        }
+        .gallery-item.seventh {
+            position: absolute;
+            left: 0;
+            top: 557px;
+        }
+        .gallery-item.eighth {
+            position: absolute;
+            left: 640px;
+            top: 237px;
         }
             .gallery-item .image {
                 width: 100%;
@@ -74,3 +130,7 @@
                     border: 1px solid #f4f5f8;
                     border-radius: 4px;
                 }
+@media (max-width: 780px) {
+    .container-portfolio {
+        grid-template-columns: repeat(2, 1fr);
+    }
