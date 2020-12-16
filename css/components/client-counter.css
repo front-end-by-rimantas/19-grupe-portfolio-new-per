@@ -34,18 +34,16 @@
                     transform: scale(1.1);
                 }
                 .integers {
-                    font-size: 24px;
+                    font-size: 1.5rem;
                     font-weight: 800;
-                    font-family: 'Montserrat', sans-serif;
                     font-style: italic;
                     color: #FFFFFF;
                     margin-bottom: var(--main-space);
                 }
                 .counter-label {
                     color: var(--clients-text-color);
-                    font-size: 14px;
+                    font-size: 0.9rem;
                     font-weight: 600;
-                    font-family: 'Montserrat', sans-serif;
                     letter-spacing: 2px;
                     text-transform: uppercase;
                     margin-bottom: 8px;

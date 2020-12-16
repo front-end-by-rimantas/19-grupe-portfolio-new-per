@@ -46,14 +46,12 @@
     margin-bottom: 20px;
     text-transform: uppercase;
     color: #232323;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
 .service-text p {
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: .9rem;
     color: #777;
     line-height: 1.8rem;
     font-weight: 400;
