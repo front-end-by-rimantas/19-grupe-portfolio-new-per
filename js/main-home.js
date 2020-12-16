@@ -29,7 +29,7 @@ EXECUTION
 ****************/
 /* navigation bar */
 /* hero */
-renderHeroIcons(heroIconData);
+renderHeroIcons('header > .row > .col-12 > div', heroIconData);
 // '#hero-icons', 
 /* about me */
 /* skills */
