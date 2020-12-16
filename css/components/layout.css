@@ -54,6 +54,7 @@ body {
     }
     .container > .row {
         gap: 20px;
+        margin: 0;
     }
         .container > .row > .col-md-1 { grid-column: auto / span 1; }
         .container > .row > .col-md-2 { grid-column: auto / span 2; }
@@ -74,6 +75,7 @@ body {
         grid-template-columns: 1fr 640px 1fr;
     }
     .container > .row {
+        margin: 0px;
         gap: 10px;
     }
         .container > .row > .col-sm-1 { grid-column: auto / span 1; }
