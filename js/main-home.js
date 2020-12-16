@@ -3,6 +3,8 @@ ALL IMPORTS
 ****************/
 /* navigation bar */
 /* hero */
+import { typeWriterAllWords } from "./data/typewriterData.js"
+import { RenderTypeWriter } from "./components/renderTypewriter/renderTypewriter.js"
 /* about me */
 /* skills */
 import { skillsData } from "./data/skillsData.js";
@@ -28,6 +30,8 @@ EXECUTION
 ****************/
 /* navigation bar */
 /* hero */
+const typeEffect = new RenderTypeWriter(".typer", typeWriterAllWords);
+typeEffect.typeWriting();
 /* about me */
 /* skills */
 renderMySkills('#skillsLeft', skillsData);
