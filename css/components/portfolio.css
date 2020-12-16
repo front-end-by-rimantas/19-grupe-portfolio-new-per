@@ -83,3 +83,11 @@
         grid-row: span 2;
     }
 }
+@media (max-width: 680px) {
+    .container-portfolio {
+        grid-template-columns: 1fr;
+    }
+    .container-portfolio.col-12 .gallery-item {
+        grid-row: span 2;
+    }
+}
