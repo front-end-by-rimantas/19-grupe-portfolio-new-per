@@ -3,6 +3,8 @@ ALL IMPORTS
 ****************/
 /* navigation bar */
 /* hero */
+import { heroIconData } from './data/heroIconData.js';
+import { renderHeroIcons } from './components/heroIcons/renderHeroIcons.js';
 import { typeWriterAllWords } from "./data/typewriterData.js"
 import { RenderTypeWriter } from "./components/renderTypewriter/renderTypewriter.js"
 /* about me */
@@ -20,7 +22,7 @@ import { renderMyServices } from "./components/myServices/renderMyServices.js";
 /* testimonials */
 /* blog */
 /* contact */
-import { contactsValidator } from "./components/myServices/contactsValidator.js";
+import { contactsValidator } from "./components/contacts/contactsValidator.js";
 
 
 /* footer */
@@ -30,6 +32,9 @@ EXECUTION
 ****************/
 /* navigation bar */
 /* hero */
+// hero-icon-render
+renderHeroIcons('header > .row > .col-12 > div', heroIconData);
+//typewriter
 const typeEffect = new RenderTypeWriter(".typer", typeWriterAllWords);
 typeEffect.typeWriting();
 /* about me */
@@ -46,5 +51,4 @@ renderMyServices('#services-block', servicesData);
 /* blog */
 /* contact */
 contactsValidator('form');
-
 /* footer */
