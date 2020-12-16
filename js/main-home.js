@@ -23,8 +23,6 @@ import { renderMyServices } from "./components/myServices/renderMyServices.js";
 /* blog */
 /* contact */
 import { contactsValidator } from "./components/contacts/contactsValidator.js";
-
-
 /* footer */
 
 /***************
@@ -52,3 +50,4 @@ renderMyServices('#services-block', servicesData);
 /* contact */
 contactsValidator('form');
 /* footer */
+document.getElementById("year").innerHTML = new Date().getFullYear();
