@@ -1,28 +1,34 @@
-.container .row.portfolio .container-portfolio.col-12 { 
-    grid-column: 2 / span 10;
- }
- /* .row.portfolio {
-     margin: 0 -77px;
- } */
-    .filtering {
-        margin-bottom: var(--section-heading-space);
+.filtering {
+    margin-bottom: var(--section-heading-space);
+}
+    .filtering .button {
+        background: inherit;
+        position: relative;
+        margin: 0px 10px;
+        padding: 5px 5px;
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: var(--text-main-color);
+        cursor: pointer;
+        border: none;
+        border-top:solid 1px #f4f5f8;
     }
-        .filtering .button {
-            background: inherit;
-            position: relative;
-            margin: 0px 10px;
-            padding: 5px 5px;
-            font-size: 14px;
-            letter-spacing: 2px;
-            color: var(--text-main-color);
-            cursor: pointer;
-            border: none;
-            border-top:solid 1px #f4f5f8;
-                }
-    .container-portfolio {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px;
+.container-portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+    .w-3 {
+        grid-column: span 2;
+    }
+    .h-2 {
+        grid-row: span 2;
+    }
+    .h-1 {
+        grid-row: span 1;
+    }
+    .h-3 {
+        grid-row: span 3;
     }
         .gallery-item {
             width: 100%;
@@ -31,8 +37,6 @@
         }
             .gallery-item .image {
                 width: 100%;
-                /* height: 100%; */
-                overflow: hidden;
             }
                 .gallery-item .image img {
                     width: 100%;
@@ -42,16 +46,3 @@
                     border: 1px solid #f4f5f8;
                     border-radius: 4px;
                 }
-        .w-3 {
-            grid-column: span 2;
-        }
-        .h-2 {
-            grid-row: span 2;
-        }
-        .h-1 {
-            grid-row: span 1;
-        }
-        .h-3 {
-            grid-row: span 3;
-        }
-             
