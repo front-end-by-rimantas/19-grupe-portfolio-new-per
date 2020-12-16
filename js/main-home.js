@@ -19,7 +19,7 @@ import { renderMyServices } from "./components/myServices/renderMyServices.js";
 /* testimonials */
 /* blog */
 /* contact */
-import { contactsValidator } from "./components/myServices/contactsValidator.js";
+import { contactsValidator } from "./components/contacts/contactsValidator.js";
 
 
 /* footer */
