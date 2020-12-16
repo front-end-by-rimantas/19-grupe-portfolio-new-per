@@ -20,6 +20,19 @@
     }
     /* background ends */
 
+.testimonials .row .allTestimonials {
+    display: inline-block;
+    width: 100%;
+}
+.allTestimonials > .screen {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+.allTestimonials > .screen > .list {
+    display: inline-block;
+    width: 100%;
+}
 .upper {
     text-transform: uppercase;
 }
@@ -27,7 +40,10 @@
     margin: 0 50px;
     text-align: center;
 }
-.review-wrap {
+.screen .list .review-wrap {
+    display: inline-block;
+    float: left;
+    width: 100%;
     background-color: #13131399;
     padding: 30px 50px 40px;
     margin-bottom: 20px;
