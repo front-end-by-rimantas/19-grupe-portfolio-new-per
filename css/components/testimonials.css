@@ -82,3 +82,17 @@
     background: var(--main-color);
     margin: 0 5px 5px;
 }
+@media (max-width: 680px) {
+    
+        .testimonials > .row {
+            margin: 0px;
+            padding: 0;
+        }
+            .testi-cont-wrap {
+                margin: 0;
+            }
+                .review-wrap {
+                    padding: 0;
+                }
+
+}
