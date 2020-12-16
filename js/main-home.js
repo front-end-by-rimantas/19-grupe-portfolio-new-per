@@ -31,7 +31,7 @@ EXECUTION
 /* navigation bar */
 /* hero */
 // hero-icon-render
-renderHeroIcons('header > .row > .col-12 > div', heroIconData);
+renderHeroIcons('#hero-icons_block', heroIconData);
 // '#hero-icons', 
 /* about me */
 /* skills */
