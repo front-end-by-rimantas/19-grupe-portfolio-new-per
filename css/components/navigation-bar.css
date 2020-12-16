@@ -9,9 +9,9 @@
 .row.navmenu {
     padding: 15px 0;
 }
-.navmenu * {
+     .navmenu * {
     font-family: 'Roboto', sans-serif;
-}
+    } 
     .navbar-logo > img {
         width: 100px;
         height: 40px;
