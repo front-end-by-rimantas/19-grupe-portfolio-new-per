@@ -24,15 +24,17 @@
         text-align: center;
         margin-top: 80px;
     }
-        .hero > .row > .row > span {
-            width: 100%;
-            display: block;
-            margin-bottom: 20px;
-            font-family: 'Raleway', sans-serif;
-            font-size: 23px;
-            color: #bdbdbd;
-        }
-        .hero > .row > .row > h1 {
+    .hero h3 {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 23px;
+        line-height: 29px;
+        font-weight: 500;
+        color: #bdbdbd;
+    }
+        .hero > .row h1 {
             width: 100%;
             display: block;
             margin-bottom: 30px;
@@ -42,23 +44,30 @@
             text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
             color: #fff;
         }
-        .hero .row > .row ul {
+        .hero .row > .typer {
             display: inline-block;
             margin-bottom: 16px;
-            list-style: none;
             letter-spacing: 5px;
             font-family: 'Raleway', sans-serif;
             font-size: 14px;
-            line-height: 30px;;
+            line-height: 26px;
+            min-height: 28px;
             color: #bdbdbd;
             border-top: 1px solid rgba(255, 255, 255, 0.07);
             border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            position: relative;
         }
-            ul > span > .typed-cursor {
-                font-family: 'Raleway', sans-serif;
+            .hero > .row .typer::after {
+                content: '';
+                position: absolute;
+                top: 2px;
+                width: 1px;
+                height: 20px;
+                background: var(--main-color);
+                animation: blinker 0.5s infinite;
             }
-        .social-icon {
 
+        .social-icon {
             width: 100%;
         }
             .hero .row .fa {
@@ -77,6 +86,16 @@
                 .hero .row .fa:hover {
                     background-color: var(--main-color);
                 }
+
+@keyframes blinker {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @media (max-width: 760px) {
     .hero > .row > .row > span {
         font-size: 16px;
