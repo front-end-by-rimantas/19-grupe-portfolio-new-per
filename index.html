@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/png">
     <!-- fonts begin-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,18 +14,20 @@
     <!-- fonts end -->
     <!-- css begin -->
     <link rel="stylesheet" href="./css/home-page.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <!-- css end -->
 </head>
 
 <body>
     <!-- nav begin-->
-    <nav class="container navbar">
-        <div class="row navbar">
-            <a class="navbar-logo col-6" href="#">
-                <img class="black" src="./img/logo.png" alt class="logo-1">
-                <img class="white" src="./img/logo-2.png" alt class="logo-2">
+    <nav class="container navbar over-bar">
+        <div class="row navmenu">
+            <a class="navbar-logo col-3" href="#">
+                <img class="over-bar" src="./img/logo.png" alt="Black New Per logo">
+                <img class="white" src="./img/logo-2.png" alt="White New Per logo">
             </a>
-            <div class="nav-links col-6">
+            <div class="nav-links col-9">
                 <a class="nav-a activeNavLink" href="#home">Home</a>
                 <a class="nav-a" href="#about">About</a>
                 <a class="nav-a" href="#services">Services</a>
@@ -42,7 +45,7 @@
     <!-- header begin -->
     <header class="container hero">
         <div class="row col-12">
-            <div class="row col-12">
+            <div class="row col-12 col-xs-12">
                 <span>
                     WELCOME
                 </span>
@@ -57,48 +60,46 @@
                     </li>
                 </ul>
                 <!--social media-->
-                <div class="social-icon">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                    <i class="fa fa-behance" aria-hidden="true"></i>
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    <i class="fa fa-dribbble" aria-hidden="true"></i>
-                </div>
+                <div class="social-icon"></div>
             </div>
         </div>
     </header>
     <!-- header end -->
 
     <!-- section About Me begin -->
-    <section class="container">
-        <div class="row">
-            <img class="portrait col-5" src="./img/about.jpg" alt="grey hair man portrait">
-            <div class="about col-7">
+    <section class="container" id="about">
+        <div class="row me">
+            <div class="image col-4 col-md-5 col-sm-6 col-xs-12">
+                <img src="./img/about.jpg" alt="grey hair man portrait">
+            </div>
+            <div class="about col-6 col-md-7 col-sm-6 col-xs-12">
                 <div class="row-title">
                     <h4><span>About</span> Me</h4>
                 </div>
-                    <h5>i am a ui/ux designer and a human</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ea blanditiis sunt fugiat nam
-                            officia
-                            ut rerum culpa quam odio ipsa itaque, impedit laboriosam non eaque numquam magnam. Veniam,
-                            aperiam.
-                        </p>
-                        <div class="info">
-                            <div class="info left col-3">
-                                <ul>
-                                    <li>Name: <span>John Doe</span></li>
-                                    <li>Age: <span>27</span></li>
-                                </ul>
-                            </div>
-                            <div class="info right col-3">
-                                <ul>
-                                    <li>Email: <span>John_Doe@gmail.com</span></li>
-                                    <li>Location : <span>Los Angeles, USA</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <input type="submit" value="Dowload resume" class="btn">
-                        <input type="submit" value="Hire me" class="btn">
+                <h5>i am a ui/ux designer and a human</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ea blanditiis sunt fugiat nam
+                    officia
+                    ut rerum culpa quam odio ipsa itaque, impedit laboriosam non eaque numquam magnam. Veniam,
+                    aperiam.
+                </p>
+                <div class="info">
+                    <div class="info left">
+                        <ul>
+                            <li>Name: <span>John Doe</span></li>
+                            <li>Age: <span>27</span></li>
+                        </ul>
+                    </div>
+                    <div class="info right">
+                        <ul>
+                            <li>Email: <span>John_Doe@gmail.com</span></li>
+                            <li>Location : <span>Los Angeles, USA</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="btn">Download resume</a>
+                    <a href="#" class="btn">Hire me</a>
+                </div>
             </div>
         </div>
     </section>
@@ -110,66 +111,8 @@
             <div class="row-title col-12">
                 <h4><span>My</span> Skills</h4>
             </div>
-            <div class="skills-bars col-6">
-                <div class="progress-bar">
-                    <div class="label">Photography</div>
-                    <div class="pbar">
-                        <div class="pbar loading"></div>
-                        <div class="bar-value">73%</div>
-                    </div>
-                </div>
-                <div class="progress-bar">
-                    <div class="label">Branding</div>
-                    <div class="pbar">
-                        <div class="pbar loading"></div>
-                        <div class="bar-value">73%</div>
-                    </div>
-                </div>
-                <div class="progress-bar">
-                    <div class="label">Graphic design</div>
-                    <div class="pbar">
-                        <div class="pbar loading"></div>
-                        <div class="bar-value">73%</div>
-                    </div>
-                </div>
-                <div class="progress-bar">
-                    <div class="label">Development</div>
-                    <div class="pbar">
-                        <div class="pbar loading"></div>
-                        <div class="bar-value">73%</div>
-                    </div>
-                </div>
-            </div>
-            <div class="skills-bars col-6">
-                <div class="progress-bar">
-                    <div class="label">Html/Css</div>
-                    <div class="pbar">
-                        <div class="pbar loading"></div>
-                        <div class="bar-value">73%</div>
-                    </div>
-                </div>
-                <div class="progress-bar">
-                    <div class="label">Js/Jquery</div>
-                    <div class="pbar">
-                        <div class="pbar loading"></div>
-                        <div class="bar-value">73%</div>
-                    </div>
-                </div>
-                <div class="progress-bar">
-                    <div class="label">Php/Wordpress</div>
-                    <div class="pbar">
-                        <div class="pbar loading"></div>
-                        <div class="bar-value">73%</div>
-                    </div>
-                </div>
-                <div class="progress-bar">
-                    <div class="label">Photoshop</div>
-                    <div class="pbar">
-                        <div class="pbar loading"></div>
-                        <div class="bar-value">73%</div>
-                    </div>
-                </div>
-            </div>
+            <div id="skillsLeft" class="skills-bars col-6 col-xs-12"></div>
+            <div id="skillsRight" class="skills-bars col-6 col-xs-12"></div>   
         </div>
     </section>
     <!-- section SKILLS end -->
@@ -177,9 +120,9 @@
     <!-- section RESUME begin -->
     <section class="container resume">
         <div class="row">
-                <div class="row-title col-12">
-                    <h4><span>My</span> Resume</h4>
-                </div>
+            <div class="row-title col-12">
+                <h4><span>My</span> Resume</h4>
+            </div>
             <!-- Left column -->
             <div class="col-6 col-md-6 col-xs-12">
                 <div class="resume-left-column">
@@ -237,60 +180,85 @@
     <!-- section RESUME end -->
 
     <!-- section CLIENT/COUNTER begin -->
-    <section class="container counter overlay">
-        <div class="row">
-            <div class="col-3">
-                <div class="block-counter col-3">
-                    <div class="counter-icon">
-                        <span class="fa fa-heart"></span>
-                    </div>
-                    <h4 class="integers">738</h4>
-                    <h5 class="counter-label">Happy clients</h5>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="block-counter">
-                    <div class="counter-icon">
-                        <span class="fa fa-check-square-o"></span>
-                    </div>
-                    <h4 class="integers">102</h4>
-                    <h5 class="counter-label">Successful projects</h5>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="block-counter">
-                    <div class="counter-icon">
-                        <span class="fa fa-trophy"></span>
-                    </div>
-                    <h4 class="integers">06</h4>
-                    <h5 class="counter-label">Awards received</h5>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="block-counter">
-                    <div class="counter-icon">
-                        <span class="fa fa-coffee"></span>
-                    </div>
-                    <h4 class="integers">511</h4>
-                    <h5 class="counter-label">Cups of tea</h5>
-                </div>
-            </div>
-        </div>
+    <section class="container counter overlay" id="client">
+        <div class="row" id="clientCounterBlock"></div>
     </section>
     <!-- section CLIENT/COUNTER end -->
 
     <!-- section SERVICES begin -->
-    <section class="container">
+    <section class="container services services-line" id="services">
         <div class="row">
-            SERVICES
+            <!-- title -->
+            <div class="row-title col-12">
+                <h4><span>My</span> Services</h4>
+            </div>
         </div>
+        <div class="row" id="services-block"></div>
     </section>
     <!-- section SERVICES end -->
 
     <!-- section PORTFOLIO begin -->
-    <section class="container">
-        <div class="row">
-            PORTFOLIO
+    <section class="container" id="portfolio">
+        <div class="row portfolio">
+            <div class=" row-title col-12">
+                <h4><span>My</span> Portfolio</h4>
+            </div>
+            <div class="filtering col-12">
+                <button class="button">All</button>
+                <button class="button">Brand</button>
+                <button class="button">Design</button>
+                <button class="button">Photo</button>
+                <button class="button">Video</button>
+            </div>
+            <div class="container-portfolio col-12">
+                <div class="gallery-container  h-2">
+                    <div class="gallery-item">
+                        <div class="image"><img src="./img/portfolio/1.jpg" alt="image"></div>
+                    </div>
+                </div>
+
+                <div class="gallery-container h-3">
+                    <div class="gallery-item">
+                        <div class="image"><img src="./img/portfolio/2.jpg" alt="image"></div>
+                    </div>
+                </div>
+
+                <div class="gallery-container h-2">
+                    <div class="gallery-item">
+                        <div class="image"><img src="./img/portfolio/3.jpg" alt="image"></div>
+                    </div>
+                </div>
+
+                <div class="gallery-container h-3">
+                    <div class="gallery-item">
+                        <div class="image"><img src="./img/portfolio/4.jpg" alt="image"></div>
+                    </div>
+                </div>
+
+                <div class="gallery-container h-3">
+                    <div class="gallery-item">
+                        <div class="image"><img src="./img/portfolio/5.jpg" alt="image"></div>
+                    </div>
+                </div>
+
+                <div class="gallery-container h-2">
+                    <div class="gallery-item">
+                        <div class="image"><img src="./img/portfolio/6.jpg" alt="image"></div>
+                    </div>
+                </div>
+
+                <div class="gallery-container h-3">
+                    <div class="gallery-item">
+                        <div class="image"><img src="./img/portfolio/7.jpg" alt="image"></div>
+                    </div>
+                </div>
+
+                <div class="gallery-container w-3 h-3">
+                    <div class="gallery-item">
+                        <div class="image"><img src="./img/portfolio/8.jpg" alt="image"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- section PORTFOLIO end -->
@@ -308,7 +276,10 @@
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
-                    <p class="review rev-row">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repudiandae distinctio consequatur provident repellendus a at tenetur, velit odit maiores nam, adipisci quo voluptate ab quisquam in earum accusamus nulla! A placeat deserunt dignissimos quasi ipsum quae atque praesentium! Ipsa!</p>
+                    <p class="review rev-row">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+                        repudiandae distinctio consequatur provident repellendus a at tenetur, velit odit maiores nam,
+                        adipisci quo voluptate ab quisquam in earum accusamus nulla! A placeat deserunt dignissimos
+                        quasi ipsum quae atque praesentium! Ipsa!</p>
                     <h5 class="rev-row reviewer upper">Jack Daniel</h5>
                     <h5 class="rev-row reviewer-pos upper">Graphic designer</h5>
                 </div>
@@ -323,40 +294,115 @@
     <!-- section TESTIMONIALS end -->
 
     <!-- section BLOG begin -->
-    <section class="container">
-        <div class="row">
-            BLOG
+    <section class="container blog" id="blog">
+        <div class="row blog ">
+            <div class="row-title col-12 col-md-12 col-sm-12 col-xs-12">
+                <h4><span>Latest</span> Blog</h4>
+            </div>
+            <div class="col-4 col-md-12 col-sm-12 col-xs-12  blog">
+                <div class="item-blog">
+                    <div class="img-blog">
+                        <img src="./img/blog/1.jpg">
+                        <a href="#">UX/UI</a>
+                    </div>
+                    <div class="content-blog">
+                        <a href="#">
+                            <h4>Light trails on highway</h4>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum rerum laborum inventore,
+                            accusantium culpa quaerat.</p>
+                        <div class="info-img">
+                            <div class="img-client">
+                                <img src="./img/blog/p1.jpg">
+                            </div>
+                            <div class="info">
+                                <h5><span>By :</span> Jack Daniel</h5>
+                                <h6>25 June 2017</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-md-12 col-sm-12 col-xs-12  blog">
+                <div class="item-blog">
+                    <div class="img-blog">
+                        <img src="./img/blog/2.jpg">
+                        <a href="#">Web Design</a>
+                    </div>
+                    <div class="content-blog">
+                        <a href="#">
+                            <h4>Riomaggiore coast scene</h4>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum rerum laborum inventore,
+                            accusantium culpa quaerat.</p>
+                        <div class="info-img">
+                            <div class="img-client">
+                                <img src="./img/blog/p2.jpg">
+                            </div>
+                            <div class="info">
+                                <h5><span>By :</span> Jack Daniel</h5>
+                                <h6>25 June 2017</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-md-12 col-sm-12 col-xs-12 blog">
+                <div class="item-blog">
+                    <div class="img-blog">
+                        <img src="./img/blog/3.jpg">
+                        <a href="#">Development</a>
+                    </div>
+                    <div class="content-blog">
+                        <a href="#">
+                            <h4>10 secrets tips for web design</h4>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum rerum laborum inventore,
+                            accusantium culpa quaerat.</p>
+                        <div class="info-img">
+                            <div class="img-client">
+                                <img src="./img/blog/p3.jpg">
+                            </div>
+                            <div class="info">
+                                <h5><span>By :</span> Jack Daniel</h5>
+                                <h6>25 June 2017</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- section BLOG end -->
 
     <!-- section CONTACT begin -->
-    <section class="container contacts">
+    <section class="container contacts" id="contact">
         <div class="row contacts-row">
-            <div class="cont-left col-7">
+            <div class="cont-left col-7 col-sm-12 col-xs-12">
                 <div class="row-title">
                     <h4><span>Get </span>in touch</h4>
                 </div>
                 <form>
                     <div class="cont-row">
                         <div class="c-icon fa fa-user"></div>
-                        <input class="cont-input" placeholder="your full name here" type="text" maxlength="50">
+                        <input class="cont-input" placeholder="your full name here" type="text" maxlength="50" data-validation="name">
                     </div>
                     <div class="cont-row">
                         <div class="c-icon fa fa-envelope"></div>
-                        <input class="cont-input" placeholder="your email here" type="email" maxlength="50">
+                        <input class="cont-input" placeholder="your email here" type="email" maxlength="50" data-validation="email">
                     </div>
                     <div class="cont-row">
                         <div class="c-icon fa fa-comment"></div>
-                        
-                        <textarea class="cont-input message" placeholder="message for me" maxlength="1000" required></textarea>
+
+                        <textarea class="cont-input message" placeholder="message for me" maxlength="1000"required data-validation="text"></textarea>
                     </div>
-                    <button class="btn">Send message</button>
+                    <button type="submit" class="btn">Send message</button>
                 </form>
             </div>
-            <div class="cont-right col-5">
+            <div class="cont-right col-5 col-sm-12 col-xs-12">
                 <h4>Contact info.</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis quibusdam eius ad quis repellat.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis quibusdam eius ad quis
+                    repellat.</p>
                 <div class="cont-row cont-info">
                     <div class="ci-icon fa fa-headphones"></div>
                     <span>+00123456789</span>
@@ -378,7 +424,9 @@
     <!-- footer begin -->
     <footer class="container">
         <div class="row">
-            FOOTER
+            <div class="bottom-text col-12">
+                <h6>Copy Right &copy; By A-Shawky 2020 | All Rights Reserved.</h6>
+            </div>
         </div>
     </footer>
     <!-- footer end -->

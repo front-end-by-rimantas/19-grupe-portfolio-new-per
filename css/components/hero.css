@@ -1,6 +1,6 @@
 .container.hero {
     background-image: url(../../img/header.jpg);
-    text-align: center;
+    /* text-align: center; */
     position: relative;
     background-size: cover;
     background-position: center;
@@ -18,8 +18,12 @@
         right: 0;
     }
     .container.hero > .row {
-        z-index: 10;
+        z-index: 1;
     }  
+    .container.hero > .row > .col-12 {
+        text-align: center;
+        margin-top: 80px;
+    }
         .hero > .row > .row > span {
             width: 100%;
             display: block;
@@ -45,6 +49,7 @@
             letter-spacing: 5px;
             font-family: 'Raleway', sans-serif;
             font-size: 14px;
+            line-height: 30px;;
             color: #bdbdbd;
             border-top: 1px solid rgba(255, 255, 255, 0.07);
             border-bottom: 1px solid rgba(255, 255, 255, 0.07);
@@ -53,11 +58,37 @@
                 font-family: 'Raleway', sans-serif;
             }
         .social-icon {
+
             width: 100%;
         }
             .hero .row .fa {
+                text-decoration: none;
                 cursor: pointer;
                 display: inline-block;
                 color: white;
+                margin: 5px;
                 padding: 10px;
+                line-height: 20px;
+                width: 40px;
+                transition: all 0.4s;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.1);
             }
+                .hero .row .fa:hover {
+                    background-color: var(--main-color);
+                }
+@media (max-width: 760px) {
+    .hero > .row > .row > span {
+        font-size: 16px;
+    }
+    .hero > .row > .row > h1 {
+        font-size: 32px;
+    }
+    .hero .row > .row ul > li {
+        font-size: 10px;
+    }
+    .hero .row .fa {
+        margin: 2px;
+    }
+
+}

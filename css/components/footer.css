@@ -1,0 +1,15 @@
+footer.container {
+    background-color: #282830;
+    padding: 30px;
+}
+    footer h6 {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 19px;
+        margin: 0px 0px 8px;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        color: #E0E0E0;
+
+    }

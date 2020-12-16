@@ -1,14 +1,24 @@
 .container.navbar {
-    background-color: var(--background-color);
-    padding: 8px 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    z-index: 10;
 }
+.row.navmenu {
+    padding: 15px 0;
+}
+     .navmenu * {
+    font-family: 'Roboto', sans-serif;
+    } 
     .navbar-logo > img {
         width: 100px;
         height: 40px;
     }
-        .navbar-logo .black {
-            display: none;
-        }
+    .over-bar .navbar-logo .over-bar {
+        display: none;
+    }
     .nav-links {
         display: flex;
         flex-direction: row;
@@ -16,19 +26,45 @@
         align-items: center;
     }
         .nav-links > .nav-a {
-            order: 7;
-            background: none;
             font-size: 15px;
             text-decoration: none;
-            color: #FFFFFF;
+            order: 7;
             margin: 0 15px;
+            transition: all 0.4s ease;
+            color: #e6e6e6;
         }
-        .nav-links > .nav-a:hover {
-            color: var(--main-color);
-        }
-        .nav-links > .nav-a.activeNavLink {
-            color: var(--main-color);
-        }
+        .nav-links .nav-a.activeNavLink {
+                color: var(--main-color);
+            }
+            .nav-links > .nav-a:hover {
+                color: var(--main-color);
+            }
     .navbar .menu-btn {
         display: none;
     }
+    
+/* Navbar start white */
+.navbar.white {
+    background-color: #fff;
+    position: fixed;
+    z-index: 99;
+}
+    .white .navmenu {
+        padding: 10px 0;
+    } 
+    /* This will probably be deleted or changed when navigation will be rendered with JS */
+    .white .navbar-logo .white {
+        display: none;
+    }
+    .white .nav-links > .nav-a{
+        display: flex;
+        place-self: center;
+        color: var(--h4-color);
+        margin: 0 15px;
+        height: 100%;
+        padding: 10px 0;
+    }
+        .white .nav-links > .nav-a:hover {
+            color: var(--main-color);
+        }
+/* Navbar end white */
