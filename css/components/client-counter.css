@@ -65,7 +65,7 @@
     .counter-icon {
         margin-bottom: 10px;
     }
-
+}  
 @media (max-width: 680px) {
     .container {
         grid-template-columns: 20px 1fr 20px;
@@ -81,4 +81,4 @@
     .counter-icon {
         margin-bottom: 10px;
     }
- }
+}
