@@ -1,9 +1,3 @@
-.container .row.portfolio .container-portfolio.col-12 { 
-    grid-column: 2 / span 10;
- }
- /* .row.portfolio {
-     margin: 0 -77px;
- } */
     .filtering {
         margin-bottom: var(--section-heading-space);
     }
@@ -18,30 +12,76 @@
             cursor: pointer;
             border: none;
             border-top:solid 1px #f4f5f8;
-                }
+        }
     .container-portfolio {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 10px;
     }
-        .gallery-item {
+    .gallery-container{
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .image {
+        width: 100%;
+        overflow: hidden;
+    }
+        .image img {
             width: 100%;
             height: 100%;
-            position: relative;
+            object-fit: cover;
+            object-position: 50% 50%;
+            border: 1px solid #f4f5f8;
+            border-radius: 4px;
         }
-            .gallery-item .image {
-                width: 100%;
-                /* height: 100%; */
-                overflow: hidden;
+
+    .gallery-overlay {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffffe5;
+        width: 90%;
+        height: 90%;
+        transition: all 0.4s ease-in-out;
+        opacity: 0;
+        border-radius: 2px;
+        z-index: 10;
+    }
+        .gallery-container:hover .gallery-overlay {
+            opacity: 1;
+        }
+            .gallery-over-links {
+                display: inline-block;
+                width: 40%;
+                height: 40%;
+                /* background-color: aqua; */
             }
-                .gallery-item .image img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: 50% 50%;
-                    border: 1px solid #f4f5f8;
-                    border-radius: 4px;
+            .gallery-over-links > h5 {
+                display: inline-block;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                letter-spacing: 0.1rem;
+                width: 100%;
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+            .gallery-over-links > a {
+                text-decoration: none;
+                color: var(--main-color);
+                width: 30px;
+                height: 30px;
+                padding: 5px;
+            }
+                .icon-link.fa-link{
+                    transform: rotate(-45deg);
                 }
+
         .w-3 {
             grid-column: span 2;
         }
@@ -54,4 +94,5 @@
         .h-3 {
             grid-row: span 3;
         }
+
              
