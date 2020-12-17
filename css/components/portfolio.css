@@ -12,6 +12,7 @@
         cursor: pointer;
         border: none;
         text-decoration: none;
+        outline: none;
     }
     .portfolio-btn.active {
         color: var(--main-color);
@@ -87,11 +88,24 @@
         }
         .cap {
             position: absolute;
-            bottom: 60%;
+            bottom: 70%;
             margin-bottom: -44px;
             margin-left: -40px;
             left: 50%;
         }
+            .portfolio-hover>.cap>h6 {
+                margin-bottom: 20px;
+                color: #111;
+                font-weight: 900;
+                font-size: 1rem;
+            }
+                
+                span.i>a {
+                    text-decoration: none;
+                    color: var(--main-color);
+                    margin: 1rem;
+                    font-size: 1.2rem;
+                }
 @media (max-width: 780px) {
     .container-portfolio {
         grid-template-columns: repeat(2, 1fr);
@@ -105,7 +119,7 @@
     .container-portfolio {
         grid-template-columns: 1fr;
     }
-    .container-portfolio.col-12 .gallery-item {
-        grid-row: span 2;
-    }
+    /* .container-portfolio.col-12 .gallery-item {
+        grid-row: span 1;
+    } */
 }
