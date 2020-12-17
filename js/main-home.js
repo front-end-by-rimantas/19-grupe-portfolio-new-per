@@ -5,6 +5,8 @@ ALL IMPORTS
 /* hero */
 import { heroIconData } from './data/heroIconData.js';
 import { renderHeroIcons } from './components/heroIcons/renderHeroIcons.js';
+import { typeWriterAllWords } from "./data/typewriterData.js"
+import { RenderTypeWriter } from "./components/renderTypewriter/renderTypewriter.js"
 /* about me */
 /* skills */
 import { skillsData } from "./data/skillsData.js";
@@ -34,7 +36,9 @@ EXECUTION
 /* hero */
 // hero-icon-render
 renderHeroIcons('header > .row > .col-12 > div', heroIconData);
-// '#hero-icons', 
+//typewriter
+const typeEffect = new RenderTypeWriter(".typer", typeWriterAllWords);
+typeEffect.typeWriting();
 /* about me */
 /* skills */
 renderMySkills('#skillsLeft', skillsData);
