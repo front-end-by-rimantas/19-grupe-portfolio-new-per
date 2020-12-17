@@ -2,6 +2,7 @@
 ALL IMPORTS
 ****************/
 /* navigation bar */
+
 /* hero */
 import { heroIconData } from './data/heroIconData.js';
 import { renderHeroIcons } from './components/heroIcons/renderHeroIcons.js';
@@ -31,6 +32,7 @@ import { contactsValidator } from "./components/contacts/contactsValidator.js";
 EXECUTION
 ****************/
 /* navigation bar */
+
 /* hero */
 // hero-icon-render
 renderHeroIcons('#hero-icons_block', heroIconData);
