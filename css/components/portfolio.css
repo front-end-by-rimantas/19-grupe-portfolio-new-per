@@ -61,34 +61,20 @@
                 content: '';
                 position: absolute;
                 top: 0;
+                bottom: 0;
                 right: -250px;
                 width: 180px;
-                height: 100%;
+                height: 98%;
                 background-color: #d8d8d8a4;
                 transform: skew(45deg);
                 transition: all 0.8s ease-in-out;
                 z-index: -1;
-            }
-            .gallery-container .gallery-overlay::before{
-                content: '';
-                position: absolute;
-                top: 0;
-                right: -250px;
-                width: 182px;
-                height: 100%;
-                background-color: var(--main-color);
-                opacity: 0.2;
-                transform: skew(45deg);
-                transition: all 0.8s ease-in-out;
-                z-index: -1;  
+                border: solid 1px var(--main-color);
             }
                 .gallery-overlay:hover::after{
                     right: 200%;
                 }
-                .gallery-overlay:hover::before{
-                    right: 200%;
-                }
-        .gallery-container:hover .gallery-over-links{
+        .gallery-overlay:hover .gallery-over-links{
             transform: translateY(0%);
         }
             .gallery-over-links {
