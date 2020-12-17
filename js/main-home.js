@@ -20,6 +20,8 @@ import { servicesData } from "./data/servicesData.js";
 import { renderMyServices } from "./components/myServices/renderMyServices.js";
 /* portfolio */
 /* testimonials */
+import { Testimonials } from "./components/testimonials/Testimonials.js";
+import { testimonialData } from "./data/testimonialsData.js";
 /* blog */
 /* contact */
 import { contactsValidator } from "./components/contacts/contactsValidator.js";
@@ -46,6 +48,10 @@ renderClientCounter('#clientCounterBlock', clientCounterData);
 renderMyServices('#services-block', servicesData);
 /* portfolio */
 /* testimonials */
+new Testimonials ({
+    selector: '#renderTestimonials',
+    data: testimonialData,
+});
 /* blog */
 /* contact */
 contactsValidator('form');
