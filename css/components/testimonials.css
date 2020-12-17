@@ -94,12 +94,17 @@
 }
 
     .slider {
-    width: 30px;
+    width: 15px;
     height: 4px;
     border-radius: 2px;
-    background: var(--main-color);
+    background: var(--background-color);
     margin: 0 5px 5px;
-}
+    cursor: pointer;
+    }
+    .slider.active {
+        width: 30px;
+        background: var(--main-color);
+    }
 @media (max-width: 680px) {
     
         .testimonials > .row {

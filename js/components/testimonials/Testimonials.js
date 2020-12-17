@@ -2,6 +2,7 @@ class Testimonials {
     constructor(params) {
         this.selector = params.selector || 'body';
         this.data = params.data || [];
+        this.isLineControlsVisible = params.isLineControlsVisible || true;
         this.DOM = null;
         this.init();
     }
@@ -43,7 +44,24 @@ class Testimonials {
         </div>`;
     }
         return HTML;
-    
+    }
+
+    generateControls() {
+        let HTML = '';
+
+        if (!this.isLineControlsVisible) {
+            return HTML;
+        }
+
+        const testimonialsCount = this.data.length;
+        let linesHTML = `<div class="slider active"></div>`;
+        linesHTML += `<div class="slider"></div>`.repeat(testimonialsCount - 1)
+
+        HTML = `<div class="review-sliders rev-row">
+                    ${this.isLineControlsVisible ? linesHTML : ''}
+                </div>`
+
+        return HTML;
     }
     render() {
         const HTML = `<div class="allTestimonials">
@@ -52,11 +70,7 @@ class Testimonials {
             ${this.generateReviews()}
             </div>
                 </div>
-                <div class="review-sliders rev-row">
-                    <div class="slider"></div>
-                    <div class="slider"></div>
-                    <div class="slider"></div>
-                </div>
+                ${this.generateControls()}
             </div>`;
 
         this.DOM.innerHTML = HTML;
