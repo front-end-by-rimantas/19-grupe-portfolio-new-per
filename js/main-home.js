@@ -2,12 +2,13 @@
 ALL IMPORTS
 ****************/
 /* navigation bar */
-
+import { navData } from './data/navData.js';
+import { RenderNav } from './components/navigation/RenderNav.js';
 /* hero */
 import { heroIconData } from './data/heroIconData.js';
 import { renderHeroIcons } from './components/heroIcons/renderHeroIcons.js';
 import { typeWriterAllWords } from "./data/typewriterData.js"
-import { RenderTypeWriter } from "./components/renderTypewriter/renderTypewriter.js"
+import { RenderTypeWriter } from "./components/renderTypewriter/RenderTypewriter.js"
 /* about me */
 /* skills */
 import { skillsData } from "./data/skillsData.js";
@@ -32,7 +33,7 @@ import { contactsValidator } from "./components/contacts/contactsValidator.js";
 EXECUTION
 ****************/
 /* navigation bar */
-
+new RenderNav(navData);
 /* hero */
 // hero-icon-render
 renderHeroIcons('#hero-icons_block', heroIconData);
