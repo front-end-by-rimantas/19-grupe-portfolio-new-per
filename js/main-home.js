@@ -23,8 +23,6 @@ import { renderMyServices } from "./components/myServices/renderMyServices.js";
 /* blog */
 /* contact */
 import { contactsValidator } from "./components/contacts/contactsValidator.js";
-
-
 /* footer */
 
 /***************
@@ -33,7 +31,7 @@ EXECUTION
 /* navigation bar */
 /* hero */
 // hero-icon-render
-renderHeroIcons('header > .row > .col-12 > div', heroIconData);
+renderHeroIcons('#hero-icons_block', heroIconData);
 //typewriter
 const typeEffect = new RenderTypeWriter(".typer", typeWriterAllWords);
 typeEffect.typeWriting();
@@ -52,3 +50,4 @@ renderMyServices('#services-block', servicesData);
 /* contact */
 contactsValidator('form');
 /* footer */
+document.getElementById("year").innerHTML = new Date().getFullYear();
