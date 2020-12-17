@@ -1,17 +1,21 @@
-function clientCounterAnimation (selector) {
-    const clientCounterIntegersDOM = document.querySelectorAll(selector);
-    const number = data[i];
-    let number = 0;
-    for (let i = 0; i <= number; i++) {
-        return number++;
+
+
+function clientCounterAnimation(counter) {
+    const speed = 100;
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
         
-    
+        const increase = Math.round(target / speed);
+
+        if(count < target) {
+            counter.innerText = count + increase;
+            setTimeout(updateCount, 50);
+        } else {
+            counter.innerText = target;
+        }
     }
-    
-
-    const speed = setInterval(clientCounterAnimation, 600);
-
-
+    updateCount();
 }
 
 export { clientCounterAnimation }
