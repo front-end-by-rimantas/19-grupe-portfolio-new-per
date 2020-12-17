@@ -1,12 +1,10 @@
-
-
-function clientCounterAnimation(counter) {
+function clientCounterAnimation(integers) {
     const speed = 100;
     const updateCount = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
+        const target = +integers.getAttribute('data-target');
+        const count = +integers.innerText;
         
-        const increase = Math.round(target / speed);
+        const increase = Math.round(target/speed);
 
         if(count < target) {
             counter.innerText = count + increase;
