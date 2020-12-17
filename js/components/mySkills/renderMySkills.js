@@ -30,7 +30,7 @@ function renderMySkills(selector, skillsData) {
             HTML += `<div class="progress-bar">
             <div class="label">${skills.label}</div>
             <div class="pbar">
-            <div style="width:${skills.value}%" class="pbar bottom">
+            <div style="width:${skills.value * 0.99}%" class="pbar bottom">
                 <div class="pbar loading">
                 <div class="bar-value">${skills.value}%</div>
                 </div>
@@ -48,7 +48,7 @@ function renderMySkills(selector, skillsData) {
             HTML += `<div class="progress-bar">
             <div class="label">${skills.label}</div>
             <div class="pbar">
-            <div style="width:${skills.value}%" class="pbar bottom">
+            <div style="width:${skills.value * 0.99}%" class="pbar bottom">
                 <div class="pbar loading">
                 <div class="bar-value">${skills.value}%</div>
                 </div>
@@ -59,6 +59,22 @@ function renderMySkills(selector, skillsData) {
     }
 
     DOM.innerHTML = HTML;
+
+    const allProgressBars = document.querySelectorAll('.progress-bar');
+
+
+    addEventListener('scroll', () => {
+        const screenBottom = innerHeight + scrollY;
+
+        for (let bar of allProgressBars) {
+            const barBottom = bar.offsetHeight + bar.offsetTop;
+            if (screenBottom >= barBottom) {
+                bar.classList.add('animate');
+            }
+        }
+    })
+
+    return true;
 
 }
 
