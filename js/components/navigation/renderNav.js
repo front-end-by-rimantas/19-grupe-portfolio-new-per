@@ -1,3 +1,4 @@
+
 class RenderNav {
     constructor (params) {
         this.selector = params.selector;
@@ -15,6 +16,7 @@ class RenderNav {
         }
 
         this.render();
+        this.addEvents();
     }
 
     isValidSelector() {
@@ -27,26 +29,34 @@ class RenderNav {
     }
 
     generateLogo() {
+
         if (true) {
-        return `<img class="white" src="./img/logo-2.png" alt="White New Per logo"></img>`;
+        return `<div class="navbar-logo col-3 col-sm-12 col-xs-12">
+                    <a class="navbar-logo col-3" href="#">
+                    <img class="white" src="./img/logo-2.png" alt="White New Per logo"></img>
+                    <img class="over-bar" src="./img/logo.png" alt="Black New Per logo"></img>
+                    </a>
+                </div>`;
         } else {
-        return `<a class="navbar-logo col-3" href="#">
-                <img class="over-bar" src="./img/logo.png" alt="Black New Per logo">
-                </a>`;
+        return;
         }
     }
 
-    isValidMenuLink() {
+    isValidMenuLink(menuItem) {
         return true;
     }
 
-    // generateNav() {
-    //     let HTML = '';
-    //     for(let i = 0; i < this.menuLinks.length; i++) {
-    //         HTML += `<a class="nav-a" href="#about">About</a>`;
-    //     }
-    //     return HTML;
-    // }
+     generateNav() {
+         let HTML = '';
+         for(let i = 0; i < this.menuLinks.length; i++) {
+             const menuItem = this.menuLinks[i];
+            if(!this.isValidMenuLink(menuItem)) {
+                continue;
+            }
+             HTML += `<a class="nav-a" href="${menuItem.link}">${menuItem.text}</a>`;
+         }
+         return HTML;
+     }
 
     isValidMenu() {
         if (!Array.isArray(this.menuLinks)) {
@@ -62,17 +72,10 @@ class RenderNav {
         if (!this.isValidMenu()) {
             return '';
         }
-        return `${this.generateLogo()}
-                <div class="row navmenu">
-                    <div class="nav-links col-9">
-                        <a class="nav-a activeNavLink" href="#home">Home</a>
-                        <a class="nav-a" href="#about">About</a>
-                        <a class="nav-a" href="#services">Services</a>
-                        <a class="nav-a" href="#portfolio">Portfolio</a>
-                        <a class="nav-a" href="#client">Client</a>
-                        <a class="nav-a" href="#blog">Blog</a>
-                        <a class="nav-a" href="#contact">Contact</a>
-                    </div>
+        return `<div class="row navmenu">
+                ${this.generateLogo()}
+                <div class="nav-links col-9">
+                ${this.generateNav()}
                     <div class="menu-btn">
                         <i class="fa fa-bars"></i>
                     </div>
@@ -81,6 +84,10 @@ class RenderNav {
     
     render() {
         this.DOM.innerHTML = this.generateHTML();
+    }
+
+    addEvents(){
+        
     }
 }
 export { RenderNav }

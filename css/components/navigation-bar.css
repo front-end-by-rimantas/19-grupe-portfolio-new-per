@@ -6,6 +6,17 @@
     padding: 0;
     z-index: 10;
 }
+    .container.navbar.scroll {
+        position: fixed;
+        background-color: white;
+        color: black;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 0;
+        z-index: 99;
+    }
 .row.navmenu {
     padding: 15px 0;
 }
@@ -33,9 +44,9 @@
             transition: all 0.4s ease;
             color: #e6e6e6;
         }
-        .nav-links .nav-a.activeNavLink {
-                color: var(--main-color);
-            }
+        .nav-links .nav-a:first-of-type {
+            color: var(--main-color);
+        }
             .nav-links > .nav-a:hover {
                 color: var(--main-color);
             }

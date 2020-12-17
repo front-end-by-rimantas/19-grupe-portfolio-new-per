@@ -7,27 +7,27 @@ const navData = {
         },
         {
             text: 'About',
-            link: '#'
+            link: '#about'
         },
         {
             text: 'Services',
-            link: '#'
+            link: '#services'
         },
         {
             text: 'Portfolio',
-            link: '#'
+            link: '#portfolio'
         },
         {
             text: 'Client',
-            link: '#'
+            link: '#renderTestimonials'
         },
         {
             text: 'Blog',
-            link: '#'
+            link: '#blog'
         },
         {
             text: 'Contact',
-            link: '#'
+            link: '#contact'
         }
 
     ]
