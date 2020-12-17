@@ -16,7 +16,7 @@ function isValidClientCounterItem (itemObject) {
             console.var('ERROR: klientų skaičiuoklės elemento reikšmė turėtų būti skaitinė ir ne tuščia.');
             return false;
         }
-        if (itemObject.value < 10) {
+         if (itemObject.value < 10) {
             return itemObject.value = '0' + itemObject.value;
         }
         if (typeof itemObject.title !== 'string' || itemObject.title === '') {

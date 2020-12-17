@@ -16,4 +16,4 @@ function counterAnimationOnScroll() {
     });
 }
 
-export { counterAnimationOnScroll }
+export { counterAnimationOnScroll } 

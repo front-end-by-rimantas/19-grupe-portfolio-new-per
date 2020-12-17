@@ -46,9 +46,8 @@ renderMySkills('#skillsRight', skillsData);
 /* resume */
 /* client counter */
 renderClientCounter('#clientCounterBlock', clientCounterData);
-clientCounterAnimation('.integers');
+clientCounterAnimation();
 counterAnimationOnScroll();
-// clientCounterAnimation(renderClientCounter('#clientCounterBlock', clientCounterData));
 /* services */
 renderMyServices('#services-block', servicesData);
 /* portfolio */

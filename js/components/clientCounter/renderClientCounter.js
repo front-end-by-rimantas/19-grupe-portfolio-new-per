@@ -30,7 +30,7 @@ function renderClientCounter (selector, data) {
                         <div class="counter-icon">
                             <span class="fa fa-${item.icon}"></span>
                         </div>
-                        <h4 class="integers" data-target=${item.value}>0</h4>
+                        <h4 class="counter integers" data-target=${item.value}>0</h4>
                         <h5 class="counter-label">${item.title}</h5>
                     </div>
                 </div>`;
