@@ -48,14 +48,31 @@
         background-color: #ffffffcc;
         width: 90%;
         height: 90%;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.4s ease-in-out;
         opacity: 0;
         border-radius: 2px;
         z-index: 10;
+        overflow: hidden;
     }
         .gallery-container:hover .gallery-overlay {
             opacity: 1;
         }
+            .gallery-container .gallery-overlay::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: -200%;
+                width: 200px;
+                height: 100%;
+                background-color: #d8d8d8a4;
+                transform: skew(40deg);
+                transition: all 0.9s ease-in-out;
+                border: 3px solid var(main-color);
+                z-index: -1;
+            }
+                .gallery-overlay:hover::after{
+                    right: 200%;
+                }
         .gallery-container:hover .gallery-over-links{
             transform: translateY(0%);
         }
@@ -64,10 +81,9 @@
                 transform: translateY(150%);
                 width: 100%;
                 height: 40%;
-                /* background-color: aqua; */
-                /* margin-left: ; */
                 transition: all 0.4s ease-in-out;
             }
+
             .gallery-over-links > h5 {
                 display: inline-block;
                 font-family: 'Montserrat', sans-serif;
@@ -76,6 +92,7 @@
                 width: 100%;
                 font-size: 15px;
                 margin-bottom: 30px;
+                /* margin-bottom sumazinti su responsive ??  */
             }
             .gallery-over-links > a {
                 text-decoration: none;
