@@ -46,21 +46,12 @@
     <header class="container hero">
         <div class="row col-12">
             <div class="row col-12 col-xs-12">
-                <span>
-                    WELCOME
-                </span>
-                <h1>
-                    I AM JOHN DOE
-                </h1>
+                <h3 class="upper">welcome</h3>
+                <h1 class="upper">i am john doe</h1>
                 <!--typewriter effect-->
-                <ul>
-                    <li>
-                        WEB DEVELOPER
-                        <span class="typed-cursor">|</span>
-                    </li>
-                </ul>
+                <span class='typer upper'></span>
                 <!--social media-->
-                <div class="social-icon"></div>
+                <div id="hero-icons_block" class="social-icon"></div>
             </div>
         </div>
     </header>
@@ -370,29 +361,7 @@
     <!-- section TESTIMONIALS begin -->
     <section class="container testimonials">
         <div class="row">
-            <div class="testi-cont-wrap col-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="review-wrap">
-                    <h5 class="review-title upper rev-row">Awwwesome work</h5>
-                    <div class="stars rev-row">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <p class="review rev-row">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-                        repudiandae distinctio consequatur provident repellendus a at tenetur, velit odit maiores nam,
-                        adipisci quo voluptate ab quisquam in earum accusamus nulla! A placeat deserunt dignissimos
-                        quasi ipsum quae atque praesentium! Ipsa!</p>
-                    <h5 class="rev-row reviewer upper">Jack Daniel</h5>
-                    <h5 class="rev-row reviewer-pos upper">Graphic designer</h5>
-                </div>
-                <div class="review-sliders rev-row">
-                    <div class="slider"></div>
-                    <div class="slider"></div>
-                    <div class="slider"></div>
-                </div>
-            </div>
+            <div id="renderTestimonials" class="testi-cont-wrap col-12 col-md-12 col-sm-12 col-xs-12"></div>
         </div>
     </section>
     <!-- section TESTIMONIALS end -->
@@ -532,7 +501,7 @@
     <footer class="container">
         <div class="row">
             <div class="bottom-text col-12">
-                <h6>Copy Right &copy; By A-Shawky 2020 | All Rights Reserved.</h6>
+                <h6>Copy Right &copy; By A-Shawky <span id="year"></span> | All Rights Reserved.</h6>
             </div>
         </div>
     </footer>
