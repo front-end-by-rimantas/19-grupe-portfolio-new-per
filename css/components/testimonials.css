@@ -34,6 +34,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
+    transition: all 1s;
 }
 .upper {
     text-transform: uppercase;

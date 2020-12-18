@@ -4,6 +4,11 @@ class Testimonials {
         this.data = params.data || [];
         this.isLineControlsVisible = params.isLineControlsVisible || true;
         this.DOM = null;
+        this.controlsDOM = null;
+        this.linesDOMs = null;
+        this.listDOM = null;
+        this.activeLineIndex = 0;
+
         this.init();
     }
     init() {
@@ -11,6 +16,7 @@ class Testimonials {
             return;
         }
         this.render();
+        this.addEvents();
     }
     isValidSelector() {
         const DOM = document.querySelector(this.selector);
@@ -74,6 +80,34 @@ class Testimonials {
             </div>`;
 
         this.DOM.innerHTML = HTML;
+
+        this.listDOM = this.DOM.querySelector('.list');
+
+        if (this.isLineControlsVisible) {
+            this.controlsDOM = this.DOM.querySelector('.review-sliders');
+
+            if (this.isLineControlsVisible) {
+                this.linesDOMs = this.controlsDOM.querySelectorAll('.slider');
+            }
+        }
+    }
+
+    addEvents() {
+        for (let i=0; i<this.linesDOMs.length; i++) {
+            const line = this.linesDOMs[i];
+
+        line.addEventListener('click', () => {
+            let proc = -20 * i + '%';
+            this.listDOM.style.transform = `translateX(${proc})`;
+            
+            // this.controlsDOM.querySelector('.slider.active').classList.remove('active')
+
+            this.linesDOMs[this.activeLineIndex].classList.remove('active');
+            this.activeLineIndex = i;
+            line.classList.add('active');
+
+        })
+    }
     }
 }
 
