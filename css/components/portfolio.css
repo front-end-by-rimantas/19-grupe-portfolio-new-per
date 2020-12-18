@@ -58,53 +58,99 @@
     .h-3 {
         grid-row: span 3;
     }
-        .gallery-item>img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: 50% 50%;
-            border: 1px solid #f4f5f8;
-            border-radius: 4px;
-        }
-        .gallery-item .portfolio-hover:hover {
-            opacity: 1;
-        }
-        .gallery-item .portfolio-hover {
+
+.gallery-item{
+    position: relative;
+    overflow: hidden;
+}
+
+.port-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+    .port-image > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        border: 1px solid #f4f5f8;
+        border-radius: 5px;
+    }
+    
+.portfolio-hover {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffffcc;
+    transition: all 0.4s ease-in;
+    opacity: 0;
+    border-radius: 3px;
+    z-index: 10;
+    overflow: hidden;
+}
+    .portfolio-hover:hover {
+        opacity: 1;
+    }
+        .gallery-item .portfolio-hover::after{
+            content: '';
             position: absolute;
-            top: 15px;
-            left: 15px;
-            right: 15px;
-            bottom: 15px;
-            border-radius: 4px;
-            background: rgba(255, 255, 255, 0.9);
-            border: 1px solid #f7f7f7;
-            opacity: 0;
-            overflow: hidden;
-            -webkit-transition: all .5s;
-            transition: all .5s;
-            color: #fff;
-            z-index: 1;
-            color: black;
+            top: 0;
+            bottom: 0;
+            right: -150%;
+            width: 50%;
+            height: auto;
+            background-color: #d8d8d8a4;
+            transform: skew(45deg);
+            transition: all 0.8s ease-in-out;
+            z-index: -1;
+            border: solid 1px var(--main-color);
         }
-        .cap {
-            position: absolute;
-            bottom: 70%;
-            margin-bottom: -44px;
-            margin-left: -40px;
-            left: 50%;
-        }
-            .portfolio-hover>.cap>h6 {
-                margin-bottom: 20px;
-                color: #111;
-                font-weight: 900;
-                font-size: 1rem;
+            .portfolio-hover:hover::after{
+                right: 160%;
             }
-                span.i>a {
-                    text-decoration: none;
-                    color: var(--main-color);
-                    margin: 1rem;
-                    font-size: 1.2rem;
-                }
+
+        .portfolio-hover-links {
+            display: inline-block;
+            transform: translateY(150%);
+            width: 100%;
+            height: auto;
+            transition: all 0.4s ease-in-out;
+        }
+            .portfolio-hover:hover .portfolio-hover-links{
+                transform: translateY(0%);
+            }
+
+        .portfolio-hover-links > h5 {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            width: 100%;
+            font-size: 15px;
+            margin-bottom: 30px;
+            /* margin-bottom sumazinti su responsive ??  */
+        }
+        .portfolio-hover-links > a {
+            text-decoration: none;
+            color: var(--main-color);
+            width: 30px;
+            height: 30px;
+            padding: 5px;
+            margin: 0 10px;
+        }
+            .portfolio-hover-links > a:hover{
+                color: var(--clients-text-color);
+            }
+            .portfolio-hover-links > a > i{
+                transform: rotate(-45deg);
+            }
+
 @media (max-width: 780px) {
     .container-portfolio {
         grid-template-columns: repeat(2, 1fr);
