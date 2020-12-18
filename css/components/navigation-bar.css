@@ -7,16 +7,45 @@
     z-index: 10;
 }
     .container.navbar.scroll {
-        position: fixed;
-        background-color: white;
-        color: black;
-        top: 0;
-        left: 0;
-        right: 0;
         width: 100%;
-        padding: 0;
+        height: 60px;
+        background-color: #fff;
+        padding: 0; 
+        position: fixed;
         z-index: 99;
+        transition: all 0.3s;
     }
+    .scroll .white .navbar-logo .white {
+        display: none;
+    }
+    .scroll .nav-links > .nav-a {
+        color: var(--h4-color);
+        margin: 0 15px;
+        padding: 10px 0;
+    }
+    .scroll .white .nav-links > .nav-a:hover {
+        color: var(--main-color);
+    }
+    .scroll .white .nav-links > .nav-a {
+        color: var(--h4-color);
+        margin: 0 15px;
+        padding: 10px 0;
+    }
+    .scroll .navbar-logo .white {
+        display: none;
+    }
+    .scroll .over-bar .navbar-logo .over-bar {
+        display: inline-block;
+        width: 100px;
+    }
+    .scroll .over-bar .navbar-logo {
+        width: 100px;
+    }
+
+    .white .navmenu {
+        padding: 10px 0;
+    } 
+
 .row.navmenu {
     padding: 15px 0;
 }
@@ -27,7 +56,7 @@
         width: 100px;
         height: 40px;
     }
-    .over-bar .navbar-logo .over-bar {
+     .over-bar .navbar-logo .over-bar {
         display: none;
     }
     .nav-links {
@@ -53,28 +82,7 @@
         display: none;
     }
     
-/* Navbar start white */
-.navbar.white {
-    width: 100%;
-    background-color: #fff;
-    position: fixed;
-    z-index: 99;
-}
-    .white .navmenu {
-        padding: 10px 0;
-    } 
-    /* This will probably be deleted or changed when navigation will be rendered with JS */
-    .white .navbar-logo .white {
-        display: none;
-    }
-    .white .nav-links > .nav-a{
-        color: var(--h4-color);
-        margin: 0 15px;
-        padding: 10px 0;
-    }
-        .white .nav-links > .nav-a:hover {
-            color: var(--main-color);
-        }
+
 /* Navbar end white */
 @media (max-width: 860px){
     .container.navbar {

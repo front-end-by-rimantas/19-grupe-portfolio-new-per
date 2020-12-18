@@ -83,11 +83,18 @@ class RenderNav {
     }
     
     render() {
+        console.log(this.DOM);
         this.DOM.innerHTML = this.generateHTML();
     }
 
     addEvents(){
-        
+        addEventListener('scroll', () => {
+            if (scrollY > 250) {
+                this.DOM.closest('nav').classList.add('scroll');
+            } else {
+                this.DOM.closest('nav').classList.remove('scroll');
+            }
+        })
     }
 }
 export { RenderNav }
