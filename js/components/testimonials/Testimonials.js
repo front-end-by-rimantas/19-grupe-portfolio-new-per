@@ -3,6 +3,7 @@ class Testimonials {
         this.selector = params.selector || 'body';
         this.data = params.data || [];
         this.isLineControlsVisible = params.isLineControlsVisible || true;
+        this.cloneCount = params.cloneCount || 2;
         this.DOM = null;
         this.controlsDOM = null;
         this.linesDOMs = null;
@@ -37,11 +38,15 @@ class Testimonials {
     }
     generateReviews() {
         let HTML = '';
-        for (let testimonial of this.data) {
+        const reviewWidth = 100 / (this.data.length + 2 * this.cloneCount);
+        const dataCopy = [this.data[3], this.data[4], ...this.data, this.data[0], this.data[1]];
+        console.log(dataCopy);
+
+        for (let testimonial of dataCopy) {
             if (!this.isValidTestimonial(testimonial)) {
                 continue;
             }
-            HTML += `<div class="review-wrap" style="width: 20%";>
+            HTML += `<div class="review-wrap" style="width: ${reviewWidth}%";>
             <h5 class="review-title upper rev-row">${testimonial.title}</h5>
             <div class="stars rev-row">${this.generateStars(testimonial.rating)}</div>
             <p class="review rev-row">${testimonial.comment}</p>
@@ -70,9 +75,10 @@ class Testimonials {
         return HTML;
     }
     render() {
+        const listWidth = (this.data.length + 2 * this.cloneCount) * 100;
         const HTML = `<div class="allTestimonials">
         <div class="screen">
-            <div class="list" style="width: 500%";>
+            <div class="list" style="width: ${listWidth}%";>
             ${this.generateReviews()}
             </div>
                 </div>
