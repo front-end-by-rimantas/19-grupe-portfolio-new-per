@@ -41,7 +41,6 @@ class Testimonials {
         let HTML = '';
         const reviewWidth = 100 / (this.data.length + 2 * this.cloneCount);
         this.reviewWidth = reviewWidth;
-        console.log(this.reviewWidth);
         const dataCopy = [this.data[3], this.data[4], ...this.data, this.data[0], this.data[1]];
         for (let testimonial of dataCopy) {
             if (!this.isValidTestimonial(testimonial)) {
@@ -102,7 +101,6 @@ class Testimonials {
             const line = this.linesDOMs[i];
         line.addEventListener('click', () => {
             let proc = `-${this.reviewWidth}` * i;
-            console.log(proc);
             this.listDOM.style.transform = `translateX(${proc}%)`;
             
             // this.controlsDOM.querySelector('.slider.active').classList.remove('active')
