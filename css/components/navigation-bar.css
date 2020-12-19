@@ -16,7 +16,7 @@
         width: 100px;
         height: 40px;
     }
-    .over-bar .navbar-logo .over-bar {
+     .over-bar .navbar-logo .over-bar {
         display: none;
     }
     .nav-links {
@@ -32,39 +32,41 @@
             transition: all 0.4s ease;
             color: #e6e6e6;
         }
-        .nav-links .nav-a.activeNavLink {
-                color: var(--main-color);
-            }
+        .nav-links .nav-a:first-of-type {
+            color: var(--main-color);
+        }
             .nav-links > .nav-a:hover {
                 color: var(--main-color);
             }
     .navbar .menu-btn {
         display: none;
     }
-    
-/* Navbar start white */
-.navbar.white {
-    width: 100%;
-    background-color: #fff;
-    position: fixed;
-    z-index: 99;
-}
-    .white .navmenu {
-        padding: 10px 0;
-    } 
-    /* This will probably be deleted or changed when navigation will be rendered with JS */
-    .white .navbar-logo .white {
-        display: none;
+    .navbar.white {
+        width: 100%;
+        background-color: #fff;
+        position: fixed;
+        z-index: 99;
+        transition: all 0.6s ease;
     }
-    .white .nav-links > .nav-a{
-        color: var(--h4-color);
-        margin: 0 15px;
-        padding: 10px 0;
-    }
-        .white .nav-links > .nav-a:hover {
-            color: var(--main-color);
+        .white .navmenu {
+            padding: 10px 0;
+        } 
+        .white .navbar-logo .white {
+            display: none;
         }
-/* Navbar end white */
+        .white .nav-links > .nav-a{
+            color: var(--h4-color);
+            margin: 0 15px;
+            padding: 10px 0;
+        }
+            .white .nav-links > .nav-a:first-of-type{
+                color: var(--main-color);
+            }
+            .white .nav-links > .nav-a:hover {
+                color: var(--main-color);
+            }
+    
+
 @media (max-width: 860px){
     .container.navbar {
         column-gap: 10px;
