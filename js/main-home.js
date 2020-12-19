@@ -21,6 +21,8 @@ import { renderClientCounter } from './components/clientCounter/renderClientCoun
 import { servicesData } from "./data/servicesData.js";
 import { renderMyServices } from "./components/myServices/renderMyServices.js";
 /* portfolio */
+import { portfolioData } from "./data/portfolioData.js";
+import { Portfolio } from "./components/portfolio/Portfolio.js";
 /* testimonials */
 import { Testimonials } from "./components/testimonials/Testimonials.js";
 import { testimonialData } from "./data/testimonialsData.js";
@@ -50,6 +52,7 @@ renderClientCounter('#clientCounterBlock', clientCounterData);
 /* services */
 renderMyServices('#services-block', servicesData);
 /* portfolio */
+new Portfolio(portfolioData);
 /* testimonials */
 new Testimonials ({
     selector: '#renderTestimonials',
