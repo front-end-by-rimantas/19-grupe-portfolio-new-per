@@ -1,5 +1,5 @@
 const portfolioData = {
-    data: [
+    cards: [
         {
             class: 'h-2',
             img: '1.jpg',
