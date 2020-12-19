@@ -4,6 +4,7 @@ class Testimonials {
         this.data = params.data || [];
         this.isLineControlsVisible = params.isLineControlsVisible || true;
         this.cloneCount = params.cloneCount || 2;
+        this.reviewWidth = 0;
         this.DOM = null;
         this.controlsDOM = null;
         this.linesDOMs = null;
@@ -39,9 +40,9 @@ class Testimonials {
     generateReviews() {
         let HTML = '';
         const reviewWidth = 100 / (this.data.length + 2 * this.cloneCount);
+        this.reviewWidth = reviewWidth;
+        console.log(this.reviewWidth);
         const dataCopy = [this.data[3], this.data[4], ...this.data, this.data[0], this.data[1]];
-        console.log(dataCopy);
-
         for (let testimonial of dataCopy) {
             if (!this.isValidTestimonial(testimonial)) {
                 continue;
@@ -63,7 +64,6 @@ class Testimonials {
         if (!this.isLineControlsVisible) {
             return HTML;
         }
-
         const testimonialsCount = this.data.length;
         let linesHTML = `<div class="slider active"></div>`;
         linesHTML += `<div class="slider"></div>`.repeat(testimonialsCount - 1)
@@ -78,13 +78,12 @@ class Testimonials {
         const listWidth = (this.data.length + 2 * this.cloneCount) * 100;
         const HTML = `<div class="allTestimonials">
         <div class="screen">
-            <div class="list" style="width: ${listWidth}%";>
+            <div class="list" style="width: ${listWidth}%; margin-left: -${this.cloneCount}00%;">
             ${this.generateReviews()}
             </div>
                 </div>
                 ${this.generateControls()}
             </div>`;
-
         this.DOM.innerHTML = HTML;
 
         this.listDOM = this.DOM.querySelector('.list');
@@ -101,10 +100,10 @@ class Testimonials {
     addEvents() {
         for (let i=0; i<this.linesDOMs.length; i++) {
             const line = this.linesDOMs[i];
-
         line.addEventListener('click', () => {
-            let proc = -20 * i + '%';
-            this.listDOM.style.transform = `translateX(${proc})`;
+            let proc = `-${this.reviewWidth}` * i;
+            console.log(proc);
+            this.listDOM.style.transform = `translateX(${proc}%)`;
             
             // this.controlsDOM.querySelector('.slider.active').classList.remove('active')
 
