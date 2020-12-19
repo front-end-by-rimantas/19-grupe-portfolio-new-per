@@ -14,35 +14,35 @@ class Portfolio {
     generateButtons(){
         let HTML = '';
 
-        this.buttonsDOM = document.querySelector(".filtering");
         for (let button of this.buttons){
             //validacijos reiks
             //add active class for active button
-            this.buttonsDOM.innerHTML += `<button class="portfolio-btn">${button.value}</button>`
+            HTML += `<button class="portfolio-btn">${button.value}</button>`
         }
+        return HTML;
     }
     render() {
-        let HTML = '';
-        this.portfolioDOM.insertAdjacentHTML('beforeEnd', `<div class="filtering col-12"></div>`);
-    // <div class="container-portfolio col-12">
-    //     <div class="gallery-item h-2">
-    //         <div class="port-image">
-    //             <img src="./img/portfolio/1.jpg" alt="image">
-    //         </div>
-    //         <div class="portfolio-hover">
-    //             <div class="portfolio-hover-links">
-    //                 <h5 class="upper">Lil bag</h5>
-    //                 <a href="#0">
-    //                     <i class="fa fa-link"></i>
-    //                 </a>
-    //                 <a href="./img/portfolio/1.jpg">
-    //                     <i class="fa fa-dot-circle-o"></i>
-    //                 </a>
-    //             </div>
-    //         </div>
-    //     </div>
-    // </div>
-    }
+        this.portfolioDOM.insertAdjacentHTML('beforeEnd', 
+                        `<div class="filtering col-12">${this.generateButtons()}</div>
+                        <div class="container-portfolio col-12">
+                            <div class="gallery-item">
+                                <div class="port-image">
+                                    <img src="./img/portfolio/1.jpg" alt="image">
+                                </div>
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-links">
+                                        <h5 class="upper">Lil bag</h5>
+                                        <a href="#0">
+                                            <i class="fa fa-link"></i>
+                                        </a>
+                                        <a href="./img/portfolio/1.jpg">
+                                            <i class="fa fa-dot-circle-o"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`
+        );}
 }
 
 export { Portfolio }
