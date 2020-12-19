@@ -10,6 +10,7 @@ function counterAnimation(counter) {
         } else {
             counter.innerText = target;
         }
+        counter.innerText = counter.innerText < 10 ? '0' + counter.innerText : counter.innerText;
     }
     updateCount();
 }
