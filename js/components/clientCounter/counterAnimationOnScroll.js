@@ -1,19 +1,17 @@
-import { clientCounterAnimation } from './clientCounterAnimation.js';
+import { counterAnimation } from './counterAnimation.js';
 
 function counterAnimationOnScroll() {
     window.addEventListener('scroll', function() {
         let element = document.querySelectorAll('.block-counter');
-        console.log(element);
+
         for (let i = 0; i < element.length; i++) {
-            let position = element[i]. getBoundingClientRect();
-            let integers = element[i].querySelector('.integers');
-            console.log(integers);
-            if (position.top >= 60 && position.bottom <= window.innerHeight) {
-                clientCounterAnimation(integers);
+            let position = element[i].getBoundingClientRect();
+            let counter = element[i].querySelector(".integers");
+            if(position.top >= 60 && position.bottom <= window.innerHeight) {
+                counterAnimation(counter);
             }
         }
-
     });
 }
 
-export { counterAnimationOnScroll } 
+export { counterAnimationOnScroll }
