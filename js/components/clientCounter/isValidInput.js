@@ -7,11 +7,11 @@ import { Validator } from '../validator/Validator.js';
  */
 function isValidInput(selector, data) {
     if (!Validator.isSelector(selector)) {
-        console.error('ERROR: selektorius turi būti tekstinio tipo ir negali būti tuščias.')
+        console.error('ERROR: client counter selector has to be text type and not empty.');
         return false;
     }
     if (!Validator.isArray(data)) {
-        console.error('ERROR: Klientų skaičiuoklei generuoti reikia ne tuščio array tipo duomenų.')
+        console.error('ERROR: client counter generation needs not empty array type data.');
         return false;
     }
     return true;
