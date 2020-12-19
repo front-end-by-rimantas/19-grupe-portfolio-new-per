@@ -74,7 +74,7 @@ class RenderNav {
         }
         return `<div class="row navmenu">
                 ${this.generateLogo()}
-                <div class="nav-links col-9">
+                <div class="nav-links col-9 col-sm-12">
                 ${this.generateNav()}
                     <div class="menu-btn">
                         <i class="fa fa-bars"></i>
@@ -83,18 +83,24 @@ class RenderNav {
     }
     
     render() {
-        console.log(this.DOM);
+        // console.log(this.DOM);
         this.DOM.innerHTML = this.generateHTML();
     }
 
-    addEvents(){
-        addEventListener('scroll', () => {
-            if (scrollY > 250) {
-                this.DOM.closest('nav').classList.add('scroll');
-            } else {
-                this.DOM.closest('nav').classList.remove('scroll');
-            }
-        })
+     addEvents(){
+        const navDOM = this.DOM.closest('nav');
+         addEventListener('scroll', () => {
+             if (scrollY > 250) {
+                 navDOM.classList.remove('over-bar');
+                 navDOM.classList.add('white');
+             } else {
+                 navDOM.classList.remove('white');
+                 navDOM.classList.add('over-bar');
+             }
+            
+         })
+        
+     }
+
     }
-}
 export { RenderNav }
