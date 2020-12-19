@@ -2,45 +2,60 @@ class Portfolio {
     constructor(selector, data){
         this.selector = selector;
         this.data = data.data;
-        this.buttons = data.buttons;
-
-
         this.portfolioDOM = document.querySelector(this.selector);
+
+        this.buttons = data.buttons;
         this.buttonsDOM = null;
 
-        this.render();
+
+        this.init();
+    }
+    init(){
+        this.renderHTML();
         this.generateButtons();
     }
-    generateButtons(){
-        let HTML = '';
 
+    generateButtons(){
+        let buttonsHTML = '';
         for (let button of this.buttons){
             //validacijos reiks
             //add active class for active button
-            HTML += `<button class="portfolio-btn">${button.value}</button>`
+            buttonsHTML += `<button class="portfolio-btn">${button.value}</button>`
         }
-        return HTML;
+        return buttonsHTML;
+
     }
-    render() {
+    generateCards(){
+        let cardsHTML = '';
+        const cards = this.data;
+        const dataLength = this.data.length;
+
+        for (let i = 0; i < dataLength; i++){
+            cardsHTML += `<div class="gallery-item ${cards[i].class}">
+            <div class="port-image">
+                <img src="./img/portfolio/${cards[i].img}" alt="image">
+            </div>
+            <div class="portfolio-hover">
+                <div class="portfolio-hover-links">
+                    <h5 class="upper">${cards[i].title}</h5>
+                    <a href="#0"><i class="fa fa-link"></i></a>
+                    <a href="./img/portfolio/${cards[i].img}">
+                        <i class="fa fa-dot-circle-o"></i>
+                    </a>
+                </div>
+            </div>
+        </div>`
+        }
+        return cardsHTML;
+        
+    }
+    renderHTML() {
         this.portfolioDOM.insertAdjacentHTML('beforeEnd', 
-                        `<div class="filtering col-12">${this.generateButtons()}</div>
+                        `<div class="filtering col-12">
+                            ${this.generateButtons()}
+                        </div>
                         <div class="container-portfolio col-12">
-                            <div class="gallery-item">
-                                <div class="port-image">
-                                    <img src="./img/portfolio/1.jpg" alt="image">
-                                </div>
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-links">
-                                        <h5 class="upper">Lil bag</h5>
-                                        <a href="#0">
-                                            <i class="fa fa-link"></i>
-                                        </a>
-                                        <a href="./img/portfolio/1.jpg">
-                                            <i class="fa fa-dot-circle-o"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                                ${this.generateCards()}
                         </div>`
         );}
 }
