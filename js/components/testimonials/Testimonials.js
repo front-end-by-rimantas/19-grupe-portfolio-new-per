@@ -2,7 +2,13 @@ class Testimonials {
     constructor(params) {
         this.selector = params.selector || 'body';
         this.data = params.data || [];
+        this.isLineControlsVisible = params.isLineControlsVisible || true;
         this.DOM = null;
+        this.controlsDOM = null;
+        this.linesDOMs = null;
+        this.listDOM = null;
+        this.activeLineIndex = 0;
+
         this.init();
     }
     init() {
@@ -10,6 +16,7 @@ class Testimonials {
             return;
         }
         this.render();
+        this.addEvents();
     }
     isValidSelector() {
         const DOM = document.querySelector(this.selector);
@@ -43,7 +50,24 @@ class Testimonials {
         </div>`;
     }
         return HTML;
-    
+    }
+
+    generateControls() {
+        let HTML = '';
+
+        if (!this.isLineControlsVisible) {
+            return HTML;
+        }
+
+        const testimonialsCount = this.data.length;
+        let linesHTML = `<div class="slider active"></div>`;
+        linesHTML += `<div class="slider"></div>`.repeat(testimonialsCount - 1)
+
+        HTML = `<div class="review-sliders rev-row">
+                    ${this.isLineControlsVisible ? linesHTML : ''}
+                </div>`
+
+        return HTML;
     }
     render() {
         const HTML = `<div class="allTestimonials">
@@ -52,14 +76,38 @@ class Testimonials {
             ${this.generateReviews()}
             </div>
                 </div>
-                <div class="review-sliders rev-row">
-                    <div class="slider"></div>
-                    <div class="slider"></div>
-                    <div class="slider"></div>
-                </div>
+                ${this.generateControls()}
             </div>`;
 
         this.DOM.innerHTML = HTML;
+
+        this.listDOM = this.DOM.querySelector('.list');
+
+        if (this.isLineControlsVisible) {
+            this.controlsDOM = this.DOM.querySelector('.review-sliders');
+
+            if (this.isLineControlsVisible) {
+                this.linesDOMs = this.controlsDOM.querySelectorAll('.slider');
+            }
+        }
+    }
+
+    addEvents() {
+        for (let i=0; i<this.linesDOMs.length; i++) {
+            const line = this.linesDOMs[i];
+
+        line.addEventListener('click', () => {
+            let proc = -20 * i + '%';
+            this.listDOM.style.transform = `translateX(${proc})`;
+            
+            // this.controlsDOM.querySelector('.slider.active').classList.remove('active')
+
+            this.linesDOMs[this.activeLineIndex].classList.remove('active');
+            this.activeLineIndex = i;
+            line.classList.add('active');
+
+        })
+    }
     }
 }
 
