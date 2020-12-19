@@ -52,7 +52,7 @@ renderClientCounter('#clientCounterBlock', clientCounterData);
 /* services */
 renderMyServices('#services-block', servicesData);
 /* portfolio */
-new Portfolio(portfolioData);
+new Portfolio('.portfolio', portfolioData);
 /* testimonials */
 new Testimonials ({
     selector: '#renderTestimonials',
