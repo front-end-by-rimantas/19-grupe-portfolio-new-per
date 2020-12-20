@@ -25,7 +25,7 @@
         letter-spacing: 0.2rem;
     }
     .nav-links.expand {
-        transform: translateY(55px);
+        transform: translateY(60px);
     }
 
     .white .nav-links{
