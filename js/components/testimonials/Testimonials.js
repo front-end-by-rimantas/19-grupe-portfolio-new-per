@@ -10,7 +10,6 @@ class Testimonials {
         this.linesDOMs = null;
         this.listDOM = null;
         this.activeLineIndex = 0;
-
         this.init();
     }
     init() {
@@ -19,6 +18,7 @@ class Testimonials {
         }
         this.render();
         this.addEvents();
+        this.autoAnimation();
     }
     isValidSelector() {
         const DOM = document.querySelector(this.selector);
@@ -73,6 +73,23 @@ class Testimonials {
 
         return HTML;
     }
+
+    autoAnimation () {
+        setInterval(() => {
+
+            for (let i=0; i<this.linesDOMs.length; i++) {
+                const line = this.linesDOMs[i];
+                let proc = `-${this.reviewWidth}` * i;
+                this.listDOM.style.transform = `translateX(${proc}%)`;
+                this.linesDOMs[this.activeLineIndex].classList.remove('active');
+                this.activeLineIndex = i;
+                line.classList.add('active');
+            }
+        }, 3000);
+
+        
+    }
+
     render() {
         const listWidth = (this.data.length + 2 * this.cloneCount) * 100;
         const HTML = `<div class="allTestimonials">
@@ -96,6 +113,8 @@ class Testimonials {
         }
     }
 
+
+
     addEvents() {
         for (let i=0; i<this.linesDOMs.length; i++) {
             const line = this.linesDOMs[i];
@@ -115,3 +134,4 @@ class Testimonials {
 }
 
 export { Testimonials }
+
