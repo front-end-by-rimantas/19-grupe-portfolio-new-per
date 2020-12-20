@@ -72,14 +72,14 @@ class RenderNav {
         if (!this.isValidMenu()) {
             return '';
         }
-        return `<div class="row navmenu mobile">
+        return `<div class="row navmenu">
                 ${this.generateLogo()}
                 <div class="menu-btn col-9">
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>
                 </div>
-                <div class="nav-links col-9 mobile">
+                <div class="nav-links col-9">
                 ${this.generateNav()}
                 </div>
 `;

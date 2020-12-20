@@ -10,11 +10,10 @@
     padding: 15px 0;
 }
 .navmenu * {
+
     font-family: 'Roboto', sans-serif;
     } 
     .navbar-logo{
-        display: flex;
-        justify-content: center;
         align-self: flex-start;
     }
         .navbar-logo a > img {
@@ -34,7 +33,7 @@
         .nav-links > .nav-a {
             font-size: 15px;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 10px;
             color: #e6e6e6;
         }
         .nav-links .nav-a:first-of-type {
@@ -61,7 +60,6 @@
         }
         .white .nav-links > .nav-a{
             color: var(--h4-color);
-            margin: 0 15px;
             padding: 10px 0;
             transition: all 0.4s ease;
         }
