@@ -4,18 +4,16 @@
  * @returns {boolean} Jei patikrinimo metu randama logine duomenu klaida, grazinama `false`, priesingu atveju - `true`
  */
 function isValidHeroIconItem(itemObject) {
-    if (typeof itemObject !== 'object') {
-        console.error('ERROR: item should be an object type.');
+    if (!Validator.isObject(itemObject)) {
+        console.var('ERROR: hero icon element has to be an object.');
         return false;
     }
-    if (typeof itemObject.link !== 'string' ||
-        itemObject.link === '') {
-        console.error('ERROR: icon link should be text and not empty.');
+    if (!Validator.isHref(itemObject.link)) {
+        console.var('ERROR: hero icon link has to be text type and not empty.');
         return false;
     }
-    if (typeof itemObject.icon !== 'string' ||
-        itemObject.icon === '') {
-        console.error('ERROR: icon should be text and not empty.');
+    if (!Validator.isTitle(itemObject.icon)) {
+        console.var('ERROR: hero element icon has to be text type and not empty.');
         return false;
     }
     return true;
