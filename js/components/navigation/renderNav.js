@@ -1,4 +1,3 @@
-
 class RenderNav {
     constructor (params) {
         this.selector = params.selector;
@@ -46,17 +45,17 @@ class RenderNav {
         return true;
     }
 
-     generateNav() {
-         let HTML = '';
-         for(let i = 0; i < this.menuLinks.length; i++) {
-             const menuItem = this.menuLinks[i];
-            if(!this.isValidMenuLink(menuItem)) {
-                continue;
-            }
-             HTML += `<a class="nav-a" href="${menuItem.link}">${menuItem.text}</a>`;
-         }
-         return HTML;
-     }
+    generateNav() {
+        let HTML = '';
+        for(let i = 0; i < this.menuLinks.length; i++) {
+            const menuItem = this.menuLinks[i];
+        if(!this.isValidMenuLink(menuItem)) {
+            continue;
+        }
+            HTML += `<a class="nav-a" href="${menuItem.link}">${menuItem.text}</a>`;
+        }
+        return HTML;
+    }
 
     isValidMenu() {
         if (!Array.isArray(this.menuLinks)) {
@@ -81,8 +80,7 @@ class RenderNav {
                 </div>
                 <div class="nav-links col-9">
                 ${this.generateNav()}
-                </div>
-`;
+                </div>`;
     }
     
     render() {
@@ -90,20 +88,25 @@ class RenderNav {
         this.DOM.innerHTML = this.generateHTML();
     }
 
-     addEvents(){
+    addEvents(){
         const navDOM = this.DOM.closest('nav');
-         addEventListener('scroll', () => {
-             if (scrollY > 250) {
-                 navDOM.classList.remove('over-bar');
-                 navDOM.classList.add('white');
-             } else {
-                 navDOM.classList.remove('white');
-                 navDOM.classList.add('over-bar');
-             }
-            
-         })
-        
-     }
+        const burgerNavDOM = document.querySelector('.nav-links');
+        const burgerDOM = document.querySelector('.menu-btn');
 
+        burgerDOM.addEventListener('click', () => {
+            burgerDOM.classList.toggle('expand');
+            burgerNavDOM.classList.toggle('expand');
+        });
+
+        addEventListener('scroll', () => {
+        if (scrollY > 250) {
+            navDOM.classList.remove('over-bar');
+            navDOM.classList.add('white');
+        } else {
+            navDOM.classList.remove('white');
+            navDOM.classList.add('over-bar');
+        }
+        })
     }
+}
 export { RenderNav }
