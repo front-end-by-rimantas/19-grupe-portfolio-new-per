@@ -31,8 +31,8 @@ class RenderNav {
     generateLogo() {
 
         if (true) {
-        return `<div class="navbar-logo col-3 col-sm-12 col-xs-12">
-                    <a class="navbar-logo col-3" href="#">
+        return `<div class="navbar-logo col-3">
+                    <a href="#">
                     <img class="white" src="./img/logo-2.png" alt="White New Per logo"></img>
                     <img class="over-bar" src="./img/logo.png" alt="Black New Per logo"></img>
                     </a>
@@ -72,14 +72,17 @@ class RenderNav {
         if (!this.isValidMenu()) {
             return '';
         }
-        return `<div class="row navmenu">
+        return `<div class="row navmenu mobile">
                 ${this.generateLogo()}
-                <div class="nav-links col-9 col-sm-12">
+                <div class="menu-btn col-9">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <div class="nav-links col-9 mobile">
                 ${this.generateNav()}
-                    <div class="menu-btn">
-                        <i class="fa fa-bars"></i>
-                    </div>
-                </div>`;
+                </div>
+`;
     }
     
     render() {
