@@ -7,33 +7,37 @@
         grid-column: auto / span 12;
         position: absolute;
         width: 100%;
-        top: -200px;
-        left: 50%;
-        transform: translateX(-50%);
+        transform: translateY(-150%);
         flex-direction: column;
         text-align: center;
+        z-index: -1;
     }
 
     .mobile.nav-links > .nav-a{
         margin: 0;
-        width: 100%;
-        padding: 5px 0;
+        width: 40%;
+        padding: 5px 10px;
         letter-spacing: 0.2rem;
-    }
-    .white .mobile.nav-links{
-        background: #fff;
     }
     .mobile.nav-a {
         padding: 15px 0;
     }
+    .mobile.nav-links.expand {
+        transform: translateY(60px);
+    }
 
+    .white .mobile.nav-links{
+        background: #fff;
+    }
+    .white .mobile.nav-links .nav-a{
+        padding: 10px;
+    }
     /* hamburger design */
     .mobile .menu-btn {
-        width: 35px;
+        width: 45px;
         height: 35px;
         border: 1px solid var(--main-color);
         border-radius: 5px;
-        z-index: 10;
         display: flex;
         flex-direction: column;
         justify-self: flex-end;
@@ -49,27 +53,25 @@
             margin-bottom: 6px;
             transition: all 0.3s ease;
         }
-        .menu-btn:hover .line1{
-            background-color: #fff;
-            transform: rotateZ(45deg) translate(4px, 4px);
-            margin-bottom: 0;
-        }
-        .menu-btn:hover .line2{
-            opacity: 0;
-        }
-        .menu-btn:hover .line3{
-            background-color: #fff;
-            transform: rotateZ(-45deg) translate(3px, -3px);
-            margin-bottom: 0;
-        } 
-        .line3 {
+            .line3 {
                 margin-bottom: 0;
             }
-    /* hamburger design end */
-}
 
-@media (max-width: 680px){
-    .mobile.nav-links {
-         top: 60px;
-    }
+        .menu-btn.expand .line1{
+            background-color: #fff;
+            transform: rotateZ(45deg) translate(3px, 3px);
+            margin-bottom: 0;
+        }
+        .menu-btn.expand .line2{
+            opacity: 0;
+        }
+        .menu-btn.expand .line3{
+            background-color: #fff;
+            transform: rotateZ(-45deg) translate(4px, -4px);
+            margin-bottom: 0;
+        } 
+        .white .menu-btn.expand .line1, .white .menu-btn.expand .line2, .white .menu-btn.expand .line3{
+            background-color: var(--main-color);
+        }
+    /* hamburger design end */
 }
