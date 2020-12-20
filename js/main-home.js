@@ -22,6 +22,8 @@ import { counterAnimationOnScroll } from './components/clientCounter/counterAnim
 import { servicesData } from "./data/servicesData.js";
 import { renderMyServices } from "./components/myServices/renderMyServices.js";
 /* portfolio */
+import { portfolioData } from "./data/portfolioData.js";
+import { Portfolio } from "./components/portfolio/Portfolio.js";
 /* testimonials */
 import { Testimonials } from "./components/testimonials/Testimonials.js";
 import { testimonialData } from "./data/testimonialsData.js";
@@ -52,6 +54,7 @@ counterAnimationOnScroll();
 /* services */
 renderMyServices('#services-block', servicesData);
 /* portfolio */
+new Portfolio('.portfolio', portfolioData);
 /* testimonials */
 new Testimonials ({
     selector: '#renderTestimonials',
