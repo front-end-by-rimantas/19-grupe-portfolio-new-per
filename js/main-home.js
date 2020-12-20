@@ -17,6 +17,7 @@ import { renderMySkills } from "./components/mySkills/renderMySkills.js";
 /* client counter */
 import { clientCounterData } from './data/clientCounterData.js';
 import { renderClientCounter } from './components/clientCounter/renderClientCounter.js';
+import { counterAnimationOnScroll } from './components/clientCounter/counterAnimationOnScroll.js';
 /* services */
 import { servicesData } from "./data/servicesData.js";
 import { renderMyServices } from "./components/myServices/renderMyServices.js";
@@ -47,6 +48,7 @@ renderMySkills('#skillsRight', skillsData);
 /* resume */
 /* client counter */
 renderClientCounter('#clientCounterBlock', clientCounterData);
+counterAnimationOnScroll();
 /* services */
 renderMyServices('#services-block', servicesData);
 /* portfolio */
