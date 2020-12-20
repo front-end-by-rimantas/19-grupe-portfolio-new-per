@@ -27,6 +27,7 @@
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
+        transition: all 0.5s ease;
     }
         .nav-links > .nav-a {
             font-size: 15px;
