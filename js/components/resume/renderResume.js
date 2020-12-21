@@ -24,6 +24,9 @@ function renderResume(selector, resumeData) {
                 }
  
             HTML += `<div class="resume-left-column">
+                        <div class="icon">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        </div>
                         <ul class="left-column">
                         <li class="list">
                             <span class="res-dot" class="res-dot">${resume.duration}</span>
@@ -39,6 +42,9 @@ function renderResume(selector, resumeData) {
         for (let i = countStartR; i < countEndR; i++) {
             const resume = resumeData.data[i];
             HTML += `<div class="resume-right-column">
+                        <div class="icon">
+                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                        </div>
                         <ul class="right-column">
                         <li class="list">
                             <span class="res-dot">${resume.duration}</span>
