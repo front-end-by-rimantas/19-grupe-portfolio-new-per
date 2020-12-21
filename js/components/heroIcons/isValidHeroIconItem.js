@@ -1,3 +1,5 @@
+import { Validator } from '../validator/Validator.js';
+
 /**
  * renderHeroIcons() funkcijos metu vykdomame cikle gaunamu duomenu validacija
  * @param {object} itemObject objektas aprasantis viena social nuoroda, kuri sudaro ikona ir nuoroda (href)
