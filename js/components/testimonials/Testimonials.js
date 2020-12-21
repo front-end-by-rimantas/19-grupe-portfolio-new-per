@@ -10,6 +10,7 @@ class Testimonials {
         this.linesDOMs = null;
         this.listDOM = null;
         this.activeLineIndex = 0;
+        this.anime = 0;
         this.init();
     }
     init() {
@@ -18,7 +19,6 @@ class Testimonials {
         }
         this.render();
         this.addEvents();
-        this.autoAnimation();
     }
     isValidSelector() {
         const DOM = document.querySelector(this.selector);
@@ -74,22 +74,6 @@ class Testimonials {
         return HTML;
     }
 
-    autoAnimation () {
-        setInterval(() => {
-
-            for (let i=0; i<this.linesDOMs.length; i++) {
-                const line = this.linesDOMs[i];
-                let proc = `-${this.reviewWidth}` * i;
-                this.listDOM.style.transform = `translateX(${proc}%)`;
-                this.linesDOMs[this.activeLineIndex].classList.remove('active');
-                this.activeLineIndex = i;
-                line.classList.add('active');
-            }
-        }, 3000);
-
-        
-    }
-
     render() {
         const listWidth = (this.data.length + 2 * this.cloneCount) * 100;
         const HTML = `<div class="allTestimonials">
@@ -116,21 +100,41 @@ class Testimonials {
 
 
     addEvents() {
+        // kol kas tik nėra grįžimo atgal ir neveikia click.
+        for (let i=0; i<this.linesDOMs.length; i++) { 
+            task(i); 
+        } 
+        function task(i) { 
+            setTimeout(function() {
+            let activeLineIndex = 0;  
+            this.listDOM = document.querySelector('.screen > .list');
+            this.linesDOMs = document.querySelectorAll('.slider');
+            const reviewWidth = 100 / (9); // kol kas statiškas review skaičius (9)
+            this.reviewWidth = reviewWidth;
+            const line = this.linesDOMs[i];
+            let proc = `-${this.reviewWidth}` * i;
+            this.listDOM.style.transform = `translateX(${proc}%)`;
+            this.linesDOMs[activeLineIndex].classList.remove('active'); // ištrina tik 0 pozicijoje
+            activeLineIndex = i;
+            line.classList.add('active'); 
+            }, 2000 * i); 
+        }
         for (let i=0; i<this.linesDOMs.length; i++) {
             const line = this.linesDOMs[i];
         line.addEventListener('click', () => {
             let proc = `-${this.reviewWidth}` * i;
+            this.listDOM = document.querySelector
             this.listDOM.style.transform = `translateX(${proc}%)`;
-            
-            // this.controlsDOM.querySelector('.slider.active').classList.remove('active')
-
             this.linesDOMs[this.activeLineIndex].classList.remove('active');
             this.activeLineIndex = i;
             line.classList.add('active');
 
         })
+        
     }
+    
     }
+    
 }
 
 export { Testimonials }
