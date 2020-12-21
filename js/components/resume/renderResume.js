@@ -22,27 +22,31 @@ function renderResume(selector, resumeData) {
                 if (!resume) {
                     continue;
                 }
-            HTML += `
-            <ul class="left-column">
-            <li class="list">
-                <span class="res-dot" class="res-dot">${resume.duration}</span>
-                <h5>${resume.course}</h5>
-                <h6>${resume.uni}</h6>
-            </li>
-        </ul>`;
+ 
+            HTML += `<div class="resume-left-column">
+                        <ul class="left-column">
+                        <li class="list">
+                            <span class="res-dot" class="res-dot">${resume.duration}</span>
+                            <h5>${resume.course}</h5>
+                            <h6>${resume.uni}</h6>
+                        </li>
+                    </ul>
+                    </div>`;
 
         }        
     }
     if ( selector === '#resumeRight' ) {
         for (let i = countStartR; i < countEndR; i++) {
             const resume = resumeData.data[i];
-            HTML += `<ul class="right-column">
-            <li class="list">
-                <span class="res-dot">${resume.duration}</span>
-                <h5>${resume.course}</h5>
-                <h6>University Of Studies, Poland, Cracow</h6>
-            </li>
-        </ul>`;
+            HTML += `<div class="resume-right-column">
+                        <ul class="right-column">
+                        <li class="list">
+                            <span class="res-dot">${resume.duration}</span>
+                            <h5>${resume.course}</h5>
+                            <h6>University Of Studies, Poland, Cracow</h6>
+                        </li>
+                        </ul>
+                    </div>`;
 
         }
     
