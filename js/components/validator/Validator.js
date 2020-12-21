@@ -38,7 +38,7 @@ class Validator {
         }
         const parts = text.split('.');
 
-        // isitikanme ar tinkama galune
+        // isitikiname ar tinkama galune
 
         if (parts.length !== 2) {
             return false;
@@ -76,6 +76,14 @@ class Validator {
             return false;
         }
         //TODO: leidziami simboliai: raides, skaiciai, tarpai, spec. simboliai
+        return true;
+    }
+    static isIcon(text) {
+        if (typeof text !== 'string' ||
+            text === '' ||
+            text.length > 50) {
+            return false;
+        }
         return true;
     }
 }

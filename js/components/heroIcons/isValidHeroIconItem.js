@@ -12,8 +12,8 @@ function isValidHeroIconItem(itemObject) {
         console.var('ERROR: hero icon link has to be text type and not empty.');
         return false;
     }
-    if (!Validator.isTitle(itemObject.icon)) {
-        console.var('ERROR: hero element icon has to be text type and not empty.');
+    if (!Validator.isIcon(itemObject.icon)) {
+        console.error('ERROR: icon data should be a string type, not empty and no longer than 50 symbols.');
         return false;
     }
     return true;
