@@ -1,3 +1,4 @@
+import { Validator } from '../validator/Validator.js';
 
 class RenderNav {
     constructor (params) {
@@ -43,6 +44,9 @@ class RenderNav {
     }
 
     isValidMenuLink(menuItem) {
+        if (!Validator.isObject(menuItem)) {
+            return false;
+        }
         return true;
     }
 
@@ -59,10 +63,7 @@ class RenderNav {
      }
 
     isValidMenu() {
-        if (!Array.isArray(this.menuLinks)) {
-            return false;
-        }
-        if (this.menuLinks.length === 0) {
+        if (!Validator.isArray(this.menuLinks)) {
             return false;
         }
         return true;

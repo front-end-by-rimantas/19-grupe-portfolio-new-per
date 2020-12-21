@@ -1,4 +1,5 @@
 import { Validator } from '../validator/Validator.js';
+
 function areSkillsValid(skills) {
     if (!Validator.isObject(skills)) {
         console.error('ERROR: skills has to be an object type');
