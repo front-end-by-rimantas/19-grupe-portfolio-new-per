@@ -17,10 +17,13 @@ import { renderMySkills } from "./components/mySkills/renderMySkills.js";
 /* client counter */
 import { clientCounterData } from './data/clientCounterData.js';
 import { renderClientCounter } from './components/clientCounter/renderClientCounter.js';
+import { counterAnimationOnScroll } from './components/clientCounter/counterAnimationOnScroll.js';
 /* services */
 import { servicesData } from "./data/servicesData.js";
 import { renderMyServices } from "./components/myServices/renderMyServices.js";
 /* portfolio */
+import { portfolioData } from "./data/portfolioData.js";
+import { Portfolio } from "./components/portfolio/Portfolio.js";
 /* testimonials */
 import { Testimonials } from "./components/testimonials/Testimonials.js";
 import { testimonialData } from "./data/testimonialsData.js";
@@ -47,9 +50,11 @@ renderMySkills('#skillsRight', skillsData);
 /* resume */
 /* client counter */
 renderClientCounter('#clientCounterBlock', clientCounterData);
+counterAnimationOnScroll();
 /* services */
 renderMyServices('#services-block', servicesData);
 /* portfolio */
+new Portfolio('.portfolio', portfolioData);
 /* testimonials */
 new Testimonials ({
     selector: '#renderTestimonials',
