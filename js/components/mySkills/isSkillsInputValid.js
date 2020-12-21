@@ -1,3 +1,5 @@
+import { Validator } from '../validator/Validator.js';
+
 function isSkillsInputValid(selector, skillsData) {
     if (!Validator.isSelector(selector)) {
         console.error('ERROR: selector has to be an object type');
