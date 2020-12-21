@@ -15,5 +15,6 @@ function isValidHeroIconInput(selector, heroIconData) {
         console.error('ERROR: hero icons generation needs not empty array type data.');
         return false;
     }
+    return true;
 }
 export { isValidHeroIconInput }
