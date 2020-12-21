@@ -19,6 +19,8 @@ class Testimonials {
         }
         this.render();
         this.addEvents();
+        // this.autoAnimation();
+        this.animation();
     }
     isValidSelector() {
         const DOM = document.querySelector(this.selector);
@@ -97,44 +99,48 @@ class Testimonials {
         }
     }
 
+    animation() {
+        let position = 0;
+        let index = 0;
+        setInterval(() => {
+            position += this.reviewWidth;
+            index += 1;
+            console.log(index);
+            this.listDOM.style.transform = `translateX(-${position}%)`;
+            this.linesDOMs[index-1].classList.remove('active');
+            this.linesDOMs[index].classList.add('active');
+            
+        }, 3000);
+    
 
+}
+        // for (let i=0; i<this.linesDOMs.length; i++) {
+        //     const line = this.linesDOMs[i];
+        //     let proc = `-${this.reviewWidth}` * i;
+        //     this.listDOM = document.querySelector('.screen > .list');
+        //     this.listDOM.style.transform = `translateX(${proc}%)`;
+        //     this.linesDOMs[this.activeLineIndex].classList.remove('active');
+        //     this.activeLineIndex = i;
+        //     line.classList.add('active');
+        // }
+        // kol kas tik nėra grįžimo atgal ir neveikia click.
+
+    
 
     addEvents() {
-        // kol kas tik nėra grįžimo atgal ir neveikia click.
-        for (let i=0; i<this.linesDOMs.length; i++) { 
-            task(i); 
-        } 
-        function task(i) { 
-            setTimeout(function() {
-            let activeLineIndex = 0;  
-            this.listDOM = document.querySelector('.screen > .list');
-            this.linesDOMs = document.querySelectorAll('.slider');
-            const reviewWidth = 100 / (9); // kol kas statiškas review skaičius (9)
-            this.reviewWidth = reviewWidth;
-            const line = this.linesDOMs[i];
-            let proc = `-${this.reviewWidth}` * i;
-            this.listDOM.style.transform = `translateX(${proc}%)`;
-            this.linesDOMs[activeLineIndex].classList.remove('active'); // ištrina tik 0 pozicijoje
-            activeLineIndex = i;
-            line.classList.add('active'); 
-            }, 2000 * i); 
-        }
+       
         for (let i=0; i<this.linesDOMs.length; i++) {
             const line = this.linesDOMs[i];
         line.addEventListener('click', () => {
             let proc = `-${this.reviewWidth}` * i;
-            this.listDOM = document.querySelector
+            this.listDOM = document.querySelector('.screen > .list');
             this.listDOM.style.transform = `translateX(${proc}%)`;
             this.linesDOMs[this.activeLineIndex].classList.remove('active');
             this.activeLineIndex = i;
             line.classList.add('active');
-
         })
-        
-    }
-    
-    }
-    
+        }  
+    }   
 }
 
 export { Testimonials }
