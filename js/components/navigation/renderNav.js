@@ -1,3 +1,4 @@
+
 import { Validator } from '../validator/Validator.js';
 
 class RenderNav {
@@ -32,8 +33,8 @@ class RenderNav {
     generateLogo() {
 
         if (true) {
-        return `<div class="navbar-logo col-3 col-sm-12 col-xs-12">
-                    <a class="navbar-logo col-3" href="#">
+        return `<div class="navbar-logo col-3">
+                    <a href="#">
                     <img class="white" src="./img/logo-2.png" alt="White New Per logo"></img>
                     <img class="over-bar" src="./img/logo.png" alt="Black New Per logo"></img>
                     </a>
@@ -50,17 +51,17 @@ class RenderNav {
         return true;
     }
 
-     generateNav() {
-         let HTML = '';
-         for(let i = 0; i < this.menuLinks.length; i++) {
-             const menuItem = this.menuLinks[i];
-            if(!this.isValidMenuLink(menuItem)) {
-                continue;
-            }
-             HTML += `<a class="nav-a" href="${menuItem.link}">${menuItem.text}</a>`;
-         }
-         return HTML;
-     }
+    generateNav() {
+        let HTML = '';
+        for(let i = 0; i < this.menuLinks.length; i++) {
+            const menuItem = this.menuLinks[i];
+        if(!this.isValidMenuLink(menuItem)) {
+            continue;
+        }
+            HTML += `<a class="nav-a" href="${menuItem.link}">${menuItem.text}</a>`;
+        }
+        return HTML;
+    }
 
     isValidMenu() {
         if (!Validator.isArray(this.menuLinks)) {
@@ -75,11 +76,13 @@ class RenderNav {
         }
         return `<div class="row navmenu">
                 ${this.generateLogo()}
-                <div class="nav-links col-9 col-sm-12">
+                <div class="menu-btn col-9">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <div class="nav-links col-9">
                 ${this.generateNav()}
-                    <div class="menu-btn">
-                        <i class="fa fa-bars"></i>
-                    </div>
                 </div>`;
     }
     
@@ -88,20 +91,25 @@ class RenderNav {
         this.DOM.innerHTML = this.generateHTML();
     }
 
-     addEvents(){
+    addEvents(){
         const navDOM = this.DOM.closest('nav');
-         addEventListener('scroll', () => {
-             if (scrollY > 250) {
-                 navDOM.classList.remove('over-bar');
-                 navDOM.classList.add('white');
-             } else {
-                 navDOM.classList.remove('white');
-                 navDOM.classList.add('over-bar');
-             }
-            
-         })
-        
-     }
+        const burgerNavDOM = document.querySelector('.nav-links');
+        const burgerDOM = document.querySelector('.menu-btn');
 
+        burgerDOM.addEventListener('click', () => {
+            burgerDOM.classList.toggle('expand');
+            burgerNavDOM.classList.toggle('expand');
+        });
+
+        addEventListener('scroll', () => {
+        if (scrollY > 250) {
+            navDOM.classList.remove('over-bar');
+            navDOM.classList.add('white');
+        } else {
+            navDOM.classList.remove('white');
+            navDOM.classList.add('over-bar');
+        }
+        })
     }
+}
 export { RenderNav }
