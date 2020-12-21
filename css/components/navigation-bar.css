@@ -1,22 +1,26 @@
 .container.navbar {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 0;
     z-index: 10;
 }
 .row.navmenu {
     padding: 15px 0;
 }
-     .navmenu * {
+.navmenu * {
+
     font-family: 'Roboto', sans-serif;
     } 
-    .navbar-logo > img {
-        width: 100px;
-        height: 40px;
+    .navbar-logo{
+        align-self: flex-start;
     }
-    .over-bar .navbar-logo .over-bar {
+        .navbar-logo a > img {
+            width: 100px;
+            height: 40px;
+        }
+     .over-bar .navbar-logo .over-bar {
         display: none;
     }
     .nav-links {
@@ -24,47 +28,64 @@
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
+        transition: all 0.4s ease;
     }
         .nav-links > .nav-a {
             font-size: 15px;
             text-decoration: none;
-            order: 7;
-            margin: 0 15px;
-            transition: all 0.4s ease;
+            margin: 0 10px;
             color: #e6e6e6;
         }
-        .nav-links .nav-a.activeNavLink {
-                color: var(--main-color);
-            }
+        .nav-links .nav-a:first-of-type {
+            color: var(--main-color);
+        }
             .nav-links > .nav-a:hover {
                 color: var(--main-color);
             }
     .navbar .menu-btn {
         display: none;
     }
-    
-/* Navbar start white */
-.navbar.white {
-    background-color: #fff;
-    position: fixed;
-    z-index: 99;
-}
-    .white .navmenu {
-        padding: 10px 0;
-    } 
-    /* This will probably be deleted or changed when navigation will be rendered with JS */
-    .white .navbar-logo .white {
-        display: none;
+    .navbar.white {
+        width: 100%;
+        background-color: #fff;
+        position: fixed;
+        z-index: 3;
+        transition: all 0.4s ease;
     }
-    .white .nav-links > .nav-a{
-        display: flex;
-        place-self: center;
-        color: var(--h4-color);
-        margin: 0 15px;
-        height: 100%;
-        padding: 10px 0;
-    }
-        .white .nav-links > .nav-a:hover {
-            color: var(--main-color);
+        .white .navmenu {
+            padding: 10px 0;
+        } 
+        .white .navbar-logo .white {
+            display: none;
         }
-/* Navbar end white */
+        .white .nav-links > .nav-a{
+            color: var(--h4-color);
+            padding: 10px 0;
+            transition: all 0.4s ease;
+        }
+            .white .nav-links > .nav-a:first-of-type{
+                color: var(--main-color);
+            }
+            .white .nav-links > .nav-a:hover {
+                color: var(--main-color);
+            }
+    
+
+@media (max-width: 860px){
+    .container.navbar {
+        column-gap: 10px;
+        left: 0;
+        right: 0;
+        transform: none;
+    }
+
+    .navmenu > .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+        .nav-links > .nav-a{
+            margin: 0 10px;
+        }
+}

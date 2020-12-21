@@ -1,21 +1,21 @@
+import { Validator } from '../validator/Validator.js';
+
 /**
  * renderHeroIcons() funkcijos metu vykdomame cikle gaunamu duomenu validacija
  * @param {object} itemObject objektas aprasantis viena social nuoroda, kuri sudaro ikona ir nuoroda (href)
  * @returns {boolean} Jei patikrinimo metu randama logine duomenu klaida, grazinama `false`, priesingu atveju - `true`
  */
 function isValidHeroIconItem(itemObject) {
-    if (typeof itemObject !== 'object') {
-        console.error('ERROR: item should be an object type.');
+    if (!Validator.isObject(itemObject)) {
+        console.var('ERROR: hero icon element has to be an object.');
         return false;
     }
-    if (typeof itemObject.link !== 'string' ||
-        itemObject.link === '') {
-        console.error('ERROR: icon link should be text and not empty.');
+    if (!Validator.isHref(itemObject.link)) {
+        console.var('ERROR: hero icon link has to be text type and not empty.');
         return false;
     }
-    if (typeof itemObject.icon !== 'string' ||
-        itemObject.icon === '') {
-        console.error('ERROR: icon should be text and not empty.');
+    if (!Validator.isIcon(itemObject.icon)) {
+        console.error('ERROR: icon data should be a string type, not empty and no longer than 50 symbols.');
         return false;
     }
     return true;
