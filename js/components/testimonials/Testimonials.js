@@ -1,3 +1,5 @@
+import { Validator } from '../validator/Validator.js';
+
 class Testimonials {
     constructor(params) {
         this.selector = params.selector || 'body';
@@ -31,6 +33,26 @@ class Testimonials {
         return true;
     }
     isValidTestimonial(testimonial) {
+        if (!Validator.isObject(testimonial)) {
+            console.error('ERROR: testimonial has to be an object type');
+            return false;
+        }
+        if (typeof testimonial.rating !== 'string' || testimonial.rating === '' || testimonial.rating.length > 2) {
+            console.var('ERROR: testimonial rating has to be string type, not empty and no longer than 2 symbols.');
+            return false;
+        }
+        if (!Validator.isTitle(testimonial.title)) {
+            console.error('ERROR: testimonial title has to be a string type');
+            return false;
+        }
+        if (!Validator.isDescription(testimonial.comment)) {
+            console.error('ERROR: testimonial coment has to be a string type, not empty and no longer than 1000 symbols.');
+            return false;
+        }
+        if (typeof testimonial.name !== 'string' || testimonial.name === '' || testimonial.rating.length > 50) {
+            console.var('ERROR: testimonial name has to be string type, not empty and no longer than 50 symbols.');
+            return false;
+        }
         return true;
     }
     generateStars(rating) {
