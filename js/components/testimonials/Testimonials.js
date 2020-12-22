@@ -66,8 +66,8 @@ class Testimonials {
             return HTML;
         }
         const testimonialsCount = this.data.length;
-        let linesHTML = `<div onclick="stop()" class="slider active"></div>`;
-        linesHTML += `<div onclick="stop()" class="slider"></div>`.repeat(testimonialsCount - 1)
+        let linesHTML = `<div class="slider active"></div>`;
+        linesHTML += `<div class="slider"></div>`.repeat(testimonialsCount - 1)
 
         HTML = `<div class="review-sliders rev-row">
                     ${this.isLineControlsVisible ? linesHTML : ''}
@@ -117,15 +117,13 @@ class Testimonials {
                 index = -1;
             }
         }, 2000);
-        
     }
-
     addEvents() {
-       
         for (let i=0; i<this.linesDOMs.length; i++) {
             const line = this.linesDOMs[i];
         line.addEventListener('click', () => {
-            clearInterval(this.interval)
+            clearInterval(this.interval);
+            setTimeout(this.animation, 3000); // kažkodėl nepaleidžia iš naujo autoanimation!!!
             this.linesDOMs[this.index].classList.remove('active');
             let proc = `-${this.reviewWidth}` * i;
             this.listDOM = document.querySelector('.screen > .list');
@@ -134,7 +132,7 @@ class Testimonials {
             this.activeLineIndex = i;
             line.classList.add('active');
         })
-        }  
+        } 
     }
 }
 
