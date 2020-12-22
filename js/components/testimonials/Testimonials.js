@@ -10,7 +10,7 @@ class Testimonials {
         this.linesDOMs = null;
         this.listDOM = null;
         this.activeLineIndex = 0;
-        this.anime = 0;
+        this.interval = 0;
         this.init();
     }
     init() {
@@ -66,8 +66,8 @@ class Testimonials {
             return HTML;
         }
         const testimonialsCount = this.data.length;
-        let linesHTML = `<div class="slider active"></div>`;
-        linesHTML += `<div class="slider"></div>`.repeat(testimonialsCount - 1)
+        let linesHTML = `<div onclick="stop()" class="slider active"></div>`;
+        linesHTML += `<div onclick="stop()" class="slider"></div>`.repeat(testimonialsCount - 1)
 
         HTML = `<div class="review-sliders rev-row">
                     ${this.isLineControlsVisible ? linesHTML : ''}
@@ -102,7 +102,7 @@ class Testimonials {
     animation() {
         let position = 0;
         let index = 0;
-        const interval = setInterval(() => {
+        this.interval = setInterval(() => {
             const length = this.linesDOMs.length - 1;
             position += this.reviewWidth;
             index += 1;
@@ -111,11 +111,13 @@ class Testimonials {
             this.linesDOMs[length].classList.remove('active');
             this.linesDOMs[index-1].classList.remove('active');
             this.linesDOMs[index].classList.add('active');
+            this.index = index;
             if (index === length) {
                 position = -this.reviewWidth;
                 index = -1;
             }
-        }, 3000);
+        }, 2000);
+        
     }
 
     addEvents() {
@@ -123,6 +125,8 @@ class Testimonials {
         for (let i=0; i<this.linesDOMs.length; i++) {
             const line = this.linesDOMs[i];
         line.addEventListener('click', () => {
+            clearInterval(this.interval)
+            this.linesDOMs[this.index].classList.remove('active');
             let proc = `-${this.reviewWidth}` * i;
             this.listDOM = document.querySelector('.screen > .list');
             this.listDOM.style.transform = `translateX(${proc}%)`;
@@ -131,7 +135,7 @@ class Testimonials {
             line.classList.add('active');
         })
         }  
-    }   
+    }
 }
 
 export { Testimonials }
