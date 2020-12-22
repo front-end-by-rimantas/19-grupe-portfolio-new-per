@@ -28,10 +28,10 @@
         border-radius: 50%;
         background-color: var(--main-color);
     }
-    .portfolio-btn:hover {
+    .portfolio-btn:hover:active{
         color: var(--main-color);
     }
-    .portfolio-btn:hover::after {
+    .portfolio-btn:hover:active::after {
         content: '';
         position: absolute;
         left: 45%;
@@ -63,6 +63,9 @@
     position: relative;
     overflow: hidden;
 }
+    .gallery-item.hidden{
+        display: none;
+    }
 
 .port-image {
     width: 100%;
