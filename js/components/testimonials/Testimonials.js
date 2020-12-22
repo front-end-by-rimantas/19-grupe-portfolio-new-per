@@ -102,30 +102,21 @@ class Testimonials {
     animation() {
         let position = 0;
         let index = 0;
-        setInterval(() => {
+        const interval = setInterval(() => {
+            const length = this.linesDOMs.length - 1;
             position += this.reviewWidth;
             index += 1;
-            console.log(index);
             this.listDOM.style.transform = `translateX(-${position}%)`;
+            this.linesDOMs[index].classList.add('active');
+            this.linesDOMs[length].classList.remove('active');
             this.linesDOMs[index-1].classList.remove('active');
             this.linesDOMs[index].classList.add('active');
-            
+            if (index === length) {
+                position = -this.reviewWidth;
+                index = -1;
+            }
         }, 3000);
-    
-
-}
-        // for (let i=0; i<this.linesDOMs.length; i++) {
-        //     const line = this.linesDOMs[i];
-        //     let proc = `-${this.reviewWidth}` * i;
-        //     this.listDOM = document.querySelector('.screen > .list');
-        //     this.listDOM.style.transform = `translateX(${proc}%)`;
-        //     this.linesDOMs[this.activeLineIndex].classList.remove('active');
-        //     this.activeLineIndex = i;
-        //     line.classList.add('active');
-        // }
-        // kol kas tik nėra grįžimo atgal ir neveikia click.
-
-    
+    }
 
     addEvents() {
        
