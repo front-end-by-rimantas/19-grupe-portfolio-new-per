@@ -100,13 +100,14 @@ class Testimonials {
     }
 
     animation() {
-        let position = 0;
-        let index = 0;
+        let position = -this.reviewWidth;
+        let index = -1;
         this.interval = setInterval(() => {
             const length = this.linesDOMs.length - 1;
             position += this.reviewWidth;
             index += 1;
             this.listDOM.style.transform = `translateX(-${position}%)`;
+            this.linesDOMs[this.activeLineIndex].classList.remove('active');
             this.linesDOMs[index].classList.add('active');
             this.linesDOMs[length].classList.remove('active');
             this.linesDOMs[index-1].classList.remove('active');
@@ -123,7 +124,7 @@ class Testimonials {
             const line = this.linesDOMs[i];
         line.addEventListener('click', () => {
             clearInterval(this.interval);
-            setTimeout(this.animation, 3000); // kažkodėl nepaleidžia iš naujo autoanimation!!!
+            setTimeout(this.animation(), 5000); // kažkodėl nepaleidžia iš naujo autoanimation!!!
             this.linesDOMs[this.index].classList.remove('active');
             let proc = `-${this.reviewWidth}` * i;
             this.listDOM = document.querySelector('.screen > .list');
