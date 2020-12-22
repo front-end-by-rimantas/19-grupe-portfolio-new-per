@@ -11,6 +11,7 @@ class Testimonials {
         this.listDOM = null;
         this.activeLineIndex = 0;
         this.interval = 0;
+
         this.init();
     }
     init() {
@@ -19,7 +20,6 @@ class Testimonials {
         }
         this.render();
         this.addEvents();
-        // this.autoAnimation();
         this.animation();
     }
     isValidSelector() {
@@ -114,8 +114,15 @@ class Testimonials {
             this.linesDOMs[index].classList.add('active');
             this.index = index;
             if (index === length) {
+                setTimeout(() => {
+                this.listDOM.classList.add('teleport');
                 position = -this.reviewWidth;
                 index = -1;
+                setTimeout(() => {
+                    this.listDOM.classList.remove('teleport');                
+                    }, 2000);
+                }, 3000);        
+                index = -1;   
             }
         }, 2000);
     }
