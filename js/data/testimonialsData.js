@@ -34,6 +34,7 @@ const testimonialData = [
         name: 'JACK DANIEL',
         specialization: 'GRAPHIC DESIGNER',
     },
+    
 ];
 
 export { testimonialData }
