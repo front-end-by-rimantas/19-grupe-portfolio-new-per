@@ -61,7 +61,6 @@ function renderMySkills(selector, skillsData) {
     DOM.innerHTML = HTML;
 
     const allProgressBars = document.querySelectorAll('.progress-bar');
-
     addEventListener('load', () => {
         const screenBottom = innerHeight + scrollY;
         for (let bar of allProgressBars) {
@@ -70,9 +69,7 @@ function renderMySkills(selector, skillsData) {
                 bar.classList.add('animate');
             }
         }
-        
     })
-    
     addEventListener('scroll', () => {
         const screenBottom = innerHeight + scrollY;
         for (let bar of allProgressBars) {
@@ -82,9 +79,7 @@ function renderMySkills(selector, skillsData) {
             }
         }
     })
-
     return true;
-
 }
 
 export { renderMySkills }
