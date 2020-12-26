@@ -12,6 +12,7 @@
         cursor: pointer;
         border: none;
         text-decoration: none;
+        text-transform: capitalize;
         outline: none;
     }
     .portfolio-btn.active {
@@ -94,7 +95,7 @@
     transition: all 0.4s ease-in;
     opacity: 0;
     border-radius: 3px;
-    z-index: 10;
+    z-index: 3;
     overflow: hidden;
 }
     .portfolio-hover:hover {

@@ -7,8 +7,6 @@ class Portfolio {
         
         this.portfolioDOM = null;
 
-        this.buttons = data.buttons;
-        
         this.init();
     }
 
@@ -22,54 +20,45 @@ class Portfolio {
         this.addEvent();
     }
     
-    update() {
-        let tags = []
+    updateContent(button) {
+        button = button.toLowerCase();
         const galleryItem = document.querySelectorAll('.gallery-item');
-        // surandam visus cardsus is this.data
-        for (let item of this.data) {
-            // surandam visus tags is kiekvieno cardso
-            for (let tag of item.tags){
-                // jeigu paspausto mygtuko pavadinimas atitinka tags'a , atspausdina atitinka! 
-                if (this.buttonText === 'all'){
-                    continue;
-                }
-                if (tag === this.buttonText){
-                    console.log('Atitinka!');
-                }
-                console.log('Neatitinka :(');
-            }
-        }
-    }
 
-
-//     this.photosDOM[i].classList.remove('hidden');
-//     continue;
-// }
-
-// if (this.data[i].tags.includes(tag)) {
-//     this.photosDOM[i].classList.remove('hidden');
-// } else {
-//     this.photosDOM[i].classList.add('hidden');
-// }
-
-    // Generate filter buttons start
-    isValidButton(button){
-        if(!Validator.isObject(button)){
-            return false;
-        }
-        if(!Validator.isTitle(button.value)){
-            return false;
-        }
-        return true;
-    }
-
-    generateButtons(){
-        let buttonsHTML = `<button class='portfolio-btn active'>All</button>`
-        for (let button of this.buttons){
-            if(!this.isValidButton(button)){
+        for (let i = 0; i < this.data.length; i++){
+            const tag = this.data[i].tag
+            if (button === 'all'){
+                galleryItem[i].classList.remove('hidden');
                 continue;
             }
-            buttonsHTML += `<button class="portfolio-btn">${button.value}</button>`
+            if (tag.includes(button)){
+                galleryItem[i].classList.remove('hidden');
+            }
+            else {
+                galleryItem[i].classList.add('hidden');
+            }
+        }
+    }
+
+    // Generate filter buttons start
+    generateButtons() {
+        let buttonsHTML = `<button class='portfolio-btn active'>All</button>`
+        
+        let buttons = [];
+
+        for (let item of this.data) {
+            for (let tag of item.tag){
+                buttons.push(tag)
+            }
+        }
+        // Array with unique tags
+        const uniqueTags = [...new Set(buttons)];
+
+        // Print out the buttons
+        for (let button of uniqueTags){
+            if(!button){
+                continue;
+            }
+            buttonsHTML += `<button class="portfolio-btn">${button}</button>`
         }
         return buttonsHTML;
     }
@@ -78,15 +67,12 @@ class Portfolio {
     // Generate portfolio card start
     isValidCard(card){
         if(!Validator.isObject(card)) {
-            console.log('blogaiobj');
             return false;
         }
         if(!Validator.isImageFile(card.img)){
-            console.log('blogaiimg');
             return false;
         }
         if(!Validator.isTitle(card.title)){
-            console.log('blogaijob');
             card.title = 'My job'
         }
         return true;
@@ -100,9 +86,9 @@ class Portfolio {
             if (!this.isValidCard(item[i])) {
                 continue;
             }
-            cardsHTML += `<div class="gallery-item ${item[i].class}" data-tag="${item[i].tags[0]}">
+            cardsHTML += `<div class="gallery-item ${item[i].class}">
             <div class="port-image">
-                <img src="./img/portfolio/${item[i].img}" alt="image">
+                <img src="./img/portfolio/${item[i].img}" alt="${item[i].title} project">
             </div>
             <div class="portfolio-hover">
                 <div class="portfolio-hover-links">
@@ -132,20 +118,16 @@ class Portfolio {
     }
     // Section render ends
 
-    updateContent(){
-
-    }
-
     // Event listeners start
     addEvent() {
         const buttonsDOM = this.portfolioDOM.querySelectorAll('.portfolio-btn');
-        this.buttonText = '';
+        let activeButton = null;
 
         //for each button do eventlistener
         for (let button of buttonsDOM){
             button.addEventListener('click', () => {
-                this.buttonText = button.innerText.toLowerCase();
-                this.update();
+                activeButton = button;
+                this.updateContent(button.innerText);
             });
         }
     }
@@ -154,4 +136,3 @@ class Portfolio {
 }
 
 export { Portfolio }
-

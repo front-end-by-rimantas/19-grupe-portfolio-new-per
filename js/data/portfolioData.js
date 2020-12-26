@@ -4,65 +4,51 @@ const portfolioData = {
             class: 'h-2',
             img: '1.jpg',
             title: 'Lil bag',
-            tags:'video',
+            tag: ['video'],
         },
         {
             class: 'h-3',
             img: '2.jpg',
             title: 'Notebook',
-            tags: 'design',
+            tag: ['design'],
         },
         {
             class: 'h-2',
             img: '3.jpg',
             title: 'Coffee cup',
-            tags:'photo',
+            tag: ['photo'],
         },
         {
             class: 'h-3',
             img: '4.jpg',
             title: 'Headphones',
-            tags: 'design',
+            tag: ['design'],
         },
         {
             class: 'h-3',
             img: '5.jpg',
             title: 'Glass bottle',
-            tags:'photo',
+            tag: ['photo'],
         },
         {
             class: 'h-2',
             img: '6.jpg',
             title: 'Make up',
-            tags:'brand',
+            tag: ['brand'],
         },
         {
             class: 'h-3',
             img: '7.jpg',
             title: 'Rum & Coke',
-            tags:'brand',
+            tag: ['brand'],
         },
         {
             class: 'w-3 h-3',
             img: '8.jpg',
             title: 'Aliens in the city',
-            tags:'video',
+            tag: ['video'],
         },
     ],
-    buttons: [
-        {
-            value: 'Brand',
-        },
-        {
-            value: 'Design',
-        },
-        {
-            value: 'Photo',
-        },
-        {
-            value: 'Video',
-        }
-    ]
 };
 
 export { portfolioData }
