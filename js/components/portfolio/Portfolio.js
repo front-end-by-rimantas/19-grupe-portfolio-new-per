@@ -55,9 +55,6 @@ class Portfolio {
 
         // Print out the buttons
         for (let button of uniqueTags){
-            if(!button){
-                continue;
-            }
             buttonsHTML += `<button class="portfolio-btn">${button}</button>`
         }
         return buttonsHTML;
@@ -126,6 +123,11 @@ class Portfolio {
         //for each button do eventlistener
         for (let button of buttonsDOM){
             button.addEventListener('click', () => {
+                activeButton = document.querySelector('.portfolio-btn.active')
+                if (activeButton !== button){
+                    activeButton.classList.remove('active');
+                    button.classList.add('active');
+                }
                 activeButton = button;
                 this.updateContent(button.innerText);
             });
