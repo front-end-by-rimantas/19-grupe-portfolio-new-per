@@ -5,11 +5,14 @@ class Testimonials {
         this.selector = params.selector || 'body';
         this.data = params.data || [];
         this.isLineControlsVisible = params.isLineControlsVisible || true;
+        this.cloneCount = params.cloneCount || 2;
+        this.reviewWidth = 0;
         this.DOM = null;
         this.controlsDOM = null;
         this.linesDOMs = null;
         this.listDOM = null;
         this.activeLineIndex = 0;
+        this.interval = 0;
 
         this.init();
     }
@@ -19,6 +22,7 @@ class Testimonials {
         }
         this.render();
         this.addEvents();
+        this.animation();
     }
     isValidSelector() {
         const DOM = document.querySelector(this.selector);
@@ -59,11 +63,14 @@ class Testimonials {
     }
     generateReviews() {
         let HTML = '';
-        for (let testimonial of this.data) {
+        const reviewWidth = 100 / (this.data.length + 2 * this.cloneCount);
+        this.reviewWidth = reviewWidth;
+        const dataCopy = [this.data[3], this.data[4], ...this.data, this.data[0], this.data[1]];
+        for (let testimonial of dataCopy) {
             if (!this.isValidTestimonial(testimonial)) {
                 continue;
             }
-            HTML += `<div class="review-wrap" style="width: 20%";>
+            HTML += `<div class="review-wrap" style="width: ${reviewWidth}%";>
             <h5 class="review-title upper rev-row">${testimonial.title}</h5>
             <div class="stars rev-row">${this.generateStars(testimonial.rating)}</div>
             <p class="review rev-row">${testimonial.comment}</p>
@@ -80,7 +87,6 @@ class Testimonials {
         if (!this.isLineControlsVisible) {
             return HTML;
         }
-
         const testimonialsCount = this.data.length;
         let linesHTML = `<div class="slider active"></div>`;
         linesHTML += `<div class="slider"></div>`.repeat(testimonialsCount - 1)
@@ -91,16 +97,17 @@ class Testimonials {
 
         return HTML;
     }
+
     render() {
+        const listWidth = (this.data.length + 2 * this.cloneCount) * 100;
         const HTML = `<div class="allTestimonials">
         <div class="screen">
-            <div class="list" style="width: 500%";>
+            <div class="list" style="width: ${listWidth}%; margin-left: -${this.cloneCount}00%;">
             ${this.generateReviews()}
             </div>
                 </div>
                 ${this.generateControls()}
             </div>`;
-
         this.DOM.innerHTML = HTML;
 
         this.listDOM = this.DOM.querySelector('.list');
@@ -114,23 +121,50 @@ class Testimonials {
         }
     }
 
+    animation() {
+        let position = -this.reviewWidth;
+        let index = -1;
+        this.interval = setInterval(() => {
+            const length = this.linesDOMs.length - 1;
+            position += this.reviewWidth;
+            index += 1;
+            this.listDOM.style.transform = `translateX(-${position}%)`;
+            this.linesDOMs[this.activeLineIndex].classList.remove('active');
+            this.linesDOMs[index].classList.add('active');
+            this.linesDOMs[length].classList.remove('active');
+            this.linesDOMs[index-1].classList.remove('active');
+            this.linesDOMs[index].classList.add('active');
+            this.index = index;
+            if (index === length) {
+                setTimeout(() => {
+                this.listDOM.classList.add('teleport');
+                position = -this.reviewWidth;
+                index = -1;
+                setTimeout(() => {
+                    this.listDOM.classList.remove('teleport');                
+                    }, 2000);
+                }, 3000);        
+                index = -1;   
+            }
+        }, 2000);
+    }
     addEvents() {
         for (let i=0; i<this.linesDOMs.length; i++) {
             const line = this.linesDOMs[i];
-
         line.addEventListener('click', () => {
-            let proc = -20 * i + '%';
-            this.listDOM.style.transform = `translateX(${proc})`;
-            
-            // this.controlsDOM.querySelector('.slider.active').classList.remove('active')
-
+            clearInterval(this.interval);
+            setTimeout(this.animation(), 5000); // kažkodėl nepaleidžia iš naujo autoanimation!!!
+            this.linesDOMs[this.index].classList.remove('active');
+            let proc = `-${this.reviewWidth}` * i;
+            this.listDOM = document.querySelector('.screen > .list');
+            this.listDOM.style.transform = `translateX(${proc}%)`;
             this.linesDOMs[this.activeLineIndex].classList.remove('active');
             this.activeLineIndex = i;
             line.classList.add('active');
-
         })
-    }
+        } 
     }
 }
 
 export { Testimonials }
+
