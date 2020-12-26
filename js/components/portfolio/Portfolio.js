@@ -53,6 +53,11 @@ class Portfolio {
         // Array with unique tags
         const uniqueTags = [...new Set(buttons)];
 
+        // Check if uniqeTags is array and not empty. If empty, returns only one option. 
+        if (!Validator.isArray(uniqueTags)){
+            return buttonsHTML;
+        }
+        
         // Print out the buttons
         for (let button of uniqueTags){
             buttonsHTML += `<button class="portfolio-btn">${button}</button>`
