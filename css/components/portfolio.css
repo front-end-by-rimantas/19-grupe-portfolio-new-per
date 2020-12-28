@@ -7,30 +7,25 @@
         margin: 0px 10px;
         padding: 5px 5px;
         font-size: 14px;
+        font-family: "Roboto", sans-serif;
         letter-spacing: 2px;
         color: var(--text-main-color);
         cursor: pointer;
         border: none;
         text-decoration: none;
+        text-transform: capitalize;
         outline: none;
-    }
-    .portfolio-btn.active {
-        color: var(--main-color);
-        border-top:solid 1px #f4f5f8;
-    }
-    .portfolio-btn.active::after {
-        content: '';
-        position: absolute;
-        left: 45%;
-        top: 30px;
-        width: 3px;
-        height: 3px;
-        border-radius: 50%;
-        background-color: var(--main-color);
     }
     .portfolio-btn:hover {
         color: var(--main-color);
     }
+    .portfolio-btn.active {
+        color: var(--main-color);
+        border-top: 1px solid #f4f5f8;
+        animation: active-line 0.3s ease-out;
+    }
+
+    .portfolio-btn.active::after,
     .portfolio-btn:hover::after {
         content: '';
         position: absolute;
@@ -41,6 +36,7 @@
         border-radius: 50%;
         background-color: var(--main-color);
     }
+
 .container-portfolio {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -63,6 +59,9 @@
     position: relative;
     overflow: hidden;
 }
+    .gallery-item.hidden{
+        display: none;
+    }
 
 .port-image {
     width: 100%;
@@ -91,7 +90,7 @@
     transition: all 0.4s ease-in;
     opacity: 0;
     border-radius: 3px;
-    z-index: 10;
+    z-index: 3;
     overflow: hidden;
 }
     .portfolio-hover:hover {
@@ -134,7 +133,7 @@
             width: 100%;
             font-size: 15px;
             margin-bottom: 30px;
-            /* margin-bottom sumazinti su responsive ??  */
+
         }
         .portfolio-hover-links > a {
             text-decoration: none;
@@ -150,6 +149,18 @@
             .portfolio-hover-links > a > i{
                 transform: rotate(-45deg);
             }
+
+@keyframes active-line {
+    0%{
+        border-top: 1px solid #f4f5f8;
+    }
+    30%{
+        border-top: 1px solid var(--main-color);
+    }
+    100%{
+        border-top: 1px solid #f4f5f8;
+    }
+}
 
 @media (max-width: 780px) {
     .container-portfolio {
