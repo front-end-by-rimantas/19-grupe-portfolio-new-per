@@ -57,7 +57,7 @@
                 margin-bottom: var(--main-space);
                 line-height: 1.8em;
             }
-                li>span {
+                .info li>span {
                     color: #676767;
                     padding: 0 0.5rem;
                     text-transform: capitalize;

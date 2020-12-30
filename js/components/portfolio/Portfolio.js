@@ -5,72 +5,98 @@ class Portfolio {
         this.selector = selector;
         this.data = data.cards;
         
-        this.buttons = data.buttons;
-        this.buttonsDOM = null;
+        this.portfolioDOM = null;
 
         this.init();
     }
+
     init(){
         if(!Validator.isSelector(this.selector)){
             return;
         }
+        this.portfolioDOM = document.querySelector(this.selector);
         this.renderHTML();
         this.generateButtons();
+        this.addEvent();
     }
+    
+    updateContent(button) {
+        button = button.toLowerCase();
+        const galleryItem = document.querySelectorAll('.gallery-item');
 
-    isValidButton(button){
-        if(!Validator.isObject(button)){
-            return false;
-        }
-        if(!Validator.isTitle(button.value)){
-            return false;
-        }
-        return true;
-    }
-
-    generateButtons(){
-        let buttonsHTML = '';
-        for (let button of this.buttons){
-            if(!this.isValidButton(button)){
+        for (let i = 0; i < this.data.length; i++){
+            const tag = this.data[i].tag
+            if (button === 'all'){
+                galleryItem[i].classList.remove('hidden');
                 continue;
             }
-            buttonsHTML += `<button class="portfolio-btn">${button.value}</button>`
+            if (tag.includes(button)){
+                galleryItem[i].classList.remove('hidden');
+            }
+            else {
+                galleryItem[i].classList.add('hidden');
+            }
+        }
+    }
+
+    // Generate filter buttons start
+    generateButtons() {
+        let buttonsHTML = `<button class='portfolio-btn active'>All</button>`
+        
+        let buttons = [];
+
+        for (let item of this.data) {
+            for (let tag of item.tag){
+                buttons.push(tag)
+            }
+        }
+        // Array with unique tags
+        const uniqueTags = [...new Set(buttons)];
+
+        // Check if uniqeTags is array and not empty. If empty, returns only one option. 
+        if (!Validator.isArray(uniqueTags)){
+            return buttonsHTML;
+        }
+        
+        // Print out the buttons
+        for (let button of uniqueTags){
+            buttonsHTML += `<button class="portfolio-btn">${button}</button>`
         }
         return buttonsHTML;
     }
-
-       
-    isValidCard(cardIndex){
-        if(!Validator.isObject(this.data[cardIndex])) {
+    // Generate filter buttons ends
+    
+    // Generate portfolio card start
+    isValidCard(card){
+        if(!Validator.isObject(card)) {
             return false;
         }
-        if(!Validator.isImageFile(this.data[cardIndex].img)){
+        if(!Validator.isImageFile(card.img)){
             return false;
         }
-        if(!Validator.isTitle(this.data[cardIndex].title)){
-            this.data[cardIndex].title = 'My job'
+        if(!Validator.isTitle(card.title)){
+            card.title = 'My job'
         }
         return true;
     }
 
     generateCards(){
         let cardsHTML = '';
-        const cards = this.data;
+        const item = this.data
         const dataLength = this.data.length;
-
         for (let i = 0; i < dataLength; i++){
-            if (!this.isValidCard(i)) {
+            if (!this.isValidCard(item[i])) {
                 continue;
             }
-            cardsHTML += `<div class="gallery-item ${cards[i].class}">
+            cardsHTML += `<div class="gallery-item ${item[i].class}">
             <div class="port-image">
-                <img src="./img/portfolio/${cards[i].img}" alt="image">
+                <img src="./img/portfolio/${item[i].img}" alt="${item[i].title} project">
             </div>
             <div class="portfolio-hover">
                 <div class="portfolio-hover-links">
-                    <h5 class="upper">${cards[i].title}</h5>
+                    <h5 class="upper">${item[i].title}</h5>
                     <a href="#0"><i class="fa fa-link"></i></a>
-                    <a href="./img/portfolio/${cards[i].img}">
+                    <a href="./img/portfolio/${item[i].img}">
                         <i class="fa fa-dot-circle-o"></i>
                     </a>
                 </div>
@@ -79,18 +105,41 @@ class Portfolio {
         }
         return cardsHTML;
     }
-
+    // Generate portfolio card ends
+    
+    // Section render starts
     renderHTML() {
-        const portfolioDOM = document.querySelector(this.selector);
-        
-        portfolioDOM.insertAdjacentHTML('beforeEnd', 
-                        `<div class="filtering col-12">
-                            ${this.generateButtons()}
-                        </div>
-                        <div class="container-portfolio col-12">
-                                ${this.generateCards()}
-                        </div>`
-        );}
+        this.portfolioDOM.insertAdjacentHTML('beforeEnd', 
+        `<div class="filtering col-12">
+        ${this.generateButtons()}
+        </div>
+        <div class="container-portfolio col-12">
+        ${this.generateCards()}
+        </div>`
+        );
+    }
+    // Section render ends
+
+    // Event listeners start
+    addEvent() {
+        const buttonsDOM = this.portfolioDOM.querySelectorAll('.portfolio-btn');
+        let activeButton = null;
+
+        //for each button do eventlistener
+        for (let button of buttonsDOM){
+            button.addEventListener('click', () => {
+                activeButton = document.querySelector('.portfolio-btn.active')
+                if (activeButton !== button){
+                    activeButton.classList.remove('active');
+                    button.classList.add('active');
+                }
+                activeButton = button;
+                this.updateContent(button.innerText);
+            });
+        }
+    }
+    
+    // Event listeners end
 }
 
 export { Portfolio }

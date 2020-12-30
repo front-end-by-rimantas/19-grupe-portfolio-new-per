@@ -14,6 +14,8 @@ import { RenderTypeWriter } from "./components/renderTypewriter/RenderTypewriter
 import { skillsData } from "./data/skillsData.js";
 import { renderMySkills } from "./components/mySkills/renderMySkills.js";
 /* resume */
+import { resumeData } from './data/resumeData.js';
+import { renderResume } from './components/resume/renderResume.js';
 /* client counter */
 import { clientCounterData } from './data/clientCounterData.js';
 import { renderClientCounter } from './components/clientCounter/renderClientCounter.js';
@@ -48,6 +50,8 @@ typeEffect.typeWriting();
 renderMySkills('#skillsLeft', skillsData);
 renderMySkills('#skillsRight', skillsData);
 /* resume */
+renderResume('#resumeLeft', resumeData);
+renderResume('#resumeRight', resumeData);
 /* client counter */
 renderClientCounter('#clientCounterBlock', clientCounterData);
 counterAnimationOnScroll();
